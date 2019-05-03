@@ -3,5 +3,5 @@
 /splitted_dataset
 /MNIST_data
 /adv_test
-*npy
+*.npy
 
