@@ -1,6 +1,6 @@
 {
   "_comment": "===== MODEL CONFIGURATION =====",
-  "model_dir": "models/01/adv_trained",
+  "model_dir": "models/02/adv_trained",
 
   "_comment": "===== TRAINING CONFIGURATION =====",
   "random_seed": 4557077,
@@ -18,10 +18,10 @@
   "eval_on_cpu": false,
 
   "_comment": "=====ADVERSARIAL EXAMPLES CONFIGURATION=====",
-  "epsilon": 0.2,
-  "k": 200,
+  "epsilon": 0.3,
+  "k": 50,
   "a": 0.01,
   "random_start": true,
-  "store_adv_path": "adv_test/01/adv_trained.npy",
-  "loss_func": "xent"
+  "store_adv_path": "adv_test/pgd/cw/02/03.npy",
+  "loss_func": "cw"
 }

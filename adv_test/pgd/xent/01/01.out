@@ -1,0 +1,94 @@
+WARNING:tensorflow:From /home/xdjf/anaconda3/envs/my_env/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From pgd_attack.py:108: read_data_sets (from tensorflow.contrib.learn.python.learn.datasets.mnist) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use alternatives such as official/mnist/dataset.py from tensorflow/models.
+WARNING:tensorflow:From /home/xdjf/anaconda3/envs/my_env/lib/python3.6/site-packages/tensorflow/contrib/learn/python/learn/datasets/mnist.py:260: maybe_download (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please write your own downloading logic.
+WARNING:tensorflow:From /home/xdjf/anaconda3/envs/my_env/lib/python3.6/site-packages/tensorflow/contrib/learn/python/learn/datasets/mnist.py:262: extract_images (from tensorflow.contrib.learn.python.learn.datasets.mnist) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use tf.data to implement this functionality.
+WARNING:tensorflow:From /home/xdjf/anaconda3/envs/my_env/lib/python3.6/site-packages/tensorflow/contrib/learn/python/learn/datasets/mnist.py:267: extract_labels (from tensorflow.contrib.learn.python.learn.datasets.mnist) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use tf.data to implement this functionality.
+WARNING:tensorflow:From /home/xdjf/anaconda3/envs/my_env/lib/python3.6/site-packages/tensorflow/contrib/learn/python/learn/datasets/mnist.py:290: DataSet.__init__ (from tensorflow.contrib.learn.python.learn.datasets.mnist) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use alternatives such as official/mnist/dataset.py from tensorflow/models.
+2019-05-04 05:02:44.280110: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX
+2019-05-04 05:02:44.290026: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2000150000 Hz
+2019-05-04 05:02:44.290805: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x55a9408f89c0 executing computations on platform Host. Devices:
+2019-05-04 05:02:44.290848: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+2019-05-04 05:02:44.435946: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x55a9409a79d0 executing computations on platform CUDA. Devices:
+2019-05-04 05:02:44.436003: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): GeForce GTX 1080 Ti, Compute Capability 6.1
+2019-05-04 05:02:44.436750: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.6705
+pciBusID: 0000:02:00.0
+totalMemory: 10.92GiB freeMemory: 9.69GiB
+2019-05-04 05:02:44.436781: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Adding visible gpu devices: 0
+2019-05-04 05:02:44.438039: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-04 05:02:44.438062: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0 
+2019-05-04 05:02:44.438075: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:   N 
+2019-05-04 05:02:44.438728: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 9423 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:02:00.0, compute capability: 6.1)
+WARNING:tensorflow:From /home/xdjf/anaconda3/envs/my_env/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+2019-05-04 05:02:45.514003: I tensorflow/stream_executor/dso_loader.cc:152] successfully opened CUDA library libcublas.so.10.0 locally
+Extracting MNIST_data/train-images-idx3-ubyte.gz
+Extracting MNIST_data/train-labels-idx1-ubyte.gz
+Extracting MNIST_data/t10k-images-idx3-ubyte.gz
+Extracting MNIST_data/t10k-labels-idx1-ubyte.gz
+Iterating over 50 batches
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+Storing examples
+Examples stored in adv_test/01/01.npy
