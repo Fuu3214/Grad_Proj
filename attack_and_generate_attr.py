@@ -41,11 +41,12 @@ from random import choice
 
 import matplotlib.pyplot as plt
 
+import tarfile
 
 # In[2]:
 
 
-model_dir = "./models/nat"
+model_dir = "./models/03"
 
 num_examples = 10000
 batch_size = 200
@@ -105,11 +106,14 @@ def batch_attack(data, attack, **params):
     return x_adv
 
 def save_npy(algm, x_adv, filename = '/adv.npy'):
-    path = './adv_test/' + algm + filename
+    path = './adv_madry/' + algm + filename
+    path_compressed = './adv_madry/' + algm + '/adv.npy.gz'
     x_adv_np = np.asarray(x_adv)
     np.save(path, x_adv_np)
     print("saved to: " + path)
-    
+    tar = tarfile.open(path_compressed,"w:gz")
+    tar.add(path)
+    tar.close()
 
 
 # In[5]:
@@ -131,7 +135,7 @@ print('JSMA: Crafting ' + str(num_examples) +
     ' adversarial examples')
 
 jsma = SaliencyMapMethod(c_model, sess=session)
-jsma_params = {'theta': 1., 'gamma': 0.1,
+jsma_params = {'theta': 1., 'gamma': 0.3,
              'clip_min': 0., 'clip_max': 1.,
              'y_target': None}
 
@@ -160,7 +164,7 @@ session, c_model = init_graph(model_dir)
 
 LEARNING_RATE = .001
 CW_LEARNING_RATE = .2
-ATTACK_ITERATIONS = 100
+ATTACK_ITERATIONS = 200
 
 print('Iterating over {} batches'.format(num_batches))
 
@@ -177,7 +181,8 @@ print("This could take some time ...")
 # Instantiate a CW attack object
 cw = CarliniWagnerL2(c_model, sess=session)
 
-cw_params = {'binary_search_steps': 1,
+cw_params = {'binary_search_steps': 5,
+               'confidence': 50,
                "y_target": None,
                'max_iterations': ATTACK_ITERATIONS,
                'learning_rate': CW_LEARNING_RATE,
@@ -199,7 +204,7 @@ session, c_model = init_graph(model_dir)
 
 
 fgsm_params = {
-  'eps': 0.3,
+  'eps': 0.5,
   'clip_min': 0.,
   'clip_max': 1.
 }
@@ -269,7 +274,7 @@ def init_my_model(model_dir):
     saver.restore(session, checkpoint)
     return session, model
 
-def generate_adv_attr(session, model, img_path, tar_path, num_examples = num_examples):
+def generate_adv_attr(session, model, img_path, tar_path, tar_compressed, num_examples = num_examples):
 
     
     
@@ -312,20 +317,24 @@ def generate_adv_attr(session, model, img_path, tar_path, num_examples = num_exa
     feature_attributions = np.asarray(feature_attributions)
     np.save(tar_path, feature_attributions)
     print('Examples stored in {}'.format(tar_path))
+    tar = tarfile.open(tar_compressed,"w:gz")
+    tar.add(tar_path)
+    tar.close()
 
 
 # In[1]:
 
 
 
-adv_dir = "./adv_test/"
-tar_dir = "./features/test/"
+adv_dir = "./adv_madry/"
+tar_dir = "./features/test_madry/"
 
 algm = ['/fgsm/','/cw/','/jsma/','/deepfool/']
 # loss = ['/xent/', '/cw/']
-model_name = '/nat/'
+# model_name = '/nat/'
 name = 'adv.npy'
 name_out = 'adv_attr.npy'
+name_compressed = 'adv_attr.npy.gz'
 
 # In[2]:
 
@@ -341,9 +350,10 @@ for a in range(len(algm)):
     
     adv_path = adv_dir + algm[a] + name
     tar_path = tar_dir + algm[a] + name_out
+    tar_compressed = tar_dir + algm[a] + name_compressed
 
     print("adv_path:" + adv_path)
-    generate_adv_attr(session, model, adv_path, tar_path)
+    generate_adv_attr(session, model, adv_path, tar_path, tar_compressed)
     session.close()
 
 
