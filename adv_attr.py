@@ -137,4 +137,5 @@ for a in range(len(algm)):
                 
                 print("adv_path:" + adv_path)
                 generate_adv_attr(session, model, adv_path, tar_path)
+            session.close()
 
