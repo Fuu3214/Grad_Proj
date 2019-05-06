@@ -1,6 +1,5 @@
 /train
 /targeted
-/splitted_dataset
 /MNIST_data
 *.npy
 
