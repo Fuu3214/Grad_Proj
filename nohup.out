@@ -1,0 +1,2135 @@
+WARNING:tensorflow:From attack_and_generate_attr.py:54: read_data_sets (from tensorflow.contrib.learn.python.learn.datasets.mnist) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use alternatives such as official/mnist/dataset.py from tensorflow/models.
+WARNING:tensorflow:From /home/xdjf/anaconda3/envs/my_env/lib/python3.6/site-packages/tensorflow/contrib/learn/python/learn/datasets/mnist.py:260: maybe_download (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please write your own downloading logic.
+WARNING:tensorflow:From /home/xdjf/anaconda3/envs/my_env/lib/python3.6/site-packages/tensorflow/contrib/learn/python/learn/datasets/mnist.py:262: extract_images (from tensorflow.contrib.learn.python.learn.datasets.mnist) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use tf.data to implement this functionality.
+WARNING:tensorflow:From /home/xdjf/anaconda3/envs/my_env/lib/python3.6/site-packages/tensorflow/contrib/learn/python/learn/datasets/mnist.py:267: extract_labels (from tensorflow.contrib.learn.python.learn.datasets.mnist) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use tf.data to implement this functionality.
+WARNING:tensorflow:From /home/xdjf/anaconda3/envs/my_env/lib/python3.6/site-packages/tensorflow/contrib/learn/python/learn/datasets/mnist.py:110: dense_to_one_hot (from tensorflow.contrib.learn.python.learn.datasets.mnist) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use tf.one_hot on tensors.
+WARNING:tensorflow:From /home/xdjf/anaconda3/envs/my_env/lib/python3.6/site-packages/tensorflow/contrib/learn/python/learn/datasets/mnist.py:290: DataSet.__init__ (from tensorflow.contrib.learn.python.learn.datasets.mnist) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use alternatives such as official/mnist/dataset.py from tensorflow/models.
+WARNING:tensorflow:From /home/xdjf/anaconda3/envs/my_env/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+2019-05-06 14:06:38.503384: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX
+2019-05-06 14:06:38.512860: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2000150000 Hz
+2019-05-06 14:06:38.513434: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x56167c84dd90 executing computations on platform Host. Devices:
+2019-05-06 14:06:38.513466: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+2019-05-06 14:06:38.660285: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x56167c8fc930 executing computations on platform CUDA. Devices:
+2019-05-06 14:06:38.660341: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): GeForce GTX 1080 Ti, Compute Capability 6.1
+2019-05-06 14:06:38.661051: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.6705
+pciBusID: 0000:02:00.0
+totalMemory: 10.92GiB freeMemory: 10.75GiB
+2019-05-06 14:06:38.661078: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Adding visible gpu devices: 0
+2019-05-06 14:06:38.662322: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-06 14:06:38.662344: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0 
+2019-05-06 14:06:38.662355: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:   N 
+2019-05-06 14:06:38.662999: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10454 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:02:00.0, compute capability: 6.1)
+WARNING:tensorflow:From /home/xdjf/anaconda3/envs/my_env/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+[INFO 2019-05-06 14:06:39,553 cleverhans] Constructing new graph for attack SaliencyMapMethod
+WARNING:tensorflow:From /home/xdjf/anaconda3/envs/my_env/lib/python3.6/site-packages/cleverhans/attacks/__init__.py:283: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /home/xdjf/anaconda3/envs/my_env/lib/python3.6/site-packages/cleverhans/attacks/__init__.py:950: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, use
+    tf.py_function, which takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    
+2019-05-06 14:06:41.206617: I tensorflow/stream_executor/dso_loader.cc:152] successfully opened CUDA library libcublas.so.10.0 locally
+2019-05-06 16:06:39.822552: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Adding visible gpu devices: 0
+2019-05-06 16:06:39.822638: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-06 16:06:39.822660: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0 
+2019-05-06 16:06:39.822675: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:   N 
+2019-05-06 16:06:39.823474: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10454 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:02:00.0, compute capability: 6.1)
+[INFO 2019-05-06 16:06:39,894 cleverhans] Constructing new graph for attack CarliniWagnerL2
+WARNING:tensorflow:From /home/xdjf/anaconda3/envs/my_env/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /home/xdjf/anaconda3/envs/my_env/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:102: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+2019-05-06 16:07:29.988791: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Adding visible gpu devices: 0
+2019-05-06 16:07:29.988914: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-06 16:07:29.988945: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0 
+2019-05-06 16:07:29.988966: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:   N 
+2019-05-06 16:07:29.990067: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10454 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:02:00.0, compute capability: 6.1)
+[INFO 2019-05-06 16:07:30,083 cleverhans] Constructing new graph for attack FastGradientMethod
+WARNING:tensorflow:From /home/xdjf/anaconda3/envs/my_env/lib/python3.6/site-packages/cleverhans/compat.py:124: calling softmax_cross_entropy_with_logits_v2_helper (from tensorflow.python.ops.nn_ops) with dim is deprecated and will be removed in a future version.
+Instructions for updating:
+dim is deprecated, use axis instead
+2019-05-06 16:07:32.076354: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Adding visible gpu devices: 0
+2019-05-06 16:07:32.076459: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-06 16:07:32.076487: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0 
+2019-05-06 16:07:32.076507: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:   N 
+2019-05-06 16:07:32.077528: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10454 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:02:00.0, compute capability: 6.1)
+[INFO 2019-05-06 16:07:32,155 cleverhans] Constructing new graph for attack DeepFool
+[INFO 2019-05-06 16:07:34,299 cleverhans] Attack result at iteration 5 is [7 2 1 0 4 1 4 9 5 9 0 6 9 0 1 5 9 7 3 4 9 6 6 5 4 0 7 4 0 1 3 1 3 4 7 2 7
+ 1 2 1 1 7 4 2 3 5 1 2 4 4 6 3 5 5 6 0 4 1 9 5 7 8 5 3 7 4 6 4 3 0 7 0 2 9
+ 1 7 3 2 9 7 7 6 2 7 8 4 7 3 6 1 3 6 9 3 1 4 1 7 6 9 6 0 5 4 9 9 2 1 9 4 8
+ 7 3 9 7 9 4 4 9 2 5 4 7 6 7 9 0 5 8 5 6 6 5 7 8 1 0 1 6 4 6 7 3 1 7 1 8 2
+ 0 2 9 9 5 5 1 5 6 0 3 4 4 6 5 4 6 5 4 5 1 4 4 7 2 3 2 7 1 8 1 8 1 8 5 0 8
+ 9 2 5 0 1 1 1 0 9 0 3 1 6 4 2]
+[INFO 2019-05-06 16:07:34,934 cleverhans] Attack result at iteration 10 is [7 2 1 0 4 1 4 9 5 9 0 6 9 0 1 5 9 7 3 4 9 6 6 5 4 0 7 4 0 1 3 1 3 4 7 2 7
+ 1 2 1 1 7 4 2 3 5 1 2 4 4 6 3 5 5 6 0 4 1 9 5 7 8 9 3 7 4 6 4 3 0 7 0 2 9
+ 1 7 3 2 9 7 7 6 2 7 8 4 7 3 6 1 3 6 9 3 1 4 1 7 6 9 6 0 5 4 9 9 2 1 9 4 8
+ 7 3 9 7 9 4 4 9 2 5 4 7 6 7 9 0 5 8 5 6 6 5 7 8 1 0 1 6 4 6 7 3 1 7 1 8 2
+ 0 2 9 9 5 5 1 5 6 0 3 4 4 6 5 4 6 5 4 5 1 4 4 7 2 3 2 7 1 8 1 8 1 8 5 0 8
+ 9 2 5 0 1 1 1 0 9 0 3 1 6 4 2]
+[INFO 2019-05-06 16:07:35,511 cleverhans] Attack result at iteration 15 is [7 2 8 0 9 7 8 9 5 9 0 0 9 0 1 3 9 7 8 4 9 6 6 5 4 0 7 4 0 1 3 1 3 0 7 2 7
+ 8 2 1 8 7 9 2 3 8 1 2 4 9 6 3 5 3 6 0 4 1 9 5 7 8 9 3 7 4 6 9 3 0 7 0 2 9
+ 8 7 3 2 8 7 7 6 2 9 8 9 7 3 6 1 8 6 9 3 1 9 8 7 6 9 6 0 3 4 9 8 8 6 9 4 8
+ 7 3 9 7 9 4 9 9 2 3 6 9 6 7 9 9 8 8 5 6 6 5 7 8 1 0 8 6 9 6 7 3 8 3 1 8 8
+ 0 3 8 8 8 3 1 3 6 0 3 9 8 6 8 9 6 3 4 3 1 4 9 8 2 3 2 7 8 8 8 8 1 8 3 0 8
+ 9 2 3 0 1 8 1 0 8 0 8 1 6 9 2]
+[INFO 2019-05-06 16:07:35,914 cleverhans] Attack result at iteration 20 is [3 2 8 0 9 7 8 4 6 7 9 0 7 7 8 3 7 3 8 7 7 5 0 3 7 6 3 9 0 3 9 1 5 0 3 1 2
+ 8 2 8 8 2 9 2 3 8 8 3 9 9 6 7 3 3 6 8 7 7 7 7 3 2 9 2 3 9 0 9 8 5 3 9 3 7
+ 8 3 5 0 8 8 9 6 2 9 3 9 8 7 0 8 8 6 3 3 8 9 8 3 0 7 0 6 3 4 9 8 8 6 4 7 3
+ 2 3 3 3 4 9 9 7 7 3 6 9 0 4 4 9 8 3 3 6 6 3 2 3 8 0 8 0 9 0 3 2 8 3 1 3 8
+ 0 3 8 8 8 3 7 3 0 9 2 9 8 6 8 9 6 3 7 3 8 7 9 8 1 5 3 7 8 8 8 8 4 3 3 6 3
+ 9 3 3 5 1 8 3 0 8 7 8 8 6 9 3]
+[INFO 2019-05-06 16:07:36,112 cleverhans] Attack result at iteration 25 is [3 1 8 2 9 7 8 4 6 7 9 0 7 7 8 3 7 3 8 7 7 5 0 3 7 6 3 9 2 3 9 4 5 0 3 1 2
+ 8 1 8 8 2 9 1 5 8 8 3 9 9 5 7 3 3 5 8 7 7 7 7 3 2 9 2 3 9 0 9 8 5 3 9 3 7
+ 8 3 5 0 8 8 9 5 1 9 3 9 8 7 0 8 8 5 3 9 8 9 8 3 0 7 0 6 3 1 5 8 8 6 4 7 3
+ 2 5 3 3 4 9 9 7 7 3 6 9 0 4 4 9 8 3 3 5 5 3 2 3 8 2 8 0 9 0 3 2 8 3 4 3 8
+ 2 3 8 8 8 3 7 3 0 9 2 9 8 5 8 9 4 3 7 3 8 7 9 8 1 5 3 1 8 3 8 2 4 3 3 6 3
+ 4 3 3 5 4 8 3 2 8 7 8 8 5 9 3]
+[INFO 2019-05-06 16:07:36,115 cleverhans] 200 out of 200 become adversarial examples at iteration 25
+[INFO 2019-05-06 16:07:36,672 cleverhans] Attack result at iteration 5 is [3 6 1 1 1 3 9 5 2 9 4 5 9 3 9 0 3 6 5 5 7 2 2 7 1 2 8 4 1 7 3 3 8 8 7 9 2
+ 2 4 1 5 9 8 7 2 3 0 2 4 2 4 1 9 5 7 7 2 8 2 0 8 5 7 7 9 1 8 1 8 0 3 0 1 9
+ 9 4 1 8 2 1 2 9 7 5 9 2 6 4 1 5 8 2 9 2 0 4 0 0 2 8 4 7 1 2 4 0 2 7 4 3 3
+ 0 0 3 1 9 6 5 2 5 8 7 9 3 0 4 2 0 7 1 1 2 1 5 3 3 9 7 8 6 5 6 1 3 8 1 0 5
+ 1 3 1 5 5 6 1 8 5 1 7 9 4 6 2 2 5 0 6 5 6 3 7 2 0 8 8 5 4 1 1 4 0 3 3 7 6
+ 1 6 2 1 9 2 8 6 1 9 5 2 5 4 4]
+[INFO 2019-05-06 16:07:37,303 cleverhans] Attack result at iteration 10 is [3 6 1 1 1 3 9 5 2 9 4 5 9 3 9 0 3 6 5 5 7 2 2 7 1 2 8 4 1 7 3 3 8 8 7 9 2
+ 2 4 1 5 9 8 7 2 3 0 2 4 2 4 1 9 5 7 7 2 8 2 0 8 5 7 7 9 1 8 1 8 0 3 0 1 9
+ 9 4 1 8 2 1 2 9 7 5 9 2 6 4 1 5 8 2 9 2 0 4 0 0 2 8 4 7 1 2 4 0 2 7 4 3 3
+ 0 0 3 1 9 6 5 2 5 8 7 9 3 0 4 2 0 7 1 1 2 1 5 3 3 9 7 8 6 5 6 1 3 8 1 0 5
+ 1 3 1 5 5 6 1 8 5 1 7 9 4 6 2 2 5 0 6 5 6 3 7 2 0 8 8 5 4 1 1 4 0 3 3 7 6
+ 1 6 2 1 9 2 8 6 1 9 5 2 5 4 4]
+[INFO 2019-05-06 16:07:37,861 cleverhans] Attack result at iteration 15 is [3 6 1 1 1 3 8 3 2 9 4 3 9 3 9 0 3 6 5 5 7 3 0 7 1 3 8 4 1 7 3 3 8 8 7 9 2
+ 2 4 1 3 9 8 7 2 3 0 4 9 2 4 1 9 5 7 7 2 8 2 6 8 3 7 7 8 8 0 1 8 0 3 0 1 9
+ 3 4 8 8 2 8 2 9 7 3 9 2 6 4 8 8 8 1 7 2 0 4 0 0 2 8 4 7 8 2 7 0 2 7 8 3 8
+ 0 0 3 1 9 6 5 0 8 8 2 9 3 8 8 2 0 7 8 1 2 1 8 8 8 9 7 8 6 3 6 8 3 8 1 0 8
+ 8 7 1 3 3 6 1 8 8 1 7 4 4 6 2 2 5 0 0 5 6 3 7 2 0 8 8 8 4 8 8 4 0 3 8 7 6
+ 8 0 2 1 9 0 8 6 1 9 3 2 5 4 4]
+[INFO 2019-05-06 16:07:38,275 cleverhans] Attack result at iteration 20 is [5 0 7 4 4 3 8 3 7 3 7 3 3 7 4 0 9 6 7 9 9 3 0 3 2 3 3 4 2 3 5 5 8 3 3 7 7
+ 1 9 4 3 5 8 2 7 2 9 4 9 3 9 4 9 3 3 2 1 3 3 6 2 3 3 3 8 8 0 4 8 0 5 0 4 3
+ 3 7 8 3 8 8 3 8 3 3 7 3 6 7 8 8 8 1 7 3 0 9 2 6 3 3 2 3 8 7 7 5 2 3 8 3 8
+ 0 6 5 8 3 5 3 0 8 8 2 3 8 8 8 1 9 3 8 4 2 4 8 8 8 4 3 3 5 3 3 8 5 8 8 0 8
+ 8 7 3 3 3 0 2 6 8 4 7 4 9 5 7 2 3 0 0 3 6 7 2 3 0 3 8 8 9 8 8 7 0 7 8 3 6
+ 8 0 1 7 7 0 8 6 4 7 3 7 3 7 9]
+[INFO 2019-05-06 16:07:38,480 cleverhans] Attack result at iteration 25 is [5 0 7 4 4 5 8 3 7 3 7 3 3 7 4 7 9 5 7 9 9 3 0 3 2 3 3 1 2 3 5 5 5 3 3 7 7
+ 1 9 4 3 5 2 2 7 2 9 4 9 3 9 4 4 3 3 2 1 3 3 6 2 3 3 3 8 8 0 4 5 7 5 7 4 3
+ 3 7 8 3 8 8 3 8 3 3 7 3 5 7 8 8 4 1 7 3 2 9 2 6 3 3 2 3 8 7 7 5 1 3 8 5 8
+ 6 6 5 8 3 5 3 0 8 9 2 3 8 8 8 1 9 3 8 4 1 4 8 8 8 4 3 3 5 3 3 8 5 5 8 2 8
+ 8 7 3 3 3 0 2 6 8 4 4 4 9 5 7 1 3 2 0 3 5 7 2 3 5 3 2 8 9 8 8 7 1 7 8 3 5
+ 8 0 1 7 7 0 2 6 4 7 3 7 3 7 9]
+[INFO 2019-05-06 16:07:38,549 cleverhans] Attack result at iteration 27 is [5 0 7 4 4 5 8 3 7 3 7 3 3 7 4 7 9 5 7 9 9 3 0 3 2 3 3 1 2 3 5 5 5 3 3 7 7
+ 1 9 4 3 5 2 2 7 2 9 4 9 3 9 4 4 3 3 2 1 3 3 6 2 3 3 3 8 8 0 4 5 7 5 7 4 3
+ 3 7 8 3 8 8 3 8 3 3 7 3 5 7 8 8 4 1 7 3 2 9 2 6 3 3 2 3 8 7 7 5 1 3 8 5 8
+ 6 6 5 8 3 5 3 0 8 9 2 3 8 8 8 1 9 3 8 4 1 4 8 8 8 4 3 3 5 3 3 8 5 5 8 2 8
+ 8 7 3 3 3 0 2 6 8 4 4 4 9 5 7 1 3 2 0 3 5 7 2 3 5 3 2 8 9 8 8 7 1 7 8 3 5
+ 8 0 1 7 7 0 2 5 4 7 3 7 3 7 9]
+[INFO 2019-05-06 16:07:38,552 cleverhans] 200 out of 200 become adversarial examples at iteration 27
+[INFO 2019-05-06 16:07:39,186 cleverhans] Attack result at iteration 5 is [2 8 3 8 2 4 5 0 3 1 7 7 5 7 9 7 1 9 2 1 4 2 9 2 0 4 9 1 4 8 1 8 4 5 9 8 8
+ 3 7 6 0 0 3 0 2 0 6 9 9 3 3 3 2 3 9 1 2 6 8 0 5 6 6 6 3 8 8 2 7 5 8 9 6 1
+ 8 4 1 2 5 9 1 9 7 5 4 0 8 9 9 1 0 5 2 3 7 8 9 4 0 6 3 9 5 2 1 3 1 3 6 5 7
+ 4 2 2 6 3 2 6 5 4 8 9 7 1 3 0 3 8 3 1 9 3 4 4 6 4 2 1 8 2 5 4 8 8 4 0 0 2
+ 3 2 7 7 0 8 7 4 4 7 9 6 9 0 9 8 0 4 6 0 6 3 5 4 8 3 3 9 3 3 3 7 8 0 2 7 1
+ 7 0 6 5 4 3 8 0 9 6 3 8 0 9 9]
+[INFO 2019-05-06 16:07:39,779 cleverhans] Attack result at iteration 10 is [2 8 3 8 2 4 5 0 3 1 7 7 5 7 9 7 1 9 2 1 4 2 9 2 0 4 9 1 4 8 1 8 4 5 9 8 8
+ 3 7 6 0 0 3 0 2 0 6 9 8 3 3 3 2 3 9 1 2 6 8 0 5 6 6 6 3 8 8 2 7 5 8 9 6 1
+ 8 4 1 2 5 9 1 9 7 5 4 0 8 9 9 1 0 5 2 3 7 8 9 4 0 6 3 9 5 2 1 3 1 3 6 5 7
+ 4 2 2 6 3 2 6 5 4 8 9 7 1 3 0 3 8 3 1 9 3 4 4 6 4 2 1 8 2 5 4 8 8 4 0 0 2
+ 3 2 7 7 0 8 7 4 4 7 9 6 9 0 9 8 0 4 6 0 6 3 5 4 8 3 3 9 3 3 3 7 8 0 2 7 1
+ 7 0 6 5 4 3 8 0 9 6 3 8 0 9 9]
+[INFO 2019-05-06 16:07:40,312 cleverhans] Attack result at iteration 15 is [8 8 8 8 2 9 9 0 2 8 3 9 3 7 9 9 8 7 2 1 4 2 9 2 0 4 8 8 8 8 8 8 4 5 9 8 8
+ 3 7 6 0 0 3 0 8 6 6 4 8 5 3 3 2 8 9 8 2 6 8 0 5 6 6 0 3 8 8 2 7 3 8 9 6 1
+ 8 9 1 2 3 9 8 7 7 5 4 0 8 9 9 8 0 3 8 8 7 0 9 8 0 6 3 9 3 8 1 8 1 3 6 5 7
+ 8 2 2 6 3 4 6 8 9 8 9 7 7 8 0 3 8 3 8 9 3 0 4 6 4 2 8 8 3 8 9 8 8 4 0 0 8
+ 3 0 3 7 0 8 7 4 4 7 9 6 9 0 9 8 0 9 6 0 6 3 8 9 8 8 8 9 3 3 8 7 8 0 3 2 1
+ 7 0 6 5 9 8 8 0 8 6 3 8 0 9 9]
+[INFO 2019-05-06 16:07:40,721 cleverhans] Attack result at iteration 20 is [8 3 8 8 7 9 9 0 2 8 3 9 3 3 3 9 8 7 7 1 7 3 4 3 9 6 8 8 8 8 8 2 5 3 9 9 2
+ 8 9 5 0 6 3 8 8 6 5 4 8 5 5 7 2 8 7 8 2 5 3 9 9 5 5 0 7 3 8 1 3 3 8 7 0 4
+ 3 9 8 3 3 3 8 7 3 7 9 9 8 4 7 8 4 3 8 8 3 0 7 8 8 6 9 7 3 8 4 8 7 3 5 3 3
+ 8 3 3 0 2 4 0 8 9 8 4 3 7 8 0 5 5 2 8 4 6 0 7 5 7 2 8 8 3 8 9 3 8 7 9 9 8
+ 5 0 3 2 0 5 8 7 9 2 4 4 4 9 3 2 5 9 6 2 5 5 8 9 9 8 8 4 5 9 8 9 3 0 3 2 1
+ 3 6 3 3 9 8 2 9 8 5 5 8 5 8 7]
+[INFO 2019-05-06 16:07:40,920 cleverhans] Attack result at iteration 25 is [8 3 8 9 7 9 9 5 2 8 3 9 3 3 3 9 8 7 7 4 7 3 4 3 9 6 8 8 8 3 8 2 5 3 3 9 2
+ 8 9 5 5 6 5 8 8 6 5 4 8 5 5 7 1 8 7 8 1 5 3 9 9 5 5 0 7 3 3 1 3 3 3 7 0 4
+ 3 9 8 3 3 3 8 7 3 7 9 9 2 4 7 8 4 3 8 8 3 0 7 8 8 5 9 7 3 8 4 8 7 5 5 3 3
+ 8 3 3 0 2 4 0 8 9 5 4 3 7 8 2 5 5 2 8 4 6 0 7 5 7 1 8 2 3 8 9 3 7 7 9 9 8
+ 5 0 3 2 5 5 8 7 9 2 4 4 4 9 3 2 5 9 6 2 5 5 8 9 9 8 8 4 5 9 8 9 3 5 3 2 4
+ 3 6 3 3 9 8 2 9 8 5 5 8 5 8 7]
+[INFO 2019-05-06 16:07:40,955 cleverhans] Attack result at iteration 26 is [8 3 8 9 7 9 9 5 2 8 3 9 3 3 3 9 8 7 7 4 7 3 4 3 9 6 8 8 8 3 8 2 5 3 3 9 2
+ 8 9 5 5 6 5 8 8 6 5 4 8 5 5 7 1 8 7 8 1 5 3 9 9 5 5 0 7 3 3 1 3 3 3 7 0 4
+ 3 9 8 3 3 3 8 7 3 7 9 9 2 4 7 8 4 3 8 8 3 0 7 8 8 5 9 7 3 8 4 8 7 5 5 3 3
+ 8 3 3 0 2 4 0 8 9 5 4 3 7 8 2 5 5 2 8 4 6 0 7 5 7 1 8 2 3 8 9 3 7 7 9 9 8
+ 5 0 3 2 5 5 8 7 9 2 4 4 4 9 3 2 5 9 5 2 5 5 8 9 9 8 8 4 5 9 8 9 3 5 3 2 4
+ 3 6 3 3 9 8 2 9 8 5 5 2 5 8 7]
+[INFO 2019-05-06 16:07:40,958 cleverhans] 200 out of 200 become adversarial examples at iteration 26
+[INFO 2019-05-06 16:07:41,561 cleverhans] Attack result at iteration 5 is [6 8 6 8 5 7 8 6 0 2 4 0 2 2 3 1 9 7 5 8 0 8 4 6 2 6 7 9 3 2 9 8 2 2 9 2 7
+ 3 5 9 1 8 0 2 0 5 2 1 3 7 6 7 1 2 5 8 0 3 7 1 4 0 9 1 8 6 7 7 4 3 4 9 1 9
+ 5 1 7 3 9 7 6 9 1 3 7 8 3 3 6 7 2 8 5 8 5 1 1 4 4 3 1 0 7 7 0 7 9 4 4 8 5
+ 5 4 0 8 2 1 0 8 4 5 0 4 0 6 1 7 3 2 6 7 2 6 9 3 1 4 6 2 5 4 2 0 6 2 1 7 3
+ 4 1 0 5 4 3 1 1 7 4 9 9 4 8 4 0 2 4 5 1 1 6 4 7 1 9 4 2 4 1 5 5 3 8 3 1 4
+ 5 6 8 9 4 1 5 3 8 0 3 2 5 1 2]
+[INFO 2019-05-06 16:07:42,149 cleverhans] Attack result at iteration 10 is [6 8 6 8 5 7 8 6 0 2 4 0 2 2 3 1 9 7 5 8 0 8 4 6 2 6 7 9 3 2 9 8 2 2 9 2 7
+ 3 5 9 1 8 0 2 0 5 2 1 3 7 6 7 1 2 5 8 0 3 7 1 4 0 9 1 8 6 7 7 4 3 4 9 1 9
+ 5 1 7 3 9 7 6 9 1 3 7 8 3 3 6 7 2 8 5 8 5 1 1 4 4 3 1 0 7 7 0 7 9 4 4 8 5
+ 5 4 0 8 2 1 0 8 4 8 0 4 0 6 1 7 3 2 6 7 2 6 9 3 1 4 6 2 5 4 2 0 6 2 1 7 3
+ 4 1 0 5 4 3 1 1 7 4 9 9 4 8 4 0 2 4 5 1 1 6 4 7 1 9 4 2 4 1 5 5 3 8 3 1 4
+ 5 6 8 9 4 1 5 3 8 0 3 2 5 1 2]
+[INFO 2019-05-06 16:07:42,712 cleverhans] Attack result at iteration 15 is [6 8 6 8 8 7 8 6 0 2 2 0 2 8 3 1 9 7 9 8 0 8 9 6 8 6 7 9 3 2 9 8 2 8 9 2 3
+ 3 5 9 1 8 0 2 0 5 6 1 3 7 6 7 1 2 5 8 0 8 7 7 4 0 9 1 8 6 9 7 4 3 7 9 8 9
+ 3 8 7 3 9 7 6 9 1 3 3 8 3 8 6 4 2 8 3 8 8 7 1 4 9 3 8 0 7 7 0 7 9 4 9 8 5
+ 5 4 0 8 2 7 0 8 4 8 0 9 0 6 8 7 3 8 6 7 2 6 9 3 8 9 6 8 5 4 8 0 6 2 1 7 8
+ 4 1 0 3 4 3 8 1 7 9 9 9 9 8 9 0 2 4 5 1 8 6 9 7 1 9 9 2 4 1 8 8 3 8 3 1 4
+ 5 6 8 9 4 8 5 8 8 0 3 2 8 1 2]
+[INFO 2019-05-06 16:07:43,145 cleverhans] Attack result at iteration 20 is [5 8 0 8 8 9 3 3 9 2 2 6 3 8 8 6 3 2 9 1 0 8 9 6 8 4 3 9 9 3 5 8 7 8 9 1 3
+ 2 7 8 3 6 2 2 0 3 6 8 5 2 6 9 4 3 3 2 5 8 4 7 7 6 3 1 3 5 9 7 3 8 7 3 8 9
+ 3 8 2 2 7 2 4 7 4 5 3 8 2 8 5 4 3 4 3 8 8 7 7 2 9 7 8 9 7 3 0 3 9 9 9 8 3
+ 3 9 3 3 3 7 5 2 9 8 9 9 4 6 8 4 8 8 5 5 3 0 9 5 8 9 0 8 3 9 8 0 6 9 7 9 8
+ 9 7 6 3 7 2 8 4 7 9 7 3 9 6 9 9 7 7 3 2 8 5 9 9 7 9 9 3 4 3 8 8 3 9 2 4 5
+ 3 5 3 4 7 8 9 8 3 0 3 3 8 8 1]
+[INFO 2019-05-06 16:07:43,352 cleverhans] Attack result at iteration 25 is [5 7 0 5 8 9 3 3 9 3 2 6 3 8 8 6 3 2 9 1 2 2 9 5 8 4 3 7 9 3 5 8 7 8 7 1 3
+ 2 7 8 3 6 2 1 2 3 6 8 5 2 5 9 4 3 3 2 5 8 4 7 7 6 3 4 3 5 9 1 3 8 7 3 8 4
+ 3 8 2 2 7 2 4 7 4 5 3 3 2 8 5 4 3 4 3 3 8 7 7 2 9 7 8 9 2 3 2 3 7 9 9 2 3
+ 3 9 3 3 3 7 5 2 9 8 9 9 4 2 8 4 8 8 5 5 3 0 3 5 8 9 0 8 3 9 8 2 5 9 7 9 8
+ 9 7 6 3 7 2 8 4 2 9 7 3 9 6 9 9 7 7 3 2 8 5 9 9 7 3 9 3 5 3 8 8 7 9 2 4 5
+ 3 5 3 4 7 8 9 8 3 2 1 3 8 8 1]
+[INFO 2019-05-06 16:07:43,387 cleverhans] Attack result at iteration 26 is [5 7 0 5 8 9 3 3 9 3 2 6 3 8 8 6 3 2 9 1 2 2 9 5 8 4 3 7 9 3 5 7 7 8 7 1 3
+ 2 7 8 3 6 2 1 2 3 6 8 5 2 5 9 4 3 3 2 5 8 4 7 7 6 3 4 3 5 9 1 3 8 7 3 8 4
+ 3 8 2 2 7 2 4 7 4 5 3 3 2 8 5 4 3 4 3 3 8 7 7 2 9 7 8 9 2 3 2 3 7 9 9 2 3
+ 3 9 3 3 3 7 5 2 9 8 9 9 4 2 8 4 8 8 5 5 3 0 3 5 8 9 0 8 3 9 8 2 5 9 7 9 8
+ 9 7 6 3 7 2 8 4 2 9 7 3 9 6 9 9 7 7 3 2 8 5 9 9 7 3 9 3 5 3 8 8 7 9 2 4 5
+ 3 5 3 4 7 8 9 8 3 2 1 3 8 8 1]
+[INFO 2019-05-06 16:07:43,390 cleverhans] 200 out of 200 become adversarial examples at iteration 26
+[INFO 2019-05-06 16:07:43,986 cleverhans] Attack result at iteration 5 is [8 3 4 4 0 8 8 3 3 1 7 3 5 9 6 3 2 6 1 3 6 0 7 2 1 7 1 4 2 4 2 1 7 9 6 1 1
+ 2 4 8 1 7 7 4 8 0 7 3 1 3 1 0 7 7 0 3 5 5 2 7 6 6 9 2 8 3 5 2 2 5 6 0 8 2
+ 9 2 8 8 8 8 7 4 7 3 0 6 6 3 2 1 3 2 2 9 3 0 0 5 7 8 1 4 4 6 0 2 9 1 4 7 4
+ 7 3 9 8 8 4 7 1 2 1 2 2 3 2 3 2 3 9 1 7 4 0 3 5 5 8 6 3 0 6 7 6 6 3 2 7 9
+ 1 1 7 5 6 4 9 5 1 3 3 4 7 8 9 1 1 0 9 1 4 4 5 4 0 6 2 2 3 1 5 1 2 0 3 8 1
+ 2 6 7 1 6 2 3 9 0 1 2 2 0 8 9]
+[INFO 2019-05-06 16:07:44,617 cleverhans] Attack result at iteration 10 is [8 3 4 4 0 8 8 3 3 1 7 3 5 8 6 3 2 6 1 3 6 0 7 2 1 7 1 4 2 4 2 1 7 9 6 1 1
+ 2 4 8 1 7 7 4 8 0 7 3 1 3 1 0 7 7 0 3 5 5 2 7 6 6 9 2 8 3 5 2 2 5 6 0 8 2
+ 9 2 8 8 8 8 7 4 9 3 0 6 6 3 2 1 3 2 2 9 3 0 0 5 7 8 1 4 4 6 0 2 9 1 4 7 4
+ 7 3 9 8 8 4 7 1 2 1 2 2 3 2 3 2 3 9 1 7 4 0 3 5 5 8 6 3 0 6 7 6 6 3 2 7 9
+ 1 1 7 5 6 4 9 5 1 3 3 4 7 8 9 1 1 0 9 1 4 4 5 4 0 6 2 2 3 1 5 1 2 0 3 8 1
+ 2 6 7 1 6 2 3 9 0 1 2 2 0 8 9]
+[INFO 2019-05-06 16:07:45,182 cleverhans] Attack result at iteration 15 is [8 3 4 4 0 8 8 8 3 8 7 3 5 8 6 3 2 6 8 3 6 0 7 8 8 7 8 4 3 8 2 8 7 9 6 7 1
+ 2 4 3 1 7 7 4 8 0 9 8 8 3 8 0 7 8 0 8 8 5 8 7 6 6 9 2 8 3 6 2 2 5 6 0 8 2
+ 9 8 8 8 8 8 7 4 9 3 0 6 6 3 2 1 3 2 8 9 3 0 6 8 7 8 3 4 9 6 9 2 9 1 4 7 4
+ 7 3 9 8 8 4 7 8 2 1 2 2 3 7 3 8 8 8 8 8 4 0 3 5 8 8 6 5 0 6 7 6 6 8 2 7 8
+ 1 8 7 5 6 4 9 5 1 3 3 4 7 8 9 7 1 6 8 8 4 4 5 8 0 6 2 8 8 1 8 1 2 0 3 8 8
+ 8 6 7 8 0 2 8 9 0 8 0 2 0 8 9]
+[INFO 2019-05-06 16:07:45,594 cleverhans] Attack result at iteration 20 is [3 5 7 7 9 8 3 8 9 8 2 3 3 8 6 9 1 0 8 5 5 9 3 8 8 9 8 7 3 8 2 8 3 7 6 7 2
+ 2 7 3 7 2 2 7 7 2 9 8 8 2 8 0 9 8 9 8 8 3 8 9 5 0 7 3 5 5 6 1 0 8 5 6 9 2
+ 4 8 3 6 9 8 2 9 9 5 2 6 0 5 7 4 5 1 8 9 8 0 6 8 3 5 3 9 9 6 9 7 7 4 1 7 7
+ 3 9 5 3 8 0 9 8 3 4 3 2 9 7 5 8 8 8 8 8 9 9 2 9 8 5 6 5 2 5 9 6 6 8 3 2 8
+ 4 8 3 7 0 4 3 3 3 3 2 5 9 8 7 7 4 6 8 8 1 7 3 8 2 0 1 8 8 2 8 8 3 6 2 8 8
+ 8 5 7 8 0 7 8 4 7 8 0 1 0 5 7]
+[INFO 2019-05-06 16:07:45,782 cleverhans] Attack result at iteration 25 is [3 5 7 7 9 2 3 8 9 8 2 9 3 8 6 9 1 0 8 5 5 9 3 8 8 9 8 7 3 8 1 8 3 7 2 7 2
+ 1 7 3 7 2 2 7 7 2 9 8 8 2 8 2 9 8 9 8 8 3 8 9 5 0 7 3 5 5 6 1 0 8 5 6 9 1
+ 4 8 3 6 9 5 2 9 9 5 2 6 0 5 7 4 5 1 8 7 8 2 6 8 3 5 3 9 9 5 9 7 7 4 1 2 7
+ 3 9 5 3 8 0 9 8 3 4 3 1 9 7 5 8 8 8 8 8 9 9 2 9 8 5 4 5 2 5 9 5 5 8 3 2 8
+ 4 8 3 7 0 1 3 3 3 5 2 5 9 2 7 7 4 6 8 8 1 7 3 8 2 0 1 8 8 2 8 8 3 6 2 2 8
+ 8 5 3 8 0 7 8 4 7 8 0 1 9 5 7]
+[INFO 2019-05-06 16:07:45,858 cleverhans] Attack result at iteration 27 is [3 5 7 7 9 2 3 8 9 8 2 9 3 8 5 9 1 0 8 5 5 9 3 8 8 9 8 7 3 8 1 8 3 7 2 7 2
+ 1 7 3 7 2 2 7 7 2 9 8 8 2 8 2 9 8 9 8 8 3 8 9 5 0 7 3 5 5 6 1 0 8 5 6 9 1
+ 4 8 3 6 9 5 2 9 9 5 2 5 0 5 7 4 5 1 8 7 8 2 6 8 3 5 3 9 9 5 9 7 7 4 1 2 7
+ 3 9 5 3 5 0 9 8 3 4 3 1 9 7 5 8 8 8 8 8 9 9 2 9 8 5 4 5 2 5 9 5 5 8 3 2 8
+ 4 8 3 7 0 1 3 3 3 5 2 5 9 2 7 7 4 6 8 8 1 7 3 8 2 0 1 8 8 2 8 8 3 6 2 2 8
+ 8 5 3 8 0 7 8 4 7 8 0 1 9 5 7]
+[INFO 2019-05-06 16:07:45,861 cleverhans] 200 out of 200 become adversarial examples at iteration 27
+[INFO 2019-05-06 16:07:46,475 cleverhans] Attack result at iteration 5 is [9 0 2 5 1 9 7 8 1 0 4 1 7 9 5 4 2 6 8 1 3 7 5 4 4 1 8 1 3 8 1 2 5 8 0 6 2
+ 1 1 1 1 5 3 4 6 9 5 0 9 2 2 4 8 2 1 7 2 4 9 4 4 0 3 9 2 2 3 3 8 3 5 7 3 5
+ 8 1 2 4 4 6 4 9 5 1 0 6 9 5 9 5 9 7 3 8 0 3 7 1 3 6 7 8 5 9 7 9 6 9 6 3 7
+ 4 6 5 3 5 4 7 8 7 8 0 7 6 8 8 7 3 3 1 9 5 2 7 3 5 1 1 2 1 4 7 4 7 5 4 5 4
+ 0 8 3 6 9 6 0 2 7 4 4 4 4 6 6 4 7 9 3 4 5 5 8 7 3 7 2 7 0 2 0 1 1 6 5 9 2
+ 8 7 2 0 1 5 0 9 1 7 0 6 0 8 6]
+[INFO 2019-05-06 16:07:47,066 cleverhans] Attack result at iteration 10 is [9 0 2 5 1 9 7 8 1 0 4 1 7 9 5 4 2 6 8 1 3 7 5 4 4 1 8 1 3 8 1 2 5 8 0 6 2
+ 1 1 1 1 5 3 4 6 9 5 0 9 2 2 4 8 2 1 7 2 4 9 4 4 0 3 9 2 2 3 3 8 3 5 7 3 5
+ 8 1 2 4 4 6 4 9 5 1 0 6 9 5 9 5 9 7 3 8 0 3 7 1 3 6 7 8 5 9 7 9 6 9 6 3 7
+ 4 6 5 3 5 4 7 8 7 8 0 7 6 8 8 7 3 3 1 9 5 2 7 3 5 1 1 2 1 4 7 4 7 5 4 5 4
+ 0 8 3 6 9 6 0 2 7 4 4 4 4 6 6 4 7 9 3 4 5 5 8 7 3 7 2 7 0 2 0 1 1 6 5 9 2
+ 8 7 2 0 1 5 0 9 1 7 0 6 0 8 6]
+[INFO 2019-05-06 16:07:47,634 cleverhans] Attack result at iteration 15 is [9 0 3 5 8 9 7 8 8 0 8 1 7 9 0 8 3 6 8 7 8 7 5 4 8 8 8 1 3 8 1 2 5 8 0 6 2
+ 8 8 7 8 5 3 9 8 9 5 0 9 2 0 9 8 2 8 4 2 9 9 4 9 0 9 9 2 2 3 8 8 3 8 7 3 8
+ 8 8 2 4 4 6 9 9 3 1 0 6 9 8 9 5 9 7 3 8 0 3 9 8 3 6 7 8 5 9 7 9 6 9 6 3 7
+ 9 6 8 3 5 4 7 8 8 8 0 7 6 8 8 7 8 7 8 9 6 2 7 8 8 8 8 2 1 9 7 4 7 5 9 5 4
+ 0 8 3 6 9 6 0 2 8 7 9 4 4 6 6 4 7 9 8 4 3 3 8 7 3 7 2 7 0 2 4 8 1 6 6 8 8
+ 8 7 2 0 8 8 7 9 1 7 8 6 0 8 6]
+[INFO 2019-05-06 16:07:47,995 cleverhans] Attack result at iteration 20 is [3 2 3 3 8 3 9 8 8 2 8 8 3 4 0 8 3 5 8 7 8 2 9 7 8 8 8 7 5 7 7 7 6 1 0 6 3
+ 8 8 7 8 9 5 9 8 1 3 9 3 3 0 9 3 3 8 4 3 9 7 9 9 5 9 7 1 1 7 8 8 5 8 9 5 8
+ 2 8 3 9 2 0 9 9 3 8 5 5 8 8 9 3 9 3 3 2 0 9 9 8 5 6 8 3 3 9 3 3 6 3 5 2 9
+ 9 4 8 8 3 9 3 8 8 8 6 2 6 8 8 9 8 7 8 4 6 7 9 8 8 8 8 1 8 9 2 7 3 3 9 3 7
+ 6 3 5 5 9 6 0 3 8 7 9 7 9 5 5 7 9 7 8 7 3 3 8 3 5 9 2 3 8 3 4 8 8 1 6 8 8
+ 3 5 1 0 8 8 7 4 4 9 8 6 6 8 5]
+[INFO 2019-05-06 16:07:48,200 cleverhans] Attack result at iteration 25 is [3 2 3 3 8 3 9 9 8 2 8 8 3 4 0 8 3 5 3 7 8 2 9 7 8 8 9 7 5 7 7 7 6 1 2 4 3
+ 8 8 7 8 9 5 9 8 1 3 9 3 3 0 9 3 3 8 4 3 9 7 9 9 5 9 7 1 1 7 8 4 5 8 9 5 8
+ 2 8 3 9 2 0 9 7 3 8 5 5 8 8 7 3 7 3 5 2 2 9 9 8 5 5 8 3 3 5 3 3 5 3 5 2 9
+ 9 4 8 8 3 9 3 2 8 2 6 2 5 9 3 9 8 7 8 4 6 7 9 8 8 8 8 1 8 9 2 7 3 3 9 3 7
+ 6 3 5 5 7 5 7 3 8 7 9 7 9 5 5 7 9 7 8 7 3 3 5 3 5 9 1 3 8 3 4 8 8 1 6 8 8
+ 3 5 1 7 8 8 7 4 4 9 8 6 6 5 5]
+[INFO 2019-05-06 16:07:48,265 cleverhans] Attack result at iteration 27 is [3 2 3 3 8 3 9 9 8 2 8 8 3 4 0 8 3 5 3 7 8 2 9 7 8 8 9 7 5 7 7 7 6 1 2 4 3
+ 8 8 7 8 9 5 9 8 1 3 9 3 3 0 9 3 3 8 4 3 9 7 9 9 5 9 7 1 1 7 8 4 5 8 9 5 8
+ 2 8 3 9 2 0 9 7 3 8 5 5 8 8 7 3 7 3 5 2 2 9 9 8 5 5 8 3 3 5 3 3 5 3 5 2 9
+ 9 4 8 8 3 9 3 2 8 2 6 2 5 9 3 9 8 7 8 4 6 7 9 8 8 8 8 1 8 9 2 7 3 3 9 3 7
+ 6 3 5 5 7 5 7 3 8 7 9 7 9 5 5 7 9 7 8 7 3 3 5 3 5 9 1 3 8 3 4 8 8 1 6 8 8
+ 3 5 1 7 8 8 7 4 4 9 8 5 6 5 5]
+[INFO 2019-05-06 16:07:48,267 cleverhans] 200 out of 200 become adversarial examples at iteration 27
+[INFO 2019-05-06 16:07:48,833 cleverhans] Attack result at iteration 5 is [8 1 8 0 3 3 7 2 3 6 2 1 6 1 1 3 7 9 0 8 0 5 4 0 2 8 2 2 9 8 4 0 4 5 8 5 1
+ 2 1 3 1 7 4 5 7 2 0 5 8 8 6 2 5 4 1 9 2 1 5 8 1 0 2 4 4 3 6 8 8 2 4 0 5 0
+ 4 4 7 9 3 4 1 5 9 7 3 5 8 8 0 5 3 3 6 6 0 1 6 0 3 5 4 4 1 2 9 1 4 6 9 9 3
+ 9 8 4 4 3 1 3 1 0 8 7 9 4 8 8 7 9 7 1 4 5 6 0 5 2 2 2 1 5 5 2 4 9 6 2 7 7
+ 2 2 1 1 2 8 3 7 2 4 1 7 1 7 6 7 8 2 7 3 1 7 5 8 2 6 2 2 5 6 5 0 9 2 4 3 3
+ 9 7 6 6 8 0 4 1 3 8 2 9 1 8 0]
+[INFO 2019-05-06 16:07:49,438 cleverhans] Attack result at iteration 10 is [8 1 8 0 3 3 7 2 3 6 2 1 6 1 1 3 7 9 0 8 0 5 4 0 2 8 2 2 9 8 4 0 4 5 8 5 1
+ 2 1 3 1 7 4 5 7 2 0 0 8 8 6 2 5 4 1 9 2 1 5 8 1 0 2 4 4 3 6 8 8 2 4 0 5 0
+ 4 4 7 9 3 4 1 5 9 7 3 5 8 8 0 5 3 3 6 6 0 1 6 0 3 5 4 4 1 2 9 1 4 6 9 9 3
+ 9 8 4 4 3 1 3 1 0 8 7 9 4 8 8 7 9 8 1 4 5 6 0 5 2 2 2 1 5 5 2 4 9 6 2 7 7
+ 2 2 1 1 2 8 3 7 2 4 1 7 1 7 6 7 8 2 7 3 1 7 5 8 2 6 2 2 5 6 5 0 9 2 4 3 3
+ 9 7 6 6 8 0 4 1 3 8 2 9 1 8 0]
+[INFO 2019-05-06 16:07:50,023 cleverhans] Attack result at iteration 15 is [8 8 8 0 3 3 8 2 8 8 2 1 6 1 1 8 7 8 0 8 0 5 4 0 2 8 7 2 9 8 9 0 6 5 8 8 1
+ 2 1 3 8 7 9 6 7 3 0 0 8 8 6 2 3 4 1 9 2 1 8 8 7 0 2 4 9 3 6 8 8 2 4 0 9 0
+ 6 4 7 9 8 4 8 0 9 7 3 8 8 8 0 3 3 3 6 6 0 8 6 0 3 7 4 4 1 8 9 8 9 6 9 9 3
+ 9 8 8 4 3 1 8 7 0 8 7 8 7 8 8 7 9 8 8 4 3 6 0 5 2 2 2 1 3 8 2 9 9 6 2 7 7
+ 0 3 8 1 0 8 8 9 8 4 8 7 1 7 6 7 8 2 7 8 8 7 8 8 2 6 3 2 8 6 6 0 9 3 4 8 8
+ 9 7 6 0 8 0 4 1 3 8 8 9 1 8 0]
+[INFO 2019-05-06 16:07:50,407 cleverhans] Attack result at iteration 20 is [8 8 8 9 7 9 8 3 8 8 3 7 8 4 8 8 9 8 0 3 5 3 7 6 4 8 7 1 3 3 9 2 6 3 5 8 1
+ 2 4 5 8 1 9 6 3 3 5 0 3 8 8 0 3 6 8 3 7 7 8 8 7 2 3 9 9 2 6 8 8 0 7 2 9 0
+ 6 9 3 9 8 7 8 0 2 2 5 8 8 8 6 3 5 5 5 5 0 8 5 0 7 7 4 9 1 8 3 8 9 6 3 7 5
+ 4 3 8 4 3 8 8 7 3 3 9 8 7 8 8 2 3 8 8 9 3 0 9 3 1 1 6 7 3 8 2 9 4 0 7 7 4
+ 0 3 8 8 0 3 8 9 8 7 8 3 1 9 4 4 2 1 7 8 8 3 8 8 3 6 3 1 8 5 6 2 3 3 9 8 8
+ 4 3 6 0 5 9 9 4 5 3 8 7 4 3 0]
+[INFO 2019-05-06 16:07:50,625 cleverhans] Attack result at iteration 25 is [5 8 5 9 7 9 8 3 8 8 3 7 8 4 8 8 9 8 2 3 5 3 7 6 4 5 7 1 3 3 9 2 6 3 5 8 4
+ 1 4 5 8 1 9 6 3 3 5 0 3 3 8 0 3 6 8 3 7 7 8 5 7 2 3 9 9 2 1 3 2 0 7 2 9 6
+ 6 9 3 5 8 7 8 0 2 2 5 8 2 3 6 3 5 5 5 5 7 8 5 2 7 7 7 9 4 8 3 8 9 5 3 7 5
+ 4 3 8 1 5 8 8 7 3 3 9 8 7 8 2 2 3 8 8 9 3 0 9 3 1 1 6 7 3 8 1 9 4 0 7 1 4
+ 0 3 8 8 0 3 8 9 8 7 8 3 4 9 4 4 2 1 1 8 8 3 8 2 3 5 3 1 8 5 6 2 3 3 9 8 8
+ 4 3 4 0 5 9 9 4 5 3 8 7 4 3 5]
+[INFO 2019-05-06 16:07:50,792 cleverhans] Attack result at iteration 30 is [5 8 5 9 7 9 8 3 8 8 3 7 8 4 8 8 9 8 2 3 5 3 7 6 4 5 7 1 3 3 9 2 6 3 5 8 4
+ 1 4 5 8 1 9 6 3 3 5 0 3 3 8 0 3 6 8 3 7 7 8 5 7 2 3 9 9 2 1 3 2 0 7 2 9 6
+ 6 9 3 5 8 7 8 0 2 2 5 8 2 3 6 3 5 5 5 5 7 8 5 2 7 7 7 9 4 8 3 8 9 5 3 7 5
+ 4 3 8 1 5 8 8 7 3 3 9 8 7 8 2 2 3 8 8 9 3 0 9 3 1 1 6 7 3 8 1 9 4 0 7 1 4
+ 0 3 8 8 0 3 8 9 8 7 8 3 4 9 4 4 2 1 1 8 8 3 8 2 3 5 3 1 8 5 6 2 3 3 9 8 8
+ 4 3 4 0 5 9 9 4 5 3 8 7 4 3 5]
+[INFO 2019-05-06 16:07:50,827 cleverhans] Attack result at iteration 31 is [5 8 5 9 7 9 8 3 8 8 3 7 8 4 8 8 9 8 2 3 5 3 7 6 4 5 7 1 3 3 9 2 6 3 5 8 4
+ 1 4 5 8 1 9 6 3 3 5 0 3 3 8 0 3 6 8 3 7 7 8 5 7 2 3 9 9 2 1 3 2 0 7 2 9 6
+ 6 9 3 5 8 7 8 0 2 2 5 8 2 3 6 3 5 5 5 5 7 8 5 2 7 7 7 9 4 8 3 8 9 5 3 7 5
+ 4 3 8 1 5 8 8 7 3 3 9 8 7 2 2 2 3 8 8 9 3 0 9 3 1 1 6 7 3 8 1 9 4 0 7 1 4
+ 0 3 8 8 0 3 8 9 8 7 8 3 4 9 4 4 2 1 1 8 8 3 8 2 3 5 3 1 8 5 6 2 3 3 9 8 8
+ 4 3 4 0 5 9 9 4 5 3 8 7 4 3 5]
+[INFO 2019-05-06 16:07:50,830 cleverhans] 200 out of 200 become adversarial examples at iteration 31
+[INFO 2019-05-06 16:07:51,442 cleverhans] Attack result at iteration 5 is [6 7 2 1 0 5 5 2 0 2 2 0 2 4 9 8 0 9 9 4 6 5 4 9 1 8 3 4 9 9 1 2 2 8 1 9 6
+ 4 0 9 4 8 3 8 6 0 2 5 1 9 6 2 9 4 0 9 6 0 6 2 5 4 2 3 8 4 5 5 0 3 8 5 3 5
+ 8 6 5 7 6 3 3 9 6 1 1 2 9 0 4 3 3 6 9 5 7 3 7 7 7 8 7 9 8 3 0 7 2 7 9 4 5
+ 4 9 3 2 1 4 0 2 3 7 5 7 8 8 5 0 1 1 4 8 3 9 0 0 0 6 6 2 3 7 8 4 7 7 9 2 4
+ 1 4 5 2 4 9 9 1 8 4 0 3 8 4 8 7 7 0 7 8 8 6 0 4 8 8 2 4 7 6 6 6 4 7 1 8 8
+ 2 3 6 3 0 0 3 7 6 9 7 9 9 5 4]
+[INFO 2019-05-06 16:07:52,018 cleverhans] Attack result at iteration 10 is [6 7 2 1 0 5 5 2 0 2 2 0 2 4 9 8 0 9 9 4 6 5 4 9 1 8 3 4 9 9 1 2 2 8 1 9 6
+ 4 0 9 4 8 3 8 6 0 2 5 1 9 6 2 9 4 0 9 6 0 6 2 5 4 2 3 8 4 5 5 0 3 8 5 3 5
+ 8 6 5 7 6 3 3 9 6 1 1 2 9 0 4 3 3 6 9 5 7 3 7 7 7 8 7 9 8 3 0 7 2 7 9 4 5
+ 4 9 3 2 1 4 0 2 3 7 5 7 8 8 5 0 1 1 4 8 3 9 0 0 0 6 6 2 3 7 8 4 7 7 9 2 4
+ 1 4 5 2 4 3 9 1 8 4 0 3 8 4 8 7 7 0 7 8 8 6 0 4 8 8 2 4 7 6 6 6 4 7 1 8 8
+ 2 3 6 3 0 0 3 7 6 9 7 9 9 5 4]
+[INFO 2019-05-06 16:07:52,590 cleverhans] Attack result at iteration 15 is [6 7 2 6 0 8 8 2 0 2 3 8 2 4 7 8 0 9 9 4 6 8 9 9 8 8 8 9 9 9 8 2 8 8 1 9 6
+ 4 0 9 9 8 3 8 0 0 2 5 1 9 6 2 9 4 8 4 6 0 6 2 8 4 0 3 3 4 3 5 9 3 8 8 3 8
+ 8 6 3 7 6 3 3 9 6 8 8 2 9 0 4 5 3 6 9 8 7 3 9 7 7 8 7 9 8 3 0 7 8 9 9 4 5
+ 8 9 3 8 8 4 0 2 3 7 5 7 8 8 3 0 5 8 4 7 3 8 0 0 0 8 6 2 3 7 8 9 7 7 9 2 4
+ 8 6 8 8 9 3 8 8 8 9 0 9 8 4 8 7 7 0 7 8 3 4 0 4 8 8 2 9 7 6 6 6 4 9 8 8 8
+ 2 3 6 3 0 0 8 7 6 9 7 9 9 8 9]
+[INFO 2019-05-06 16:07:52,986 cleverhans] Attack result at iteration 20 is [6 9 7 6 8 8 8 3 2 2 3 8 2 1 7 6 0 5 3 9 0 8 9 7 8 4 8 9 4 4 8 3 8 3 4 4 6
+ 9 5 9 9 2 8 3 0 0 3 6 7 7 0 3 4 9 8 4 0 0 5 7 8 7 0 3 3 4 3 3 9 3 3 8 5 8
+ 8 0 3 7 8 9 8 3 5 8 8 7 3 5 9 5 5 5 9 8 0 3 9 2 3 3 3 3 8 9 0 2 8 9 9 7 9
+ 8 3 5 8 8 9 0 1 2 2 3 9 8 3 3 8 5 8 6 7 5 8 6 0 7 8 0 3 5 3 8 9 3 3 3 3 3
+ 8 6 8 8 9 3 8 8 3 9 8 9 6 3 0 7 9 6 9 8 3 4 6 9 9 2 2 9 9 4 3 8 7 9 8 8 8
+ 3 9 5 9 6 8 8 1 6 9 3 9 7 8 9]
+[INFO 2019-05-06 16:07:53,194 cleverhans] Attack result at iteration 25 is [5 9 7 6 8 8 8 3 2 7 3 8 2 1 7 6 2 5 3 9 0 8 9 7 8 4 8 9 4 4 8 3 8 3 4 4 5
+ 9 5 4 9 2 8 3 0 2 3 6 7 7 0 3 4 9 8 4 0 5 5 7 8 7 0 9 3 4 3 3 9 5 3 8 5 8
+ 2 0 3 2 8 9 8 3 5 8 8 7 3 5 9 5 5 5 7 8 0 2 9 2 3 3 3 3 3 9 7 2 8 9 4 7 9
+ 8 3 5 8 8 9 9 1 2 2 3 9 5 3 3 8 5 8 6 7 5 8 6 2 7 8 0 3 5 3 5 9 3 3 3 3 3
+ 8 6 8 8 9 3 8 8 3 9 8 9 6 3 0 1 9 6 9 3 3 4 6 9 9 2 1 9 9 4 3 8 7 9 8 3 2
+ 3 9 5 9 6 8 8 1 6 4 3 7 7 8 9]
+[INFO 2019-05-06 16:07:53,292 cleverhans] Attack result at iteration 28 is [5 9 7 6 8 8 8 3 2 7 3 8 1 1 7 6 2 5 3 9 0 8 9 7 8 4 8 9 4 4 8 3 8 3 4 4 5
+ 9 5 4 9 2 8 3 0 2 3 6 7 7 0 3 4 9 8 4 0 5 5 7 8 7 0 9 3 1 3 3 9 5 3 8 5 8
+ 2 0 3 2 8 9 8 3 5 8 8 7 3 5 9 5 5 5 7 8 0 2 9 2 3 3 3 3 3 9 7 2 8 9 4 7 9
+ 8 3 5 8 8 9 9 1 2 2 3 9 5 3 3 8 5 8 6 7 5 8 6 2 7 8 0 3 5 3 5 9 3 3 3 3 3
+ 8 6 8 8 9 3 8 8 3 9 8 9 6 3 0 1 9 6 9 3 3 4 6 9 9 2 1 9 9 4 3 8 7 9 8 3 2
+ 3 9 5 9 6 8 8 1 1 4 3 7 7 8 9]
+[INFO 2019-05-06 16:07:53,295 cleverhans] 200 out of 200 become adversarial examples at iteration 28
+[INFO 2019-05-06 16:07:53,939 cleverhans] Attack result at iteration 5 is [3 3 6 1 2 3 7 3 3 2 0 3 3 8 4 3 6 3 5 0 2 0 9 0 7 4 6 9 3 5 1 9 6 1 4 5 4
+ 5 0 5 9 5 2 1 2 9 1 9 9 4 0 8 4 5 2 9 2 1 2 1 7 3 6 8 8 4 9 1 9 8 5 7 5 1
+ 1 8 6 5 2 4 4 3 2 3 5 6 8 8 6 2 3 1 0 5 8 9 2 9 6 7 0 4 8 7 1 7 4 1 0 3 7
+ 2 0 0 9 1 7 8 7 8 4 7 2 0 4 6 0 3 1 1 3 3 9 6 7 4 1 5 3 0 8 7 3 9 6 9 3 5
+ 0 2 7 4 5 1 7 5 8 0 8 8 1 5 0 3 0 3 1 4 0 3 7 2 7 1 8 0 7 0 4 3 1 9 8 7 7
+ 1 4 9 9 3 2 1 7 9 0 2 0 3 3 7]
+[INFO 2019-05-06 16:07:54,517 cleverhans] Attack result at iteration 10 is [3 3 6 1 2 3 7 3 3 2 0 3 3 8 4 3 6 3 5 0 2 0 9 0 7 4 6 9 3 5 1 9 6 1 4 5 4
+ 5 0 5 9 5 2 1 2 9 1 9 9 4 0 8 4 5 2 9 2 1 2 1 7 3 6 8 8 4 9 1 9 8 5 7 5 1
+ 1 8 6 5 2 4 4 3 2 3 5 6 8 8 6 2 3 1 0 5 8 9 2 9 6 7 0 4 8 7 1 7 4 1 0 3 7
+ 2 0 0 9 1 7 8 7 8 4 7 2 0 4 6 0 3 1 1 3 3 9 6 7 4 1 5 3 0 8 7 3 9 6 9 3 5
+ 0 2 7 4 5 1 7 5 8 0 8 8 1 5 0 3 0 3 1 4 0 3 7 2 7 1 8 0 7 0 4 3 1 9 8 7 7
+ 1 4 9 9 3 2 1 7 9 0 2 0 3 3 7]
+[INFO 2019-05-06 16:07:55,081 cleverhans] Attack result at iteration 15 is [5 3 6 1 2 3 9 3 3 3 0 3 3 8 4 8 6 3 8 6 2 6 9 0 7 4 5 9 3 8 8 9 6 1 8 5 4
+ 3 0 5 9 5 2 8 8 9 8 9 9 4 0 8 9 5 2 9 2 8 2 1 7 3 6 8 8 9 9 8 9 8 3 7 5 1
+ 1 8 6 8 0 9 4 7 2 3 3 6 8 8 6 2 3 1 0 3 8 9 2 9 0 7 0 4 8 7 8 7 4 1 0 5 7
+ 3 0 0 9 8 7 0 7 8 4 4 2 0 4 6 0 3 8 8 8 8 8 6 9 4 1 5 3 0 8 7 8 9 6 9 8 8
+ 0 2 7 4 5 1 2 9 8 0 8 8 1 9 0 3 0 5 1 4 8 3 7 2 7 6 8 0 7 0 9 3 8 9 8 9 7
+ 1 8 9 9 3 7 1 7 9 0 2 0 3 3 7]
+[INFO 2019-05-06 16:07:55,437 cleverhans] Attack result at iteration 20 is [5 7 6 8 3 9 9 5 3 3 0 3 5 3 9 8 0 2 8 6 3 6 7 9 9 5 5 3 5 8 8 7 6 8 8 3 2
+ 3 6 9 9 3 6 8 8 9 8 4 7 7 2 8 9 3 3 9 2 8 2 7 2 2 6 3 3 9 3 8 4 3 3 3 9 7
+ 8 2 5 8 0 9 9 7 0 2 3 6 8 8 6 2 9 8 2 3 3 7 1 4 0 7 5 5 8 9 8 3 9 4 9 5 3
+ 3 9 9 4 8 7 0 2 3 6 4 7 6 7 8 9 7 8 8 8 8 8 0 9 5 4 1 2 6 5 7 8 7 6 9 8 8
+ 7 7 3 2 3 4 2 9 8 0 3 8 8 9 0 3 2 5 4 9 8 2 3 2 5 6 8 5 2 2 9 2 8 0 9 9 3
+ 8 8 7 4 2 7 8 3 7 2 3 2 5 5 3]
+[INFO 2019-05-06 16:07:55,647 cleverhans] Attack result at iteration 25 is [5 7 5 8 3 9 9 5 5 3 5 5 5 3 9 8 0 2 8 6 3 6 7 9 9 5 5 3 5 8 8 7 0 8 8 3 2
+ 3 6 9 9 3 6 8 8 7 8 4 7 7 2 2 9 3 3 7 1 8 1 7 2 2 5 3 3 9 3 8 4 3 3 3 9 7
+ 8 2 5 8 0 9 9 7 0 2 3 5 5 1 5 7 9 8 2 3 3 7 1 4 0 9 5 5 8 9 8 3 9 4 9 5 3
+ 3 9 9 4 8 1 0 2 3 6 4 7 6 7 8 9 7 8 8 8 8 8 0 9 5 4 1 2 6 5 1 8 7 5 4 8 8
+ 7 7 3 2 3 4 2 9 5 7 3 8 8 9 5 5 2 5 4 9 8 2 3 1 5 6 5 5 2 2 9 2 8 0 9 9 3
+ 8 8 7 4 2 7 8 3 7 2 3 2 5 5 3]
+[INFO 2019-05-06 16:07:55,820 cleverhans] Attack result at iteration 30 is [5 7 5 8 3 9 9 5 5 3 5 5 5 3 9 8 0 2 8 6 3 6 7 9 9 5 5 3 5 8 8 7 0 8 8 3 2
+ 3 6 9 7 3 6 8 8 7 8 4 7 7 2 2 9 3 3 7 1 8 1 7 2 2 5 3 3 9 3 8 4 3 3 3 9 7
+ 8 2 5 8 0 9 9 7 0 2 3 5 5 1 5 7 9 8 2 3 3 7 1 4 0 9 5 5 5 9 8 3 9 4 9 5 3
+ 3 9 9 4 8 1 0 2 3 6 4 7 6 7 8 9 7 8 8 8 8 8 0 9 5 4 1 2 6 5 1 8 7 5 4 8 8
+ 7 7 3 2 3 4 2 9 5 7 3 8 8 9 5 5 2 5 4 9 8 2 3 1 5 6 5 5 2 2 9 2 8 0 9 9 3
+ 8 8 7 4 2 7 8 3 7 2 3 2 5 5 3]
+[INFO 2019-05-06 16:07:55,855 cleverhans] Attack result at iteration 31 is [5 7 5 8 3 9 9 5 5 3 5 5 5 3 9 8 0 2 8 6 3 6 7 9 9 5 5 3 5 8 8 7 0 8 8 3 2
+ 3 6 9 7 3 6 8 8 7 8 4 7 7 2 2 9 3 3 7 1 8 1 7 2 2 5 3 3 9 3 8 4 3 3 3 9 7
+ 8 2 5 8 0 9 9 7 0 2 3 5 5 1 5 7 9 8 2 3 3 7 1 4 0 9 5 5 5 9 8 3 9 4 9 5 3
+ 3 9 9 4 8 1 0 2 3 6 4 7 6 7 8 9 7 8 8 8 8 8 0 9 5 4 1 2 6 5 1 8 7 5 4 8 8
+ 7 7 3 2 3 4 2 9 5 7 3 2 8 9 5 5 2 5 4 9 8 2 3 1 5 6 5 5 2 2 9 2 8 0 9 9 3
+ 8 8 7 4 2 7 8 3 7 2 3 2 5 5 3]
+[INFO 2019-05-06 16:07:55,859 cleverhans] 200 out of 200 become adversarial examples at iteration 31
+[INFO 2019-05-06 16:07:56,448 cleverhans] Attack result at iteration 5 is [6 9 2 3 3 7 7 0 0 7 5 2 9 8 7 4 4 2 6 6 1 9 6 8 2 9 0 8 3 1 1 6 3 5 1 1 1
+ 3 1 2 3 0 2 0 1 3 5 5 7 4 8 9 6 9 6 8 3 6 6 8 5 1 4 2 4 4 5 1 1 9 0 2 4 9
+ 5 7 1 8 3 5 6 9 8 7 1 1 6 7 6 3 2 2 0 8 9 2 5 1 0 8 1 4 5 7 9 6 9 0 6 1 5
+ 5 8 3 8 2 6 5 0 7 4 6 1 3 4 7 3 2 3 4 2 5 2 7 1 7 2 6 4 1 5 7 8 6 0 1 8 2
+ 5 7 7 6 9 3 5 8 4 2 4 0 8 8 3 4 9 2 7 5 8 6 5 6 0 8 6 7 3 6 4 9 4 6 8 3 2
+ 4 1 0 1 4 6 2 9 1 1 0 6 3 9 5]
+[INFO 2019-05-06 16:07:57,039 cleverhans] Attack result at iteration 10 is [6 9 2 3 3 7 7 0 0 7 5 2 9 8 7 4 4 2 6 6 1 9 6 8 2 9 0 8 3 1 1 6 3 5 1 1 1
+ 3 1 2 3 0 2 0 1 3 5 5 7 4 8 9 6 9 6 8 3 6 6 8 5 1 4 2 4 4 5 1 1 9 0 2 4 9
+ 5 7 1 8 3 5 6 9 8 7 1 1 6 7 6 3 2 2 0 8 9 2 5 1 0 8 1 4 5 7 9 6 9 0 6 1 5
+ 5 8 3 8 2 6 5 0 7 4 6 1 3 4 7 3 2 3 4 2 5 2 7 1 7 2 6 4 1 5 7 8 6 0 1 8 2
+ 5 7 7 6 9 3 5 8 4 2 4 0 8 8 3 4 9 2 7 5 8 6 5 6 0 8 6 7 3 6 4 9 4 6 8 3 2
+ 4 1 0 1 4 6 2 9 1 1 0 6 3 9 5]
+[INFO 2019-05-06 16:07:57,623 cleverhans] Attack result at iteration 15 is [6 9 2 3 8 7 7 0 0 9 5 2 9 8 8 9 9 2 6 6 1 9 6 8 2 9 9 8 3 1 8 6 3 3 8 8 8
+ 3 1 8 8 0 3 0 1 3 3 8 3 4 8 9 6 9 6 8 3 6 6 8 5 8 4 3 9 4 3 8 4 9 0 8 7 9
+ 5 7 1 8 8 5 0 9 8 9 8 8 6 7 6 3 2 2 0 8 8 2 3 8 0 8 6 9 5 7 9 6 9 0 6 1 5
+ 5 8 8 8 2 6 5 0 7 4 6 8 8 4 7 3 2 3 9 2 3 2 7 1 7 8 6 6 1 5 2 8 6 0 8 8 2
+ 5 7 7 6 8 3 9 8 4 2 4 0 8 8 3 9 9 2 7 8 8 0 3 6 0 8 6 7 3 6 4 9 7 6 8 8 0
+ 4 8 0 2 4 6 2 8 1 8 0 6 3 9 3]
+[INFO 2019-05-06 16:07:57,978 cleverhans] Attack result at iteration 20 is [6 7 9 5 8 3 2 9 4 9 3 3 7 5 8 9 9 1 5 0 7 5 5 2 3 4 9 2 7 4 8 6 3 3 8 8 8
+ 5 2 8 8 5 3 0 7 9 3 8 3 7 7 4 3 7 5 8 2 4 6 2 3 8 4 3 9 9 3 8 4 3 0 8 7 3
+ 9 2 8 8 8 3 0 4 3 9 8 8 8 5 5 3 3 3 5 3 8 3 3 8 0 3 6 9 3 2 4 6 8 7 8 7 9
+ 0 8 8 8 7 6 3 0 3 7 0 8 8 9 3 5 3 5 9 4 3 7 3 8 3 8 5 6 8 0 2 2 8 9 8 3 7
+ 3 2 9 6 8 3 9 2 7 3 7 0 8 8 5 9 7 2 3 8 8 0 3 6 9 5 6 3 5 0 9 7 7 9 6 8 0
+ 7 8 9 2 9 0 2 8 7 8 9 5 9 4 3]
+[INFO 2019-05-06 16:07:58,168 cleverhans] Attack result at iteration 25 is [2 7 9 5 8 3 2 9 4 9 3 3 7 5 8 9 9 1 5 0 7 5 5 2 3 4 9 2 7 4 8 5 5 3 8 8 8
+ 5 2 8 8 5 3 2 7 9 3 8 3 7 7 4 3 7 5 3 2 4 5 2 3 8 4 3 9 9 3 8 4 3 5 8 7 3
+ 9 2 8 6 8 3 0 4 3 9 8 8 8 5 5 5 3 3 5 3 8 3 3 8 5 3 6 9 3 2 4 5 8 7 8 7 9
+ 0 0 8 8 7 5 3 2 3 7 0 8 8 9 3 5 3 5 9 4 3 7 3 8 3 8 5 6 8 0 2 2 8 9 8 3 7
+ 3 2 9 4 8 9 9 2 7 3 7 7 8 2 5 9 7 1 3 8 1 0 3 5 9 5 5 3 5 0 9 7 7 9 6 8 0
+ 7 8 9 2 9 0 7 8 7 8 9 5 9 4 3]
+[INFO 2019-05-06 16:07:58,233 cleverhans] Attack result at iteration 27 is [2 7 9 5 8 3 2 9 4 9 3 3 7 5 8 9 9 1 5 0 7 5 5 2 3 4 9 2 7 4 8 5 5 3 8 8 8
+ 5 2 8 8 5 3 2 7 9 3 8 3 7 7 4 3 7 5 3 2 4 5 2 3 8 1 3 9 9 3 8 4 3 5 8 7 3
+ 9 2 8 6 8 3 0 4 3 9 8 8 8 5 5 5 3 3 5 3 8 3 3 8 5 3 6 9 3 2 4 5 8 7 8 7 9
+ 0 0 8 5 7 5 3 2 3 7 0 8 8 9 3 5 3 5 9 4 3 7 3 8 3 8 5 6 8 0 2 2 8 9 8 3 7
+ 3 2 9 4 8 9 9 2 7 3 7 7 2 2 5 9 7 1 3 8 1 0 3 5 9 5 5 3 5 0 9 7 7 9 6 8 0
+ 7 8 9 2 9 0 7 8 7 8 9 5 9 4 3]
+[INFO 2019-05-06 16:07:58,235 cleverhans] 200 out of 200 become adversarial examples at iteration 27
+[INFO 2019-05-06 16:07:58,787 cleverhans] Attack result at iteration 5 is [6 5 6 5 8 4 6 4 3 9 1 3 4 1 9 1 7 1 8 9 3 5 4 0 7 3 6 1 7 5 5 3 3 0 1 3 7
+ 5 8 6 5 1 0 8 2 3 4 6 7 9 8 1 8 4 9 2 8 6 2 7 0 0 6 7 5 8 6 0 9 3 9 1 3 5
+ 4 3 3 5 5 6 3 0 2 3 4 2 3 0 9 9 4 7 2 8 4 7 0 6 0 8 5 2 8 5 7 3 0 8 2 3 2
+ 8 2 5 5 7 6 4 6 8 4 8 2 7 4 5 2 0 3 9 9 6 7 2 5 1 1 1 2 3 6 7 8 7 6 4 8 9
+ 4 8 6 3 8 3 1 0 6 2 2 5 6 9 5 8 1 4 1 7 8 4 6 1 8 4 3 1 2 8 0 8 5 9 1 4 2
+ 0 2 7 0 9 0 2 5 7 6 7 9 4 2 6]
+[INFO 2019-05-06 16:07:59,383 cleverhans] Attack result at iteration 10 is [6 5 6 5 8 4 6 4 3 9 1 3 4 1 9 1 7 1 8 9 3 5 4 0 7 3 6 1 7 5 5 3 3 0 1 3 7
+ 5 8 6 5 1 0 8 2 3 4 6 7 9 8 1 8 4 9 2 8 6 2 7 0 0 6 7 5 8 6 0 9 3 7 1 3 5
+ 4 3 3 5 5 6 3 0 2 3 4 2 3 0 9 9 4 7 2 8 4 7 0 6 0 8 5 2 8 5 7 3 0 8 2 3 2
+ 8 2 5 5 7 6 4 6 8 4 8 2 7 4 5 2 0 3 9 9 6 7 2 5 1 1 1 2 3 6 7 8 7 6 4 8 9
+ 4 8 6 3 8 3 1 0 6 2 2 5 6 9 5 8 1 4 1 7 8 4 6 1 8 4 3 1 2 8 0 8 5 9 1 4 2
+ 0 2 7 0 7 0 2 5 7 6 7 9 4 2 6]
+[INFO 2019-05-06 16:07:59,997 cleverhans] Attack result at iteration 15 is [6 8 6 8 8 9 6 4 3 9 8 3 8 1 9 1 7 1 7 9 3 3 4 0 9 8 6 8 7 5 8 3 3 0 8 3 7
+ 9 8 6 8 1 0 8 2 3 4 6 7 9 8 8 8 4 9 2 8 6 2 7 0 0 6 3 5 8 6 0 9 8 7 8 3 0
+ 8 8 8 5 5 6 3 0 2 8 9 8 9 0 9 9 4 7 2 8 9 7 0 6 0 8 5 2 8 8 7 8 0 0 2 9 8
+ 8 2 5 3 7 6 4 0 8 4 8 2 3 4 5 2 0 9 9 9 6 7 2 5 6 1 1 8 8 6 7 8 7 6 4 8 9
+ 9 8 6 3 8 3 1 0 6 2 2 8 6 9 8 8 1 9 1 7 8 9 6 1 8 4 3 4 2 8 0 8 3 9 2 4 2
+ 8 3 7 0 7 0 8 8 7 6 2 9 4 2 6]
+[INFO 2019-05-06 16:08:00,421 cleverhans] Attack result at iteration 20 is [5 8 0 8 3 9 5 4 5 7 8 8 8 1 7 8 2 4 7 9 5 3 9 5 9 8 6 8 1 7 8 5 5 2 8 5 9
+ 9 3 6 8 7 0 4 7 3 9 5 9 4 3 8 4 9 7 3 3 0 7 3 0 0 0 3 3 3 0 6 4 8 7 8 5 0
+ 8 8 8 3 3 6 7 0 2 8 9 8 9 6 7 4 1 3 2 8 9 3 9 5 2 8 3 3 8 8 9 8 9 0 3 9 8
+ 8 3 3 3 0 5 7 0 3 7 8 3 3 7 9 1 6 9 2 4 0 3 1 3 6 1 7 8 8 0 3 3 7 0 0 9 9
+ 9 7 6 5 3 3 7 6 0 2 2 8 6 4 8 3 1 9 8 3 2 9 5 4 3 9 5 4 3 3 2 3 3 7 2 6 3
+ 8 3 3 5 7 0 8 8 3 5 2 9 7 1 0]
+[INFO 2019-05-06 16:08:00,651 cleverhans] Attack result at iteration 25 is [5 8 0 8 3 9 5 1 5 7 8 8 8 4 7 8 2 4 7 4 5 3 9 5 9 8 5 8 1 7 8 5 5 2 8 5 9
+ 9 3 5 8 7 2 4 7 5 9 5 9 4 3 8 4 9 7 3 3 0 7 3 0 2 0 3 3 3 0 6 4 8 7 8 5 0
+ 8 8 8 3 3 5 7 2 2 8 9 8 9 6 7 4 1 3 3 0 9 3 9 5 2 3 3 3 2 8 9 8 9 0 3 9 8
+ 5 3 3 3 0 5 7 0 3 7 5 3 3 7 9 1 6 9 2 4 0 3 1 3 6 3 7 8 8 0 3 3 2 0 0 9 4
+ 9 7 5 5 3 5 7 6 0 1 7 8 5 4 8 3 4 9 8 3 2 9 5 4 3 9 5 4 3 3 2 3 3 7 2 6 3
+ 8 3 3 5 7 0 8 8 3 5 2 4 7 1 0]
+[INFO 2019-05-06 16:08:00,754 cleverhans] Attack result at iteration 28 is [5 8 0 8 3 9 5 1 5 7 8 8 8 4 7 8 2 4 7 4 5 3 9 5 9 8 5 8 1 7 8 5 5 2 8 5 9
+ 9 3 5 8 7 2 4 7 5 9 5 9 4 3 8 4 9 7 3 3 0 7 3 5 2 0 3 3 3 0 6 4 8 7 8 5 0
+ 8 8 8 3 3 5 7 2 1 8 9 8 9 6 7 4 1 3 3 0 9 3 9 5 2 3 3 3 2 8 9 8 9 0 3 9 8
+ 5 3 3 3 0 5 7 0 3 7 5 3 3 7 9 1 6 9 2 4 0 3 1 3 6 3 7 8 8 0 3 3 2 0 0 9 4
+ 9 7 5 5 3 5 7 6 0 1 7 8 5 4 8 3 4 9 8 3 2 9 5 4 3 9 5 4 3 3 2 3 3 7 2 6 3
+ 8 3 3 5 7 2 8 8 3 5 2 4 7 1 0]
+[INFO 2019-05-06 16:08:00,758 cleverhans] 200 out of 200 become adversarial examples at iteration 28
+[INFO 2019-05-06 16:08:01,355 cleverhans] Attack result at iteration 5 is [2 4 4 8 0 4 4 5 8 0 6 8 9 8 5 6 9 0 4 8 7 1 3 4 5 8 0 9 1 3 3 6 9 8 7 1 0
+ 5 7 1 7 5 2 7 9 1 8 5 2 4 9 4 7 2 2 3 4 9 1 9 2 1 7 9 4 4 1 6 7 2 7 8 8 1
+ 9 7 1 1 7 5 3 3 5 1 3 7 6 1 3 8 7 5 9 0 0 0 2 8 8 2 3 7 1 3 0 3 4 4 3 8 9
+ 2 3 9 7 1 1 7 0 4 9 6 5 9 1 7 0 2 0 0 4 6 7 0 7 1 4 6 4 5 4 9 9 1 7 9 5 3
+ 3 8 2 3 6 2 2 1 1 1 1 1 6 9 8 4 3 7 1 6 4 5 0 4 7 4 2 4 0 7 0 1 9 8 8 6 0
+ 0 4 1 6 8 2 2 3 8 4 8 2 2 1 7]
+[INFO 2019-05-06 16:08:01,991 cleverhans] Attack result at iteration 10 is [2 4 4 8 0 4 4 5 8 0 6 8 9 8 5 6 9 0 4 8 7 1 3 4 5 8 0 9 1 3 3 6 9 8 7 1 0
+ 5 7 1 7 5 2 7 9 1 8 5 2 4 9 4 7 2 2 3 4 9 1 9 2 1 7 9 4 4 1 6 7 2 7 8 8 1
+ 9 7 1 1 7 5 3 3 5 1 3 7 6 1 3 8 7 5 9 0 0 0 2 8 8 2 3 7 1 3 0 3 4 4 3 8 9
+ 2 3 9 7 1 1 7 0 4 9 6 5 9 1 7 0 2 0 0 4 6 7 0 7 1 4 6 4 5 4 9 9 1 7 9 5 3
+ 3 8 2 3 6 2 2 1 1 1 1 1 6 9 8 4 3 7 1 6 4 5 0 4 7 4 2 4 0 7 0 1 9 8 8 6 0
+ 0 4 1 6 8 2 2 3 8 4 8 2 2 1 7]
+[INFO 2019-05-06 16:08:02,555 cleverhans] Attack result at iteration 15 is [3 4 8 8 0 7 8 8 8 0 6 8 8 8 5 6 9 0 9 8 7 7 3 8 5 8 0 9 1 8 8 6 9 8 7 1 0
+ 8 7 8 7 8 2 7 9 1 8 5 2 9 9 9 7 8 3 3 4 9 1 9 8 8 7 9 4 7 1 6 9 2 7 8 0 1
+ 9 7 8 7 7 3 3 3 3 8 8 7 6 1 3 8 7 5 3 0 0 0 2 8 8 8 3 7 7 3 0 3 4 9 5 8 9
+ 2 3 9 7 8 8 7 0 0 9 6 8 9 1 7 0 2 8 0 9 6 7 9 7 8 4 6 4 8 9 9 9 7 7 9 5 3
+ 3 8 2 3 6 2 2 1 8 1 1 1 6 9 8 4 3 8 1 6 4 3 0 9 9 4 2 9 0 7 0 1 0 8 8 6 0
+ 0 4 9 6 8 2 2 3 3 4 8 0 2 1 7]
+[INFO 2019-05-06 16:08:02,919 cleverhans] Attack result at iteration 20 is [3 9 8 3 8 7 8 8 3 0 0 8 8 3 3 5 4 0 9 2 3 7 2 8 6 8 6 7 7 8 8 6 4 8 2 2 2
+ 8 3 8 3 8 3 3 4 4 8 3 3 9 4 9 3 8 3 8 9 7 2 9 8 8 9 9 4 7 3 5 9 3 3 2 0 7
+ 4 3 8 7 2 3 5 8 3 8 8 3 0 8 5 2 9 3 3 4 5 6 2 3 0 8 7 3 7 5 6 8 1 9 5 5 3
+ 7 5 3 2 8 8 3 6 0 4 6 8 7 8 7 5 3 8 0 9 6 3 9 9 8 9 6 9 8 9 7 9 7 7 7 3 8
+ 7 5 4 2 5 3 2 8 8 4 4 7 6 4 8 7 5 8 7 6 9 3 6 9 9 7 3 9 0 3 5 2 0 3 2 5 9
+ 8 7 9 6 3 2 1 2 3 3 8 0 3 8 3]
+[INFO 2019-05-06 16:08:03,119 cleverhans] Attack result at iteration 25 is [3 9 8 3 8 7 8 8 3 2 0 3 8 3 3 5 4 2 9 2 3 7 2 8 6 3 6 7 7 8 8 5 4 5 2 2 2
+ 8 3 8 3 8 3 3 4 4 8 3 3 9 4 9 3 8 3 8 9 7 2 7 8 8 9 7 5 7 3 5 9 3 3 2 0 7
+ 4 3 8 7 2 3 5 8 3 8 8 3 0 8 5 2 9 3 3 4 5 6 1 3 0 8 7 3 7 5 6 8 1 9 5 5 3
+ 7 5 3 2 8 8 3 6 0 4 2 8 7 8 2 5 3 8 2 9 5 3 9 9 8 9 5 9 8 9 7 7 7 1 7 3 8
+ 7 5 4 2 5 3 1 8 8 4 4 7 6 4 2 7 5 8 7 5 9 3 6 9 9 7 3 9 2 3 5 2 0 3 2 5 9
+ 8 7 9 5 3 1 1 2 3 3 2 0 3 8 3]
+[INFO 2019-05-06 16:08:03,223 cleverhans] Attack result at iteration 28 is [3 9 8 3 8 7 8 8 3 2 0 3 8 3 3 5 4 2 9 2 3 7 2 8 6 3 6 7 7 8 8 5 4 5 2 2 2
+ 8 3 8 3 8 3 3 4 4 5 3 3 9 4 9 3 8 3 8 9 7 2 7 8 8 9 7 5 7 3 5 9 3 3 2 0 7
+ 4 3 8 7 2 3 5 8 3 8 8 3 0 8 5 2 9 3 3 4 5 6 1 3 0 8 7 3 7 5 6 8 1 9 5 5 3
+ 7 5 3 2 8 8 3 6 0 4 2 8 7 8 2 5 3 8 2 9 5 3 9 9 8 9 5 9 8 9 7 7 7 1 7 3 8
+ 7 5 4 2 5 3 1 8 8 4 4 7 5 4 2 7 5 8 7 5 9 3 6 9 9 7 3 9 2 3 5 2 0 3 2 5 9
+ 8 7 9 5 3 1 1 2 3 3 2 0 3 8 3]
+[INFO 2019-05-06 16:08:03,227 cleverhans] 200 out of 200 become adversarial examples at iteration 28
+[INFO 2019-05-06 16:08:03,847 cleverhans] Attack result at iteration 5 is [5 4 4 0 4 3 9 7 3 1 0 1 2 5 4 2 1 0 1 8 9 1 6 8 3 8 9 3 6 2 8 3 2 2 1 0 4
+ 2 9 2 4 3 7 9 1 5 2 4 9 0 3 8 5 3 6 0 9 4 6 2 5 0 0 7 4 6 6 8 6 6 8 6 9 1
+ 7 2 5 9 9 0 7 2 7 6 7 0 6 5 4 4 7 2 0 9 9 2 2 9 4 4 2 3 3 2 1 7 0 7 6 4 1
+ 3 8 7 4 5 9 2 5 1 8 7 3 7 1 5 5 0 9 1 4 0 6 3 3 6 0 4 9 7 5 1 6 8 9 5 5 7
+ 9 3 8 3 8 1 5 3 5 0 5 5 3 8 6 7 7 7 3 7 0 5 9 0 2 5 5 3 1 7 7 8 6 5 7 3 8
+ 9 5 3 7 9 1 7 0 0 3 7 2 3 8 1]
+[INFO 2019-05-06 16:08:04,388 cleverhans] Attack result at iteration 10 is [5 4 4 0 4 3 8 7 3 1 0 1 2 5 4 2 1 0 1 8 9 1 6 8 3 8 9 3 6 2 8 3 2 2 1 0 4
+ 2 9 2 4 3 7 9 1 5 2 4 9 0 3 8 5 3 6 0 9 4 6 2 5 0 0 7 4 6 6 8 6 6 8 6 9 1
+ 7 2 5 9 9 0 7 2 7 6 7 0 6 5 4 4 7 2 0 9 9 2 2 9 4 4 2 3 3 2 1 7 0 7 6 4 1
+ 3 8 7 4 5 9 2 5 1 8 7 3 7 1 5 5 0 9 1 4 0 6 3 3 6 0 4 9 7 5 1 6 8 9 5 5 7
+ 9 3 8 3 8 1 5 3 5 0 5 5 3 8 6 7 7 7 3 7 0 5 9 0 2 5 5 3 1 7 7 8 6 5 3 3 8
+ 9 5 3 7 9 1 7 0 0 3 7 2 3 8 1]
+[INFO 2019-05-06 16:08:04,979 cleverhans] Attack result at iteration 15 is [5 9 9 0 4 3 8 3 3 1 0 8 2 5 4 7 8 0 7 8 9 1 6 8 3 8 9 3 6 2 8 3 2 2 1 0 8
+ 2 9 2 4 3 7 9 8 5 2 4 8 0 8 8 3 3 6 0 8 8 6 2 5 0 0 9 9 6 6 8 6 6 8 6 9 1
+ 7 2 5 9 9 0 7 2 7 6 7 0 6 8 4 9 7 2 0 9 9 8 3 8 9 4 2 3 8 2 1 9 0 3 6 4 8
+ 3 8 7 9 6 9 3 5 1 8 0 3 7 8 3 3 0 9 8 9 0 6 3 5 0 0 9 9 7 3 8 6 8 9 3 5 7
+ 9 8 8 8 8 1 5 3 5 0 3 3 3 8 6 7 7 7 8 7 0 3 8 0 8 5 3 8 1 7 2 8 6 5 3 8 8
+ 9 5 3 7 0 1 7 0 0 3 7 2 3 8 8]
+[INFO 2019-05-06 16:08:05,394 cleverhans] Attack result at iteration 20 is [3 9 9 5 2 2 8 3 5 7 0 8 2 3 9 7 8 6 7 3 7 1 4 8 3 3 4 5 6 2 3 9 2 1 8 5 8
+ 2 7 2 7 7 2 7 8 9 2 9 8 8 8 8 3 9 5 6 8 8 6 7 3 0 2 9 9 6 6 3 6 0 8 3 4 8
+ 8 1 3 4 8 2 9 3 3 6 8 9 6 8 2 9 9 3 0 3 7 8 3 8 9 9 3 9 8 3 1 9 6 3 6 5 8
+ 8 3 2 9 6 2 3 9 7 3 0 5 4 8 3 3 6 4 8 9 5 6 1 5 0 6 9 8 3 3 8 0 8 7 3 9 3
+ 4 8 3 8 3 3 3 9 3 0 3 3 8 8 5 2 7 3 8 3 5 3 8 8 8 8 3 8 4 7 2 2 6 9 3 8 8
+ 7 3 5 5 0 8 3 0 9 5 9 7 5 8 8]
+[INFO 2019-05-06 16:08:05,611 cleverhans] Attack result at iteration 25 is [3 9 9 5 2 2 8 3 5 7 2 8 1 3 9 7 8 6 7 3 7 4 4 3 5 3 4 5 5 1 3 9 1 1 8 5 8
+ 1 7 1 7 7 2 7 8 9 1 9 8 8 8 2 3 9 5 6 8 8 5 7 3 2 2 9 9 5 2 3 5 0 2 3 4 8
+ 8 1 3 4 8 2 9 3 3 5 8 9 4 8 2 9 9 3 2 3 7 8 3 8 9 9 3 9 8 3 4 9 6 3 0 5 8
+ 8 3 2 9 6 2 3 9 7 3 0 5 4 8 3 3 6 4 8 9 5 5 1 5 0 6 9 8 3 3 8 0 3 7 3 9 3
+ 4 8 3 8 3 3 3 9 3 7 3 3 8 9 5 2 1 3 8 3 5 3 8 8 8 8 3 8 4 1 2 2 5 9 3 8 5
+ 7 3 5 5 0 8 3 2 9 5 9 7 5 8 8]
+[INFO 2019-05-06 16:08:05,684 cleverhans] Attack result at iteration 27 is [3 9 9 5 2 2 8 3 5 7 2 8 1 3 9 7 8 6 7 3 7 4 4 3 5 3 4 5 5 1 3 9 1 1 8 5 8
+ 1 7 1 7 7 2 7 8 9 1 9 8 8 8 2 3 9 5 6 8 8 5 7 3 2 2 9 9 5 2 3 5 0 2 3 4 8
+ 8 1 3 4 8 2 9 3 3 5 8 9 4 8 2 9 9 3 2 3 7 8 3 8 9 9 3 9 8 3 4 9 6 3 0 5 8
+ 8 3 2 9 6 2 3 9 7 3 0 5 4 8 3 3 6 4 8 9 5 5 1 5 0 6 9 8 3 3 8 0 3 7 3 9 3
+ 4 8 3 8 3 3 3 9 3 7 3 3 8 9 5 2 1 3 8 3 5 3 8 8 8 8 3 8 4 1 2 2 5 9 3 8 5
+ 7 3 5 5 0 8 3 2 9 5 9 7 5 1 8]
+[INFO 2019-05-06 16:08:05,687 cleverhans] 200 out of 200 become adversarial examples at iteration 27
+[INFO 2019-05-06 16:08:06,324 cleverhans] Attack result at iteration 5 is [8 6 2 9 5 7 5 2 8 6 2 5 1 4 8 4 5 8 3 0 6 2 7 3 3 2 1 0 7 3 4 0 3 9 3 2 8
+ 9 0 3 8 0 7 6 5 4 7 3 9 0 8 6 2 5 1 1 0 0 4 4 0 1 2 3 2 7 7 8 5 2 5 7 6 9
+ 1 4 1 6 4 2 4 3 5 4 3 9 5 0 1 5 3 8 9 1 9 7 9 5 5 2 7 4 6 0 1 1 1 0 4 4 7
+ 6 3 0 0 4 3 0 6 1 4 6 1 3 8 1 2 5 6 2 7 3 6 0 1 9 7 6 6 8 9 2 9 5 8 3 1 0
+ 0 7 6 6 2 1 6 9 3 1 8 6 9 0 6 0 0 0 6 3 5 9 8 4 5 5 8 5 3 0 4 0 2 9 6 8 2
+ 3 1 2 1 1 5 6 9 8 0 6 6 5 5 3]
+[INFO 2019-05-06 16:08:06,979 cleverhans] Attack result at iteration 10 is [8 6 2 9 5 7 5 2 8 6 2 5 1 4 8 4 5 8 3 0 6 2 7 3 3 2 1 0 7 3 4 0 3 9 3 2 8
+ 9 0 3 8 0 7 6 5 4 7 3 9 0 8 6 2 5 1 1 0 0 4 4 0 1 2 3 2 7 7 8 5 2 5 7 6 9
+ 1 4 1 6 4 2 4 3 5 4 3 9 5 0 1 5 3 8 9 1 9 7 9 5 5 2 7 4 6 0 1 1 1 0 4 4 7
+ 6 3 0 0 4 3 0 6 1 4 6 1 3 8 1 2 5 6 2 7 3 6 0 1 9 7 6 6 8 9 2 9 5 8 3 1 0
+ 0 7 6 6 2 1 6 9 3 1 8 6 9 0 6 0 0 0 6 3 5 9 8 4 5 5 8 5 3 0 4 0 2 9 6 8 2
+ 3 1 2 1 1 5 6 9 8 0 6 6 5 5 3]
+[INFO 2019-05-06 16:08:07,553 cleverhans] Attack result at iteration 15 is [8 6 2 8 3 7 5 7 8 6 8 3 1 4 8 9 5 8 3 0 6 2 7 3 8 2 1 0 7 3 9 6 8 9 3 7 8
+ 9 0 3 8 0 7 6 5 4 7 3 9 0 8 6 2 5 1 8 0 0 6 8 0 8 6 3 3 7 7 8 5 2 8 7 6 9
+ 1 9 1 6 9 2 4 3 5 4 3 9 8 0 1 5 8 8 9 8 9 7 9 8 3 8 7 4 6 0 8 1 8 0 4 4 7
+ 6 8 0 0 4 8 0 6 8 9 6 1 3 8 1 2 3 6 2 4 3 6 0 8 9 7 0 6 8 9 2 9 8 8 3 1 0
+ 0 7 6 6 2 8 6 9 3 8 8 6 9 6 6 0 0 0 6 3 8 7 3 9 5 8 8 8 8 6 0 0 3 9 6 8 2
+ 3 8 2 8 8 5 0 9 8 0 6 6 3 5 8]
+[INFO 2019-05-06 16:08:07,983 cleverhans] Attack result at iteration 20 is [3 0 1 8 3 4 3 7 9 5 8 3 8 7 2 9 3 8 5 2 6 3 3 3 8 2 8 5 3 5 9 6 8 8 9 7 5
+ 9 6 5 8 0 4 6 3 9 3 3 5 0 8 5 2 3 2 8 5 9 6 8 0 8 6 8 3 3 3 8 9 2 8 2 0 3
+ 8 9 7 6 9 7 9 2 3 9 7 9 8 5 8 3 8 3 7 8 9 3 7 8 3 8 9 4 0 0 8 8 8 0 4 7 3
+ 0 8 8 6 7 8 2 6 8 9 5 3 2 8 7 0 3 0 3 4 5 5 0 8 7 2 0 0 8 7 2 7 8 3 2 7 7
+ 2 9 0 0 3 8 0 4 2 8 3 6 4 6 0 0 0 6 0 2 8 7 3 9 3 8 8 8 8 6 0 5 3 7 5 8 2
+ 5 8 3 8 8 3 0 9 8 0 6 8 3 9 8]
+[INFO 2019-05-06 16:08:08,223 cleverhans] Attack result at iteration 25 is [3 0 1 8 3 4 3 7 9 5 8 3 8 7 2 9 3 7 5 2 5 3 3 5 8 1 8 5 3 5 9 6 8 8 9 7 5
+ 4 6 5 2 5 4 6 3 9 3 5 5 2 8 5 1 3 2 8 5 9 6 8 2 8 6 8 3 3 3 8 9 1 8 2 0 3
+ 8 9 7 5 9 7 9 2 3 9 7 4 8 5 8 3 8 3 7 8 7 3 7 8 3 8 9 7 0 5 8 8 8 2 5 7 3
+ 0 8 8 6 7 8 2 4 8 9 5 3 2 8 7 0 3 0 3 4 5 5 0 8 7 2 0 0 4 7 1 7 8 3 2 7 7
+ 2 9 0 0 3 8 0 4 2 8 3 2 4 6 0 7 2 6 0 2 8 7 3 9 3 8 5 8 8 6 0 5 3 7 5 2 1
+ 5 8 3 8 8 3 0 4 2 7 5 8 3 9 8]
+[INFO 2019-05-06 16:08:08,301 cleverhans] Attack result at iteration 27 is [3 0 1 8 3 4 3 7 9 5 8 3 8 7 2 9 3 7 5 2 5 3 3 5 8 1 8 5 3 5 9 6 8 8 9 7 5
+ 4 6 5 2 5 4 5 3 9 3 5 5 2 5 5 1 3 2 8 5 9 6 8 2 8 6 8 3 3 3 5 9 1 8 2 0 3
+ 8 9 7 5 9 7 9 2 3 9 7 4 8 5 8 3 8 3 7 8 7 3 7 8 3 8 9 7 0 5 8 8 8 2 5 7 3
+ 0 8 8 6 7 8 2 4 8 9 5 3 2 5 7 0 3 0 3 4 5 5 2 8 7 2 0 0 4 7 1 7 8 3 2 7 7
+ 2 9 0 0 3 8 0 4 2 8 3 2 4 6 0 7 2 6 0 2 8 7 3 9 3 8 5 8 8 6 0 5 3 7 5 2 1
+ 5 8 3 8 8 3 0 4 2 7 5 8 3 9 8]
+[INFO 2019-05-06 16:08:08,304 cleverhans] 200 out of 200 become adversarial examples at iteration 27
+[INFO 2019-05-06 16:08:08,965 cleverhans] Attack result at iteration 5 is [8 6 2 1 4 5 4 3 7 8 5 0 9 3 5 1 1 0 4 4 7 0 1 7 0 1 6 1 4 5 6 6 5 7 8 4 4
+ 7 2 5 3 7 0 7 7 9 6 4 2 8 5 7 8 3 9 5 8 9 9 8 6 2 8 9 2 3 6 1 1 8 9 3 4 0
+ 7 9 6 4 1 4 1 3 4 9 3 1 4 7 7 4 7 2 9 3 0 8 0 8 4 0 4 4 1 5 2 8 3 4 9 5 2
+ 8 1 5 3 7 9 4 2 5 6 3 5 9 3 5 9 3 1 9 7 3 0 6 9 8 4 0 4 5 2 9 0 1 0 3 1 6
+ 5 8 1 5 3 5 0 3 5 5 9 2 8 7 0 4 9 1 9 7 7 5 5 2 0 9 1 8 6 2 3 0 6 2 1 9 1
+ 3 5 5 0 3 8 3 3 7 6 8 0 1 4 0]
+[INFO 2019-05-06 16:08:09,621 cleverhans] Attack result at iteration 10 is [8 6 2 1 4 5 4 3 7 8 5 0 9 3 5 1 1 0 4 4 7 0 1 7 0 1 6 1 4 5 6 6 5 7 8 4 4
+ 7 2 5 3 7 0 7 7 9 6 4 2 8 5 7 8 3 9 5 8 9 9 8 6 2 8 9 2 3 6 1 1 8 9 3 4 0
+ 7 9 6 4 1 4 1 3 4 9 3 1 4 7 7 4 7 2 9 3 0 8 0 8 4 0 4 4 1 5 2 8 3 4 9 5 2
+ 8 1 5 3 7 9 4 2 5 6 3 5 9 3 5 9 3 1 9 7 3 0 6 9 8 4 0 4 5 2 9 0 1 0 3 1 6
+ 5 8 1 5 3 5 0 3 5 5 9 2 8 7 0 4 9 1 9 7 7 5 5 2 0 9 1 8 6 2 3 0 6 2 1 9 1
+ 3 5 5 0 3 8 3 3 7 6 8 0 1 4 0]
+[INFO 2019-05-06 16:08:10,237 cleverhans] Attack result at iteration 15 is [8 6 0 1 9 8 4 3 7 8 3 0 9 3 8 1 1 0 4 9 7 0 1 3 0 1 0 1 9 3 6 6 3 7 8 4 4
+ 7 8 8 8 7 0 7 7 9 6 4 8 8 3 9 8 8 7 8 8 9 9 8 5 2 8 4 2 3 6 8 8 8 9 8 8 0
+ 7 9 6 4 8 4 8 8 4 9 3 7 4 7 7 9 7 2 9 8 0 8 8 8 9 0 4 3 1 3 2 8 3 4 9 5 2
+ 8 8 9 3 7 9 4 2 5 6 8 8 9 3 5 9 2 8 9 5 9 0 6 9 8 9 0 6 5 2 9 0 8 0 3 1 6
+ 5 8 8 8 3 3 0 8 3 5 9 2 8 7 0 4 9 8 9 7 9 5 3 2 0 8 8 8 6 2 3 0 6 2 8 9 8
+ 3 6 5 0 3 8 3 3 7 6 8 0 8 4 0]
+[INFO 2019-05-06 16:08:10,655 cleverhans] Attack result at iteration 20 is [8 0 0 4 9 8 3 2 4 8 3 9 4 5 8 8 7 6 9 9 7 6 8 3 7 8 0 1 9 3 5 5 3 5 0 7 2
+ 3 8 8 8 2 5 2 3 4 6 9 8 8 3 9 8 8 7 8 2 7 4 6 5 2 8 4 3 5 6 8 8 8 3 8 8 6
+ 2 4 5 7 8 7 8 8 5 8 5 7 9 3 2 9 2 3 3 8 5 3 8 8 9 9 2 3 8 3 3 8 5 2 3 9 2
+ 8 8 9 7 3 4 3 3 3 0 8 8 4 5 7 4 2 8 9 5 9 1 5 9 7 9 8 6 7 1 7 5 8 2 7 7 6
+ 3 8 8 8 5 3 0 8 3 0 3 3 9 2 6 9 4 8 4 3 9 0 3 3 6 8 8 8 5 3 9 7 5 3 8 3 8
+ 3 6 3 0 8 9 8 5 2 6 8 5 8 9 5]
+[INFO 2019-05-06 16:08:10,856 cleverhans] Attack result at iteration 25 is [9 0 0 4 9 8 3 2 4 3 3 9 4 5 8 8 7 6 9 9 2 6 8 3 7 8 0 4 9 3 5 5 3 5 0 7 2
+ 3 8 8 8 2 5 2 3 4 5 9 8 4 3 9 2 8 7 8 2 7 4 6 5 1 9 4 3 5 4 8 8 2 3 8 8 6
+ 2 4 5 7 8 7 8 8 5 8 5 7 9 3 2 9 2 3 3 8 5 3 8 2 9 9 2 3 8 3 3 3 5 2 3 9 1
+ 2 8 9 7 3 4 3 3 3 0 8 8 4 5 7 4 2 8 7 5 9 1 5 7 7 9 8 6 7 1 7 5 8 2 7 7 5
+ 3 5 8 8 5 3 2 8 3 0 3 3 9 2 6 9 4 8 4 3 9 0 3 3 6 8 8 2 5 3 9 7 5 3 8 3 8
+ 5 6 3 7 8 9 8 5 2 3 5 5 8 9 5]
+[INFO 2019-05-06 16:08:10,860 cleverhans] 200 out of 200 become adversarial examples at iteration 25
+[INFO 2019-05-06 16:08:11,528 cleverhans] Attack result at iteration 5 is [6 9 8 1 2 8 9 5 9 7 3 7 8 0 1 3 0 4 6 1 0 2 5 8 4 4 1 1 5 4 6 6 0 6 9 2 6
+ 2 7 1 7 9 4 0 0 3 8 2 2 3 1 6 0 5 7 7 9 2 6 7 7 7 8 6 8 8 4 6 8 4 1 2 8 2
+ 3 9 4 0 3 7 3 2 3 3 7 3 4 0 6 2 0 8 1 5 3 5 4 1 7 1 5 7 5 7 3 2 2 7 3 7 3
+ 7 8 5 4 5 2 5 6 5 3 6 7 4 1 7 1 5 2 3 0 3 1 4 2 6 7 4 3 8 0 6 2 1 6 5 3 9
+ 1 9 3 2 1 8 4 4 6 5 8 6 9 7 7 8 6 9 7 3 9 4 0 5 4 6 4 1 2 3 0 0 2 6 6 5 7
+ 0 8 6 4 7 9 0 7 3 4 2 1 8 8 5]
+[INFO 2019-05-06 16:08:12,181 cleverhans] Attack result at iteration 10 is [6 9 8 1 2 8 9 5 9 7 3 7 8 0 1 3 0 4 6 1 0 2 5 8 4 4 1 1 5 4 6 6 0 6 9 2 6
+ 2 7 1 7 9 4 0 0 3 8 2 2 3 1 6 0 5 7 7 9 2 6 7 7 7 8 6 8 8 4 6 8 4 1 2 8 2
+ 3 9 4 0 3 7 3 2 3 3 7 3 4 0 6 2 0 8 1 5 3 5 4 1 7 1 5 7 5 7 3 2 2 7 3 7 3
+ 7 8 5 4 5 2 5 6 5 3 6 7 4 1 7 1 5 2 3 0 3 1 4 2 6 7 4 3 8 0 6 2 1 6 5 3 9
+ 1 9 3 2 1 8 4 4 6 5 8 6 9 7 7 8 6 9 7 3 9 4 0 5 4 6 4 1 2 3 0 0 2 6 6 5 7
+ 0 8 6 4 7 9 0 7 3 4 2 1 8 8 5]
+[INFO 2019-05-06 16:08:12,797 cleverhans] Attack result at iteration 15 is [6 9 8 1 2 8 9 5 9 7 3 7 8 0 8 3 0 4 6 1 0 7 5 8 4 9 1 1 3 9 0 6 0 6 9 2 6
+ 2 7 8 7 9 8 0 0 8 8 2 2 3 8 6 0 5 7 8 9 2 6 7 7 7 3 6 8 8 7 6 8 4 1 3 8 1
+ 8 9 4 0 8 7 8 2 3 8 9 8 8 0 6 2 0 8 7 5 3 8 4 7 7 1 3 7 5 7 3 2 3 7 3 7 3
+ 3 8 8 4 5 2 3 6 5 3 6 7 8 1 7 1 5 2 3 6 3 1 9 2 6 8 6 3 8 0 6 2 1 6 5 3 9
+ 1 9 8 2 1 8 4 4 6 3 8 6 9 7 7 8 6 9 8 3 9 4 0 3 9 6 4 1 2 3 0 0 8 6 6 8 7
+ 0 8 6 4 7 9 0 7 2 8 2 1 8 8 8]
+[INFO 2019-05-06 16:08:13,222 cleverhans] Attack result at iteration 20 is [5 7 8 4 8 9 4 9 7 9 5 5 8 5 8 9 0 7 6 7 5 7 9 5 7 9 7 8 3 9 0 0 0 6 7 3 0
+ 3 9 8 9 3 8 5 9 8 3 1 0 5 8 6 2 3 2 8 7 7 0 1 3 3 3 8 3 8 7 5 8 9 4 3 8 1
+ 8 5 7 9 8 3 8 2 3 8 9 8 8 0 6 0 7 5 7 3 2 8 4 7 9 7 3 9 3 3 8 4 3 5 5 1 3
+ 3 8 8 6 7 1 3 5 3 2 0 2 8 3 3 8 9 1 2 6 5 3 9 0 6 8 6 5 3 0 5 3 8 0 3 5 9
+ 7 9 8 3 7 5 6 9 5 3 8 6 9 2 2 8 3 4 8 2 3 7 5 3 9 6 7 1 7 3 0 5 8 0 0 8 3
+ 6 2 8 7 2 3 0 3 2 8 3 7 8 8 8]
+[INFO 2019-05-06 16:08:13,415 cleverhans] Attack result at iteration 25 is [5 7 3 4 8 9 4 9 7 9 5 5 4 5 8 9 5 7 0 7 5 7 9 5 7 9 7 8 3 9 0 0 2 1 7 3 0
+ 3 9 8 9 3 8 5 9 8 3 1 0 5 8 5 2 3 2 8 7 7 0 1 3 3 3 8 3 3 7 5 2 9 4 3 3 1
+ 8 5 7 9 8 3 8 1 2 8 9 8 8 7 5 0 7 5 7 3 2 8 1 7 9 7 3 9 3 3 8 4 3 5 5 1 5
+ 3 5 8 6 7 1 3 5 3 2 0 2 8 3 3 8 9 1 2 6 5 3 9 0 5 8 6 5 3 2 5 3 8 0 3 5 3
+ 7 4 8 3 7 5 6 9 5 3 2 5 5 2 2 3 3 4 8 2 3 7 5 3 9 5 7 4 7 9 5 5 8 0 0 8 3
+ 6 2 8 7 2 3 2 3 2 8 3 7 9 5 8]
+[INFO 2019-05-06 16:08:13,418 cleverhans] 200 out of 200 become adversarial examples at iteration 25
+[INFO 2019-05-06 16:08:14,055 cleverhans] Attack result at iteration 5 is [9 2 7 1 8 8 8 2 7 6 0 1 2 7 1 0 8 3 6 0 5 3 6 2 8 7 0 1 4 2 1 1 4 4 4 4 7
+ 1 6 2 9 9 0 0 1 8 8 4 3 4 2 0 6 1 6 1 2 2 2 1 2 3 7 8 1 0 0 2 1 6 6 0 1 6
+ 2 5 1 7 4 8 2 1 4 3 8 3 9 9 4 8 3 4 7 2 7 5 7 0 4 3 3 2 6 7 6 0 0 6 7 7 0
+ 5 5 8 1 0 7 0 2 8 1 5 0 8 8 0 3 2 7 7 2 6 4 7 5 5 5 2 9 2 8 4 6 8 6 5 0 0
+ 8 7 6 1 7 1 1 2 7 4 0 0 7 7 6 3 8 6 4 2 0 9 4 0 5 7 8 2 7 4 7 1 1 3 6 6 2
+ 9 1 9 4 8 3 6 9 5 9 6 2 4 6 7]
+[INFO 2019-05-06 16:08:14,660 cleverhans] Attack result at iteration 10 is [9 2 7 1 8 8 8 2 7 6 0 1 2 7 1 0 8 3 6 0 5 3 6 2 8 7 0 1 4 2 1 1 4 4 4 4 7
+ 1 6 2 9 9 0 0 1 8 8 4 3 4 2 0 6 1 6 1 2 2 2 1 2 3 7 8 1 0 0 2 1 6 6 0 1 6
+ 2 5 1 7 4 8 2 1 4 3 8 3 9 9 4 8 3 4 7 2 7 5 7 0 4 3 3 2 6 7 6 0 0 6 7 7 0
+ 5 5 8 1 0 7 0 2 8 1 5 0 8 8 0 3 2 7 7 2 6 4 7 5 5 5 2 9 2 8 4 6 8 6 5 0 0
+ 8 7 6 1 7 1 1 2 7 4 0 0 7 7 6 3 8 6 4 2 0 9 4 0 5 7 8 2 7 4 7 1 1 3 6 6 0
+ 9 1 9 4 8 3 6 9 5 9 6 2 4 6 7]
+[INFO 2019-05-06 16:08:15,232 cleverhans] Attack result at iteration 15 is [9 8 8 8 8 8 8 3 7 6 0 1 3 7 1 0 8 8 6 0 8 3 6 2 8 8 0 8 4 2 8 1 9 9 4 9 7
+ 1 6 2 8 9 0 0 8 8 8 9 8 9 2 0 6 8 6 1 2 2 2 1 0 3 7 8 1 0 0 2 8 0 0 0 1 6
+ 2 3 8 7 9 8 2 1 9 3 8 3 9 9 4 8 7 4 9 2 7 8 7 0 4 3 2 2 6 7 6 6 0 6 7 7 0
+ 5 3 8 8 0 8 0 2 8 1 8 0 8 8 0 3 2 7 7 2 6 4 7 9 5 5 7 9 2 8 8 6 8 6 3 0 0
+ 8 7 6 2 7 1 1 2 7 9 8 0 7 7 6 8 8 6 4 2 0 9 9 9 3 7 8 2 7 4 7 1 8 3 6 8 0
+ 9 8 9 4 8 3 6 9 8 9 6 3 4 6 7]
+[INFO 2019-05-06 16:08:15,640 cleverhans] Attack result at iteration 20 is [3 8 8 8 9 6 3 3 3 5 2 2 3 9 2 2 8 8 5 6 8 8 2 7 9 8 9 8 1 3 8 8 9 9 7 9 3
+ 4 5 1 8 3 9 8 8 6 3 9 8 9 1 9 5 8 0 8 7 7 1 8 0 7 3 7 8 9 5 7 8 0 0 0 7 5
+ 7 3 8 5 9 8 1 4 9 5 8 9 4 7 9 9 7 9 9 1 3 8 2 6 7 5 2 2 6 9 6 6 9 0 2 3 0
+ 9 3 3 8 5 8 6 2 8 4 8 0 3 8 6 5 1 2 3 3 6 3 9 9 3 7 7 7 3 8 8 5 2 5 3 0 0
+ 5 3 6 2 3 8 4 2 3 9 8 5 9 0 6 8 3 0 9 3 5 1 9 9 3 9 3 1 1 6 8 8 8 2 5 8 0
+ 9 8 4 9 8 5 6 9 8 9 6 3 7 6 5]
+[INFO 2019-05-06 16:08:15,847 cleverhans] Attack result at iteration 25 is [3 8 8 8 9 6 3 3 3 5 2 2 3 9 2 2 3 8 5 6 8 8 2 7 9 8 9 8 1 3 8 8 9 9 7 9 3
+ 4 5 1 8 3 9 8 8 6 3 9 8 9 1 9 5 8 0 8 7 7 1 8 0 7 3 7 8 9 5 7 8 0 0 2 7 5
+ 7 3 8 5 9 3 1 4 9 5 7 9 4 7 9 9 7 9 9 1 3 8 2 6 7 5 2 2 4 9 2 6 9 0 2 3 7
+ 9 3 3 8 5 8 6 1 9 4 8 5 3 3 6 5 1 2 3 3 5 3 9 9 3 7 7 7 3 2 8 5 2 5 3 2 5
+ 5 3 0 2 3 8 4 1 3 9 8 5 9 0 5 8 3 0 9 3 5 1 9 9 3 9 3 1 1 6 8 8 8 2 5 8 0
+ 7 8 4 9 2 5 5 5 8 3 5 3 7 5 5]
+[INFO 2019-05-06 16:08:15,975 cleverhans] Attack result at iteration 29 is [3 8 8 8 9 6 3 3 3 5 2 2 3 9 2 2 3 8 5 6 8 8 2 7 9 8 9 8 1 3 8 8 9 9 7 9 3
+ 4 5 1 8 3 9 8 8 6 3 9 8 9 1 9 5 8 0 8 7 7 1 8 0 7 3 7 8 9 5 7 8 0 0 2 7 5
+ 7 3 8 5 9 3 1 4 9 5 7 9 4 7 9 9 7 9 9 1 3 8 2 6 7 5 2 1 4 9 2 6 9 0 2 3 7
+ 9 3 3 8 5 8 6 1 9 4 8 5 3 3 6 5 1 2 3 3 5 3 9 9 3 7 7 7 3 2 8 5 2 5 3 2 5
+ 5 3 0 2 3 8 4 1 3 9 8 5 9 0 5 8 3 0 9 3 5 1 9 9 3 9 3 1 1 6 8 8 8 2 5 8 0
+ 7 8 4 9 2 5 5 5 8 3 5 3 7 5 5]
+[INFO 2019-05-06 16:08:15,978 cleverhans] 200 out of 200 become adversarial examples at iteration 29
+[INFO 2019-05-06 16:08:16,594 cleverhans] Attack result at iteration 5 is [7 0 6 6 9 4 8 3 5 3 4 9 0 0 5 2 5 0 7 1 1 1 0 7 6 7 9 6 6 4 1 4 3 1 1 2 2
+ 4 1 0 8 7 6 3 4 0 0 6 3 3 0 7 1 7 1 1 3 1 0 9 9 7 5 4 1 4 8 9 5 3 5 1 9 8
+ 2 7 3 9 9 0 1 0 2 9 3 9 3 3 6 2 4 9 8 3 7 4 0 4 7 8 4 9 8 1 9 7 5 9 2 8 2
+ 2 0 2 2 3 8 4 6 8 4 8 2 4 6 7 9 3 3 9 4 3 1 4 4 7 0 5 9 6 0 4 4 4 4 6 1 2
+ 3 3 6 4 5 9 6 8 5 6 0 8 6 4 1 8 6 5 2 8 4 5 5 4 7 7 0 7 8 2 2 3 7 0 1 8 0
+ 7 1 9 8 7 5 5 9 1 7 5 4 9 1 2]
+[INFO 2019-05-06 16:08:17,189 cleverhans] Attack result at iteration 10 is [7 0 6 6 9 4 8 3 5 3 4 9 0 0 5 2 5 0 7 1 1 1 0 7 6 7 9 6 6 4 1 4 3 1 1 2 2
+ 4 1 0 8 7 6 3 4 0 0 6 3 3 0 7 1 7 1 1 3 1 0 9 9 7 5 4 1 4 8 9 5 3 5 1 9 8
+ 2 7 3 9 9 0 1 0 2 9 3 9 3 3 6 2 4 9 8 3 7 4 0 4 7 8 4 9 8 1 9 7 5 9 2 8 2
+ 2 0 2 2 3 8 4 6 8 4 8 2 4 6 7 9 3 3 9 4 3 1 4 4 7 0 5 9 6 0 4 4 4 4 6 1 2
+ 3 3 6 4 5 9 6 8 5 6 0 8 6 4 1 8 6 5 2 8 4 5 5 4 7 7 0 7 8 2 2 3 7 0 1 8 0
+ 7 1 9 8 7 5 5 9 1 7 5 4 9 1 2]
+[INFO 2019-05-06 16:08:17,770 cleverhans] Attack result at iteration 15 is [7 0 6 6 9 9 8 3 3 8 9 9 0 0 8 2 5 0 7 8 7 1 6 7 6 7 9 8 6 8 1 4 3 1 8 2 2
+ 4 1 0 8 7 6 3 9 0 0 6 3 3 0 7 1 7 8 1 3 6 0 9 9 8 8 9 8 4 8 8 5 8 3 1 9 8
+ 2 3 8 8 9 0 1 0 2 9 5 9 3 8 6 2 4 9 3 3 7 9 0 4 7 8 9 9 8 1 9 7 3 9 2 8 2
+ 2 0 2 3 3 8 4 6 8 4 8 2 4 6 7 9 3 8 9 9 3 8 9 8 9 0 5 9 8 0 4 4 4 4 6 8 2
+ 3 3 0 4 5 9 6 8 8 6 5 0 6 9 8 8 6 8 2 8 4 3 5 4 7 7 0 2 8 2 2 3 7 0 8 8 0
+ 7 1 9 8 7 3 3 9 8 7 8 9 3 8 2]
+[INFO 2019-05-06 16:08:18,174 cleverhans] Attack result at iteration 20 is [3 6 5 6 7 9 7 9 3 8 9 7 9 0 8 2 3 9 9 8 7 7 6 3 5 7 9 8 6 8 7 7 5 8 8 3 7
+ 9 2 0 5 2 6 2 9 5 3 0 2 5 8 3 7 1 8 8 5 6 9 9 9 8 8 9 8 9 5 8 6 8 3 7 9 9
+ 7 3 8 8 9 3 8 0 2 9 5 3 5 8 2 2 9 7 3 5 2 9 0 9 9 8 9 7 5 9 3 1 3 9 1 8 2
+ 7 0 2 3 9 3 9 5 8 9 5 2 7 4 3 4 5 8 7 9 5 8 9 8 9 3 3 4 8 9 7 2 5 7 0 8 3
+ 9 8 0 4 5 8 6 3 8 6 5 0 6 9 8 5 8 8 2 5 7 3 3 9 3 3 7 2 8 3 3 2 1 9 8 8 5
+ 3 8 7 3 9 3 3 9 8 3 8 9 3 8 7]
+[INFO 2019-05-06 16:08:18,393 cleverhans] Attack result at iteration 25 is [3 6 5 6 7 9 7 9 3 8 9 7 9 2 8 7 3 9 9 8 7 7 6 3 5 2 4 8 5 8 7 7 5 8 8 3 7
+ 9 2 7 5 2 5 2 9 5 3 0 2 5 8 3 7 1 8 8 5 6 9 7 3 8 8 9 8 9 5 8 6 8 3 7 7 9
+ 7 3 8 8 4 3 8 2 2 7 5 3 5 8 2 1 9 7 3 5 2 9 2 9 9 3 9 7 5 9 3 1 3 3 1 2 1
+ 7 7 1 3 9 3 9 5 6 9 5 1 7 4 3 4 5 8 7 9 5 8 9 8 9 3 3 4 8 9 7 2 5 7 0 8 3
+ 9 8 0 1 7 8 6 3 8 1 5 0 5 9 8 5 8 8 1 5 7 3 3 9 3 3 7 2 9 3 3 2 1 9 8 9 5
+ 3 8 7 3 9 3 3 3 8 3 8 9 3 8 7]
+[INFO 2019-05-06 16:08:18,465 cleverhans] Attack result at iteration 27 is [3 6 5 4 7 9 7 9 3 8 9 7 9 2 8 7 3 9 9 8 7 7 6 3 5 2 4 8 5 8 7 7 5 8 8 3 7
+ 9 2 7 5 2 5 2 9 5 3 0 2 5 8 3 7 1 8 8 5 6 9 7 3 8 8 9 8 9 5 8 6 8 3 7 7 9
+ 7 3 8 8 4 3 8 2 1 7 5 3 5 8 2 1 9 7 3 5 2 9 2 9 9 3 9 7 5 9 3 1 3 3 1 2 1
+ 7 7 1 3 9 3 9 5 6 9 5 1 7 4 3 4 5 8 7 9 5 8 9 8 9 3 3 4 8 9 7 2 5 7 0 8 3
+ 9 8 0 1 7 8 5 3 8 1 5 0 5 9 8 5 8 8 1 5 7 3 3 9 3 3 7 2 9 3 3 2 1 9 8 9 5
+ 3 8 7 3 9 3 3 3 8 3 8 9 3 8 7]
+[INFO 2019-05-06 16:08:18,468 cleverhans] 200 out of 200 become adversarial examples at iteration 27
+[INFO 2019-05-06 16:08:19,071 cleverhans] Attack result at iteration 5 is [2 1 6 6 7 1 1 4 0 7 4 2 4 0 6 4 7 6 9 5 3 4 6 5 0 1 8 8 2 8 3 5 7 8 0 8 5
+ 7 1 1 0 1 3 7 8 5 0 7 1 1 0 1 1 4 5 2 7 6 2 3 0 2 8 5 9 6 9 7 2 1 3 6 4 1
+ 8 2 4 0 5 1 0 2 2 6 4 4 3 9 6 1 6 5 7 9 2 0 2 6 0 1 4 3 3 2 8 8 0 8 8 9 0
+ 9 6 7 6 3 9 3 4 7 7 7 4 9 0 6 4 8 4 2 7 2 8 1 0 0 7 8 3 3 3 1 3 7 6 1 3 1
+ 6 6 5 7 4 7 5 9 5 8 4 9 9 1 6 5 0 1 3 7 0 3 4 8 2 2 0 2 5 1 5 1 4 8 8 9 1
+ 2 1 3 5 1 0 9 4 4 8 3 2 5 9 7]
+[INFO 2019-05-06 16:08:19,694 cleverhans] Attack result at iteration 10 is [2 1 6 6 7 1 1 4 0 7 4 2 4 0 6 4 7 6 9 5 3 4 6 5 0 1 8 8 2 8 3 5 7 8 0 8 5
+ 7 1 1 0 1 3 7 8 5 0 7 1 1 0 1 1 4 5 2 7 6 2 3 0 2 8 5 9 6 9 7 2 1 3 6 4 1
+ 8 2 4 0 5 1 0 2 2 6 4 4 3 9 6 1 6 5 7 9 2 0 2 6 0 1 4 3 3 2 8 8 0 8 8 9 0
+ 9 6 7 6 3 9 3 4 7 7 7 4 9 0 6 4 9 4 2 7 2 8 1 0 0 7 8 3 3 3 1 3 7 6 1 3 1
+ 6 6 5 7 4 7 5 9 5 8 4 9 9 1 6 5 0 1 3 7 0 3 4 8 2 2 0 2 5 1 5 1 4 8 8 9 1
+ 2 1 3 5 1 0 9 4 4 8 3 2 5 9 7]
+[INFO 2019-05-06 16:08:20,276 cleverhans] Attack result at iteration 15 is [2 1 6 6 0 8 8 9 0 7 4 2 9 8 6 9 7 6 9 3 3 9 6 5 0 8 8 8 2 8 8 8 7 8 0 8 3
+ 7 8 1 0 8 3 7 8 8 0 7 8 1 0 1 8 9 8 2 7 6 2 3 0 2 3 5 9 6 9 9 2 1 3 6 4 1
+ 8 2 4 0 5 1 0 3 2 6 4 9 8 8 6 1 6 3 7 9 2 8 2 6 0 8 4 8 3 2 8 8 0 8 8 9 9
+ 9 6 8 6 8 9 3 9 7 7 7 9 9 0 6 4 9 8 2 7 2 8 1 0 0 7 8 3 3 3 1 8 7 6 8 3 1
+ 6 0 3 7 4 7 5 9 9 8 9 9 9 8 8 5 0 1 3 2 0 3 9 8 2 2 0 2 8 1 2 1 6 8 8 9 1
+ 2 1 3 3 1 0 9 4 4 3 3 8 8 9 7]
+[INFO 2019-05-06 16:08:20,692 cleverhans] Attack result at iteration 20 is [1 6 4 0 0 8 8 9 9 2 7 8 9 8 0 9 3 6 7 3 9 9 0 9 8 8 3 8 7 3 8 8 3 3 2 6 3
+ 3 8 4 0 8 9 3 3 8 0 7 8 8 0 8 8 9 8 2 3 0 2 7 6 2 3 9 4 0 8 9 3 8 2 6 6 4
+ 8 3 7 5 3 7 0 3 3 0 9 9 8 8 8 4 3 3 9 4 2 8 3 5 5 8 9 8 5 2 8 8 0 3 8 7 9
+ 4 0 8 6 8 3 9 9 9 3 1 9 7 7 6 9 9 8 3 9 3 8 7 5 0 3 3 5 3 5 8 8 8 6 8 3 3
+ 8 0 3 2 4 9 3 2 9 2 9 3 4 8 8 3 5 4 5 2 8 9 9 8 7 1 5 3 8 4 2 1 6 3 8 3 8
+ 1 8 8 3 8 5 7 4 9 3 3 8 8 4 2]
+[INFO 2019-05-06 16:08:20,915 cleverhans] Attack result at iteration 25 is [1 6 4 0 0 8 8 9 9 2 7 8 9 8 0 9 3 5 7 3 9 9 0 9 8 8 3 2 7 3 8 8 3 3 2 6 3
+ 3 8 4 2 8 9 3 3 8 2 3 8 8 2 8 8 9 8 1 3 0 1 7 6 7 3 9 4 0 8 9 3 8 2 5 6 4
+ 5 3 7 5 3 7 5 3 3 0 9 9 8 8 8 4 3 3 9 4 1 8 3 5 5 8 9 8 5 2 8 8 2 3 3 7 9
+ 4 0 8 5 8 3 9 9 9 3 1 9 7 7 3 9 9 8 3 9 3 8 7 5 5 3 3 5 5 5 8 8 8 5 8 7 3
+ 8 0 3 2 1 9 3 2 9 2 9 3 4 8 8 3 5 4 5 2 8 9 9 9 7 1 5 3 8 4 2 4 6 3 3 3 8
+ 1 8 8 3 8 5 7 5 9 3 7 8 8 4 2]
+[INFO 2019-05-06 16:08:20,989 cleverhans] Attack result at iteration 27 is [1 6 4 0 0 8 8 9 9 2 7 8 9 8 0 9 3 5 7 3 9 9 0 9 8 8 3 2 7 3 8 8 3 3 2 6 3
+ 3 8 4 2 8 9 3 3 8 2 3 8 8 2 8 8 9 8 1 3 0 1 7 6 7 3 9 4 0 8 9 3 8 2 5 6 4
+ 5 3 7 5 3 7 5 3 3 0 9 9 8 8 8 4 3 3 9 4 1 8 3 5 5 8 9 8 5 1 5 5 2 3 3 7 9
+ 4 0 8 5 8 3 9 9 9 3 1 9 7 7 3 9 9 8 3 9 3 1 7 5 5 3 3 5 5 5 8 8 8 5 8 7 3
+ 8 0 3 2 1 9 3 2 9 2 9 3 4 8 8 3 5 4 5 2 8 9 9 9 7 1 5 3 8 4 2 4 6 3 3 3 8
+ 1 8 8 3 8 5 7 5 9 3 7 8 8 4 2]
+[INFO 2019-05-06 16:08:20,992 cleverhans] 200 out of 200 become adversarial examples at iteration 27
+[INFO 2019-05-06 16:08:21,568 cleverhans] Attack result at iteration 5 is [6 6 2 0 0 0 5 8 7 1 5 2 3 8 5 1 8 2 0 4 9 9 6 2 3 3 5 6 4 8 0 9 2 8 3 6 7
+ 5 7 2 9 4 9 1 2 8 6 0 7 0 9 1 1 0 7 5 9 9 1 9 5 9 2 5 0 4 1 0 8 9 0 8 9 8
+ 9 4 2 5 7 9 8 9 8 0 9 9 6 8 9 9 5 9 8 5 1 0 3 3 5 2 1 6 5 0 2 8 3 5 6 2 3
+ 0 2 2 6 4 3 5 5 1 7 2 1 6 9 1 9 9 5 5 1 6 2 2 8 6 7 1 4 6 0 4 0 3 3 2 2 3
+ 6 8 9 8 5 3 8 5 4 5 2 0 5 6 3 2 8 3 9 9 5 7 9 4 6 7 1 3 7 3 6 6 0 9 0 1 9
+ 4 2 8 8 0 1 6 9 7 5 3 4 7 4 9]
+[INFO 2019-05-06 16:08:22,167 cleverhans] Attack result at iteration 10 is [6 6 2 0 0 0 5 8 7 1 5 2 3 8 5 1 8 2 0 4 9 9 6 2 3 3 5 6 4 8 0 9 2 8 3 6 7
+ 5 7 2 9 4 9 1 2 8 6 0 7 0 9 1 1 0 7 5 9 9 1 9 5 9 2 5 0 4 1 0 8 9 0 8 9 8
+ 9 4 2 5 7 9 8 9 8 0 9 9 6 8 9 9 5 9 8 6 1 0 3 3 5 2 1 6 5 0 2 8 3 5 6 2 3
+ 0 2 2 6 4 3 5 5 1 7 2 1 6 9 1 9 9 5 5 1 6 2 2 8 6 7 1 4 6 0 4 0 3 3 2 2 3
+ 6 8 9 8 5 3 8 5 4 5 2 0 5 6 3 2 8 3 9 9 5 7 9 4 6 7 1 3 7 3 6 6 0 9 0 1 9
+ 4 2 8 8 0 1 6 9 7 5 3 4 7 4 9]
+[INFO 2019-05-06 16:08:22,754 cleverhans] Attack result at iteration 15 is [6 6 2 0 0 0 8 8 8 8 3 2 3 8 5 1 8 2 0 9 9 9 6 8 3 3 8 6 9 8 0 9 2 8 3 6 9
+ 3 8 2 9 4 9 8 2 8 6 0 7 0 9 8 7 2 7 8 3 9 4 9 6 9 2 8 0 9 1 0 8 4 0 8 7 8
+ 9 9 3 5 7 0 8 9 8 0 9 9 6 8 9 9 5 9 8 6 8 0 8 8 3 2 1 6 3 0 2 8 1 8 6 2 3
+ 0 2 2 6 4 8 3 3 8 7 8 8 6 8 1 3 9 8 8 1 6 2 2 8 6 7 8 9 0 0 6 0 3 8 0 2 8
+ 6 8 9 8 5 3 8 8 9 5 8 0 8 6 8 3 8 3 9 9 3 7 9 6 6 7 8 3 7 3 6 6 0 9 0 1 8
+ 9 2 8 8 0 8 6 9 7 8 5 4 7 4 9]
+[INFO 2019-05-06 16:08:23,130 cleverhans] Attack result at iteration 20 is [8 0 3 9 8 5 8 8 8 8 3 3 3 3 9 8 8 4 4 9 7 4 6 8 5 3 8 0 9 8 5 8 7 8 2 0 9
+ 3 8 1 3 9 4 8 3 2 0 2 3 0 4 8 7 2 3 8 3 7 4 4 6 8 3 8 6 9 8 0 3 4 9 8 7 3
+ 3 9 3 3 7 0 8 7 8 0 5 7 3 3 7 7 3 9 8 6 8 6 8 8 3 3 7 0 3 6 2 3 1 8 5 7 9
+ 9 3 0 0 9 8 3 3 8 9 8 8 0 8 7 3 7 8 8 4 6 2 3 3 0 3 8 9 0 5 6 6 5 8 0 3 8
+ 0 8 7 2 3 3 8 8 9 9 8 0 8 6 8 3 3 5 4 0 3 3 4 6 6 3 8 2 1 8 0 6 9 3 0 7 8
+ 9 1 3 5 6 8 6 9 9 8 5 7 3 4 3]
+[INFO 2019-05-06 16:08:23,332 cleverhans] Attack result at iteration 25 is [8 0 3 9 8 5 8 2 8 8 3 3 2 3 9 8 5 4 4 9 7 4 0 8 5 5 8 0 9 2 5 8 7 2 2 0 9
+ 3 8 1 3 9 4 8 3 2 0 2 3 5 4 8 7 2 3 8 3 7 4 4 6 8 3 8 6 9 8 1 3 4 9 3 7 3
+ 3 9 3 3 1 0 5 7 3 5 5 7 3 3 7 7 3 4 5 6 8 6 8 8 3 3 7 0 3 6 1 3 1 8 5 7 9
+ 9 3 0 0 9 8 3 3 8 9 8 8 0 8 7 3 7 8 8 4 5 2 3 3 0 3 8 9 0 5 6 6 5 8 0 3 8
+ 0 8 7 2 3 7 9 8 9 9 8 2 8 5 8 3 3 5 4 0 3 3 4 6 5 3 8 2 1 8 0 5 9 3 5 7 8
+ 9 1 3 5 6 8 5 3 9 8 5 7 3 7 3]
+[INFO 2019-05-06 16:08:23,366 cleverhans] Attack result at iteration 26 is [8 0 3 9 8 5 8 2 8 8 3 3 2 3 9 8 5 4 4 9 7 4 0 8 5 5 8 0 9 2 5 8 7 2 2 0 9
+ 3 8 1 3 9 4 8 3 2 0 2 3 5 4 8 7 2 3 8 3 7 4 4 6 8 3 8 6 9 8 1 3 4 9 3 7 3
+ 3 9 3 3 1 0 5 7 3 5 5 7 3 3 7 7 3 4 5 6 8 6 8 8 3 3 7 0 3 6 1 3 1 8 5 7 9
+ 9 3 0 0 9 8 3 3 8 9 8 8 0 8 7 3 7 8 8 4 5 1 3 3 0 3 8 9 0 5 6 6 5 8 0 3 8
+ 0 2 7 2 3 7 9 8 9 9 8 2 8 5 8 3 3 5 4 0 3 3 4 6 5 3 8 2 1 8 0 5 9 3 5 7 8
+ 9 1 3 5 6 8 5 3 9 8 5 7 3 7 3]
+[INFO 2019-05-06 16:08:23,368 cleverhans] 200 out of 200 become adversarial examples at iteration 26
+[INFO 2019-05-06 16:08:23,998 cleverhans] Attack result at iteration 5 is [9 4 3 6 3 1 1 7 6 9 1 8 4 1 1 9 9 4 3 6 8 1 6 0 4 1 3 7 7 4 9 5 1 0 0 1 1
+ 6 2 1 9 8 4 0 3 6 4 9 0 7 1 6 5 7 5 2 5 1 8 5 4 7 0 5 7 0 2 5 8 1 0 4 5 7
+ 1 8 5 1 3 0 0 6 0 7 3 1 8 3 9 7 0 0 8 9 5 9 8 3 2 7 2 9 7 2 1 1 3 7 5 3 1
+ 9 8 2 2 2 8 8 5 7 3 8 9 8 8 6 8 2 3 9 7 5 6 2 9 2 8 8 1 6 8 8 7 9 1 8 0 1
+ 7 2 0 7 5 1 9 0 2 0 9 8 6 2 3 9 3 8 0 2 1 1 1 1 4 2 9 7 7 5 1 1 2 1 9 9 9
+ 1 0 2 0 2 1 1 4 6 4 1 5 4 9 7]
+[INFO 2019-05-06 16:08:24,542 cleverhans] Attack result at iteration 10 is [9 4 3 6 3 1 1 7 6 9 1 8 4 1 1 9 9 4 3 6 8 1 6 0 4 1 3 7 7 4 9 5 1 0 0 1 1
+ 6 2 1 9 8 4 0 3 6 4 9 0 7 1 6 5 7 5 2 5 1 8 5 4 7 0 5 7 0 2 5 8 1 0 4 5 7
+ 1 8 5 1 3 0 0 6 0 7 3 1 8 3 9 7 0 0 8 9 5 9 8 3 2 7 2 9 7 2 1 1 3 7 5 3 1
+ 9 8 2 2 2 8 8 5 7 3 8 9 8 8 6 8 2 3 9 7 5 6 2 9 2 8 8 1 6 8 8 7 9 1 8 0 1
+ 7 2 0 7 5 1 9 0 2 0 9 8 6 2 3 9 3 8 0 2 1 1 1 1 4 2 9 7 7 5 1 1 2 1 9 9 9
+ 1 0 2 0 2 1 1 4 6 4 1 5 4 9 7]
+[INFO 2019-05-06 16:08:25,129 cleverhans] Attack result at iteration 15 is [8 4 3 6 3 8 8 7 0 9 8 8 9 3 8 9 9 8 3 6 8 8 6 0 9 1 8 7 7 4 9 8 8 0 0 8 8
+ 6 2 7 9 8 4 0 3 8 4 9 0 7 1 6 3 4 5 3 8 1 8 8 9 7 0 6 7 0 2 5 8 1 0 0 5 7
+ 1 0 8 1 9 9 0 6 0 7 3 8 8 8 9 7 8 0 8 9 8 9 8 3 2 7 3 9 9 2 1 8 8 7 8 3 7
+ 9 8 2 2 2 8 8 5 7 3 8 9 8 8 6 8 2 3 8 7 5 6 2 9 3 8 8 1 6 8 8 7 9 8 8 0 1
+ 7 2 0 9 8 8 9 0 3 0 9 3 6 2 8 0 3 8 0 2 1 1 8 8 4 3 9 7 7 5 6 1 3 1 9 9 9
+ 8 0 2 0 2 8 1 9 6 9 1 9 4 9 9]
+[INFO 2019-05-06 16:08:25,498 cleverhans] Attack result at iteration 20 is [8 7 5 8 5 8 8 9 0 4 8 3 9 3 8 3 7 8 5 0 8 8 5 5 9 1 8 7 2 4 4 8 8 9 0 8 8
+ 8 3 7 4 8 7 0 5 8 7 3 9 3 4 0 3 4 3 3 8 8 3 8 9 9 7 6 3 2 2 3 3 4 5 0 3 3
+ 8 0 8 3 9 9 8 0 0 3 3 8 8 8 4 8 8 9 8 4 8 7 8 5 3 2 3 4 9 1 4 8 8 2 8 5 7
+ 4 7 3 2 3 6 2 3 7 5 8 7 3 3 0 3 2 5 8 3 3 6 3 7 3 3 8 7 4 2 8 2 4 8 0 6 7
+ 7 3 9 9 8 8 7 5 3 6 7 3 0 3 8 0 5 8 0 3 8 8 8 8 9 3 4 9 2 6 6 1 3 8 7 3 7
+ 8 6 3 9 3 8 4 9 6 9 4 9 5 4 9]
+[INFO 2019-05-06 16:08:25,683 cleverhans] Attack result at iteration 25 is [8 7 5 8 5 8 8 9 0 4 8 3 9 3 8 3 7 8 5 0 5 8 5 5 9 4 8 1 2 1 4 8 8 9 2 8 8
+ 8 3 7 4 3 7 5 5 8 7 3 9 3 4 0 3 4 3 3 8 8 3 8 9 9 7 6 3 2 1 3 3 4 5 0 3 3
+ 8 0 8 3 9 9 8 0 5 3 7 8 5 8 4 8 8 9 0 4 8 7 3 5 3 2 3 4 9 1 4 8 8 2 8 5 7
+ 4 7 3 1 3 6 2 3 1 5 3 7 3 3 0 3 1 5 8 3 3 5 3 7 3 3 6 7 4 2 9 2 4 8 0 6 7
+ 2 3 9 9 8 8 7 5 3 6 7 3 0 3 8 0 5 1 2 3 8 8 8 8 9 3 4 9 2 6 6 4 3 8 7 3 7
+ 8 6 3 9 3 8 4 9 4 9 4 9 5 4 9]
+[INFO 2019-05-06 16:08:25,685 cleverhans] 200 out of 200 become adversarial examples at iteration 25
+[INFO 2019-05-06 16:08:26,302 cleverhans] Attack result at iteration 5 is [7 7 5 6 2 2 2 8 0 6 9 0 1 9 7 7 1 4 8 5 3 4 3 4 7 7 5 0 7 4 8 8 1 5 3 9 5
+ 9 7 6 9 0 3 6 3 9 8 2 2 1 2 8 6 8 5 5 3 9 4 9 2 5 1 5 1 4 4 1 4 4 3 5 9 1
+ 2 2 3 3 0 2 9 0 0 9 9 6 0 9 3 7 8 4 1 9 9 7 2 7 9 9 5 9 5 1 1 8 3 5 1 9 5
+ 3 5 4 9 5 9 3 1 9 0 9 7 5 4 9 2 0 1 0 5 1 4 9 3 3 6 1 5 2 5 2 2 0 9 2 6 6
+ 0 1 2 0 3 0 2 5 5 7 9 5 5 0 8 9 5 0 3 2 5 9 0 8 8 4 5 8 8 4 5 4 8 5 4 9 2
+ 2 1 2 6 8 8 7 0 3 6 6 4 3 8 8]
+[INFO 2019-05-06 16:08:26,897 cleverhans] Attack result at iteration 10 is [7 7 5 6 2 2 2 8 0 6 9 0 1 9 7 7 1 4 8 5 3 4 3 4 7 7 5 0 7 4 8 8 1 5 3 9 5
+ 9 7 6 9 0 3 6 3 9 8 2 2 1 2 8 6 8 5 5 0 9 4 9 2 5 1 5 1 4 4 1 4 4 3 5 9 1
+ 2 2 3 3 0 2 9 0 0 9 9 6 0 9 3 7 8 4 1 9 9 7 2 7 9 9 5 9 5 1 1 8 3 5 1 9 5
+ 3 5 4 9 5 9 3 1 9 0 9 7 5 4 9 2 0 1 0 5 1 4 9 3 3 6 1 5 2 5 2 2 0 9 2 6 6
+ 0 1 2 0 3 0 2 5 5 7 9 5 5 0 8 9 5 0 3 2 5 9 0 8 8 4 5 8 8 4 5 4 8 5 4 9 2
+ 2 1 2 6 8 8 7 0 3 6 6 4 3 8 8]
+[INFO 2019-05-06 16:08:27,500 cleverhans] Attack result at iteration 15 is [7 7 8 6 2 8 2 8 0 6 9 6 3 7 9 7 7 9 8 8 8 4 3 9 7 7 5 0 7 4 8 8 8 8 3 9 8
+ 9 3 6 9 0 3 6 3 9 8 2 8 8 2 8 6 8 5 3 0 9 9 9 2 5 1 3 1 4 4 1 4 4 8 3 9 1
+ 2 8 3 3 0 2 9 0 8 9 3 6 0 9 3 2 8 9 8 9 9 7 8 7 9 9 8 9 5 1 8 8 3 3 8 9 8
+ 3 8 4 7 5 9 3 8 9 0 9 7 3 4 9 2 0 1 0 8 8 4 9 3 3 6 8 9 2 3 2 2 8 2 2 6 6
+ 0 8 3 0 3 0 2 3 5 7 9 9 3 0 8 9 8 0 8 2 3 9 0 8 8 4 8 8 8 9 8 4 8 3 9 9 2
+ 2 8 2 6 8 8 7 0 3 6 0 9 3 8 8]
+[INFO 2019-05-06 16:08:27,867 cleverhans] Attack result at iteration 20 is [3 1 8 0 3 8 7 2 6 5 3 6 3 7 9 3 7 9 6 8 8 3 8 9 9 3 3 0 7 9 8 8 8 8 5 9 8
+ 4 3 5 3 9 5 6 7 3 9 2 8 8 1 3 6 6 3 3 0 7 9 9 7 3 2 3 1 3 9 8 4 6 8 3 3 4
+ 1 8 3 3 9 3 4 0 8 7 3 5 9 9 9 2 8 9 8 4 9 9 8 8 9 7 8 7 3 7 8 2 7 3 8 4 8
+ 9 8 4 7 9 7 5 8 3 6 3 3 3 9 7 3 3 8 0 8 8 7 3 5 9 5 8 9 2 3 3 3 8 2 4 5 5
+ 8 8 3 5 9 0 1 3 3 9 7 9 3 0 3 5 8 0 8 1 3 4 6 3 3 7 8 8 3 9 8 7 5 3 9 3 1
+ 2 8 1 5 3 8 5 9 3 4 0 9 3 8 6]
+[INFO 2019-05-06 16:08:28,040 cleverhans] Attack result at iteration 24 is [3 1 8 0 3 8 7 2 6 5 3 6 3 7 9 3 7 9 6 8 8 3 8 9 9 3 3 5 2 9 2 3 8 8 5 7 8
+ 4 3 5 3 9 5 5 7 3 9 1 8 8 1 3 5 6 3 3 0 7 9 4 7 3 2 3 4 3 9 8 5 6 8 3 3 4
+ 1 8 5 2 9 3 4 2 8 7 3 5 9 5 9 2 5 9 8 4 7 9 8 8 5 7 8 7 3 7 8 2 7 3 8 4 8
+ 9 8 7 7 9 7 5 8 3 6 3 3 3 9 7 3 3 8 5 8 8 7 3 5 9 5 8 9 1 3 3 3 8 2 4 5 5
+ 8 8 3 5 9 2 1 3 3 9 7 9 3 5 3 5 8 2 8 1 3 4 6 3 3 7 8 2 3 9 8 7 5 3 9 3 1
+ 1 8 1 5 3 2 5 9 5 4 0 9 5 2 6]
+[INFO 2019-05-06 16:08:28,043 cleverhans] 200 out of 200 become adversarial examples at iteration 24
+[INFO 2019-05-06 16:08:28,710 cleverhans] Attack result at iteration 5 is [7 2 2 0 0 9 3 9 9 1 9 8 6 6 4 2 6 9 2 8 5 4 5 7 9 9 9 2 1 8 3 4 0 7 8 3 9
+ 3 4 6 5 6 2 3 9 2 6 0 0 6 1 2 8 7 9 8 2 0 4 7 7 5 0 5 6 4 6 7 4 3 0 7 5 0
+ 7 4 2 0 8 9 9 4 2 4 6 7 8 7 6 9 4 1 3 7 3 0 8 7 7 6 1 3 9 2 7 9 2 1 8 3 2
+ 9 6 8 4 0 1 2 8 4 5 2 7 8 1 1 3 0 3 5 7 0 3 1 9 3 5 3 1 7 7 3 0 8 4 8 2 6
+ 5 2 9 7 3 9 0 9 9 6 4 2 9 7 2 1 1 6 7 4 7 5 9 0 8 2 1 4 4 5 7 6 1 3 2 5 9
+ 9 3 6 1 1 4 6 9 7 2 1 5 1 4 6]
+[INFO 2019-05-06 16:08:29,284 cleverhans] Attack result at iteration 10 is [7 2 2 0 0 9 3 9 9 1 9 8 6 6 4 2 6 9 2 8 5 4 5 7 9 9 9 2 1 8 3 4 0 7 8 3 9
+ 3 4 6 5 6 2 3 9 2 6 0 0 6 1 2 8 7 9 8 2 0 4 7 7 5 0 5 6 4 6 7 4 3 0 7 5 0
+ 7 4 2 0 8 9 9 4 2 4 6 7 8 7 6 9 4 1 3 7 3 0 8 7 7 6 1 3 9 2 7 3 2 1 8 3 2
+ 9 6 8 4 0 1 2 8 4 5 2 7 8 1 1 3 0 3 5 7 0 3 1 9 3 5 3 1 7 7 3 0 8 4 8 2 6
+ 5 2 9 7 3 9 0 9 9 6 4 2 9 7 2 1 1 6 7 4 7 5 9 0 8 2 1 4 4 5 7 6 1 3 2 5 9
+ 9 3 6 1 1 4 6 9 7 2 1 5 1 4 6]
+[INFO 2019-05-06 16:08:29,873 cleverhans] Attack result at iteration 15 is [7 2 2 0 0 9 8 9 9 1 8 8 6 6 9 9 6 9 2 8 5 9 5 7 9 9 9 2 8 8 3 8 0 7 8 7 9
+ 3 4 6 5 6 2 3 9 2 6 0 0 6 8 8 8 7 8 8 2 0 9 7 3 8 0 5 6 4 6 7 4 8 0 7 8 0
+ 7 4 2 0 8 9 8 4 0 4 6 7 8 8 6 9 9 1 3 7 3 0 8 8 7 0 9 3 9 2 2 3 2 2 8 3 2
+ 9 6 8 4 0 8 2 8 9 9 2 7 8 8 8 3 0 3 5 7 0 3 1 7 3 6 8 1 7 7 3 0 8 4 8 8 6
+ 6 2 9 7 3 9 0 9 9 6 6 2 9 7 2 2 8 6 7 9 7 5 9 0 8 2 1 2 4 5 9 6 1 3 8 8 9
+ 9 3 6 1 1 4 6 9 7 7 1 8 1 9 6]
+[INFO 2019-05-06 16:08:30,246 cleverhans] Attack result at iteration 20 is [1 3 1 9 0 4 8 7 0 2 8 8 0 8 9 9 0 3 7 8 3 9 3 3 4 4 4 3 8 8 5 8 8 2 3 7 3
+ 2 3 0 3 0 1 2 3 3 6 6 9 0 8 8 3 9 8 8 3 0 9 9 3 8 0 3 0 4 8 9 7 8 0 2 8 2
+ 3 9 2 6 3 7 8 7 0 9 0 8 8 8 5 3 9 2 5 9 5 0 3 8 7 0 9 5 4 3 2 3 7 2 3 2 2
+ 4 6 8 9 9 8 3 8 9 9 7 3 3 8 8 3 9 5 9 3 5 9 4 7 9 6 8 3 7 3 7 6 8 7 3 8 4
+ 6 2 7 4 5 7 9 3 4 0 6 7 9 9 0 2 8 6 2 9 2 3 4 0 3 7 8 2 7 5 9 5 7 8 8 8 7
+ 3 9 6 3 7 9 6 7 3 7 8 8 7 9 5]
+[INFO 2019-05-06 16:08:30,454 cleverhans] Attack result at iteration 25 is [1 3 1 9 2 4 8 7 0 2 8 5 0 8 9 9 0 3 7 5 3 9 3 3 4 4 4 3 8 5 5 8 8 2 3 7 3
+ 2 3 0 3 0 1 2 3 3 5 6 9 0 8 8 3 9 8 2 3 2 9 9 3 8 5 3 0 7 8 9 7 8 7 2 8 2
+ 3 9 1 6 3 7 8 7 0 9 0 8 5 8 5 3 9 2 5 9 5 2 3 8 2 0 9 5 4 3 2 3 7 2 3 2 1
+ 4 5 5 9 9 8 3 8 9 9 7 3 3 8 8 2 9 5 9 3 5 9 4 7 9 6 8 3 3 3 7 6 3 7 3 8 4
+ 6 1 7 4 5 7 9 3 4 0 6 7 5 9 0 2 8 5 2 9 2 3 4 0 3 7 8 2 7 7 9 5 7 8 8 8 7
+ 3 9 4 3 7 9 5 7 3 7 8 8 7 9 5]
+[INFO 2019-05-06 16:08:30,490 cleverhans] Attack result at iteration 26 is [1 3 1 9 2 4 8 7 0 2 8 5 0 8 9 9 0 3 7 5 3 9 3 3 4 4 4 3 8 5 5 8 8 2 3 7 3
+ 2 3 0 3 0 1 2 3 3 5 6 9 0 8 8 3 9 8 2 3 2 9 9 3 8 5 3 0 7 8 9 7 8 7 2 8 2
+ 3 9 1 6 3 7 8 7 0 9 0 8 5 8 5 3 9 2 5 9 5 2 3 8 2 0 9 5 4 3 2 3 7 2 3 2 1
+ 4 5 5 9 9 8 3 5 9 9 7 3 3 8 8 2 9 5 9 3 5 9 4 7 9 6 8 3 3 3 7 6 3 7 3 8 4
+ 6 1 7 4 5 7 9 3 4 0 6 7 5 9 0 2 8 5 2 9 2 3 4 0 3 7 8 2 7 7 9 5 7 8 8 8 7
+ 3 9 4 3 7 9 5 7 3 7 8 8 7 9 5]
+[INFO 2019-05-06 16:08:30,492 cleverhans] 200 out of 200 become adversarial examples at iteration 26
+[INFO 2019-05-06 16:08:31,043 cleverhans] Attack result at iteration 5 is [3 8 1 1 0 3 1 6 8 4 9 0 7 3 0 2 9 0 6 6 6 3 6 7 7 2 8 6 0 8 3 0 2 9 8 3 2
+ 5 3 8 8 0 0 1 9 5 1 3 9 6 0 1 4 1 7 1 2 3 7 9 7 4 9 9 3 9 2 8 2 7 1 8 0 9
+ 1 0 1 7 7 9 6 9 9 9 2 1 6 1 3 5 7 1 9 7 6 4 5 7 6 6 9 9 6 3 6 2 9 8 1 2 2
+ 5 5 2 3 7 2 1 0 1 0 4 5 2 8 2 8 3 5 1 7 8 1 1 2 9 7 8 4 0 3 0 7 8 8 4 7 7
+ 8 5 8 4 9 8 1 3 8 0 3 1 7 8 5 5 1 6 5 7 4 9 3 5 4 7 1 2 0 8 1 6 0 7 3 4 7
+ 3 9 6 0 8 6 4 8 7 7 9 3 8 6 9]
+[INFO 2019-05-06 16:08:31,632 cleverhans] Attack result at iteration 10 is [3 8 1 1 0 3 1 6 8 4 9 0 7 3 0 2 9 0 6 6 6 3 6 7 7 2 8 6 0 8 3 0 2 9 8 3 2
+ 5 3 8 8 0 0 1 9 5 1 3 9 6 0 1 4 1 7 1 2 3 7 9 7 4 9 9 3 9 2 8 2 7 1 8 0 9
+ 1 0 1 7 7 9 6 9 9 9 2 1 6 1 3 5 7 1 9 7 6 4 5 7 6 6 9 9 6 3 6 2 9 8 1 2 2
+ 5 5 2 3 7 2 1 0 1 0 4 5 2 8 2 8 3 5 1 7 8 1 1 2 9 7 8 4 0 3 0 7 8 8 4 7 7
+ 8 5 8 4 9 8 1 3 8 0 3 1 7 8 5 5 1 6 5 7 4 9 3 5 4 7 1 2 0 8 1 6 0 7 3 4 7
+ 3 9 6 0 8 6 4 8 7 7 9 3 8 6 9]
+[INFO 2019-05-06 16:08:32,222 cleverhans] Attack result at iteration 15 is [3 8 8 1 0 8 7 6 3 8 9 0 7 3 0 2 9 0 0 6 6 3 6 7 7 2 8 6 0 8 3 0 3 9 8 3 2
+ 8 3 9 8 0 0 1 9 8 8 3 9 6 0 1 4 8 7 8 2 3 7 9 7 4 9 9 3 8 2 8 2 9 8 8 0 9
+ 2 0 1 7 7 9 6 9 9 9 8 1 0 8 3 5 7 8 9 9 6 9 5 7 6 6 9 9 6 3 6 2 9 8 8 3 2
+ 8 5 6 3 7 8 7 8 7 0 4 9 2 0 2 8 3 5 8 7 8 1 7 8 9 7 8 4 0 3 0 7 8 8 4 7 7
+ 8 8 8 6 9 8 1 8 8 0 8 1 7 8 3 6 8 6 3 7 9 9 3 8 8 7 8 2 0 8 1 6 0 8 3 4 7
+ 8 9 6 0 8 6 4 8 8 7 9 8 8 6 9]
+[INFO 2019-05-06 16:08:32,629 cleverhans] Attack result at iteration 20 is [9 8 8 8 6 8 7 8 3 8 7 2 3 9 5 2 7 0 0 5 0 8 0 9 2 3 8 6 5 3 3 0 3 4 3 5 1
+ 8 5 9 8 5 0 8 7 8 8 3 9 6 9 1 7 8 3 8 7 3 7 7 3 7 7 4 5 8 3 8 4 9 8 3 0 8
+ 2 0 4 3 9 7 4 9 9 9 8 1 0 8 5 3 2 8 3 9 5 9 3 9 0 6 4 7 2 5 6 2 4 2 8 3 3
+ 8 9 6 5 3 8 7 8 7 0 5 9 3 0 2 8 7 3 8 3 8 7 7 8 9 2 6 6 9 5 6 7 3 3 4 4 9
+ 8 8 3 6 4 3 8 8 8 9 8 4 3 9 3 6 8 0 3 3 9 7 9 8 8 3 8 2 6 8 8 0 0 8 9 9 9
+ 8 7 6 0 8 6 3 8 8 4 3 8 2 6 9]
+[INFO 2019-05-06 16:08:32,837 cleverhans] Attack result at iteration 25 is [9 4 8 8 6 8 7 8 3 8 7 2 3 9 5 4 7 5 0 5 0 8 0 9 2 3 2 4 5 3 5 6 3 4 3 5 1
+ 8 5 9 3 5 2 8 7 8 8 7 7 5 9 4 7 8 3 8 7 2 2 7 3 7 7 4 5 8 3 3 4 9 8 3 2 8
+ 2 7 4 3 9 7 4 4 7 7 8 4 0 8 5 3 2 8 3 9 5 9 3 9 0 1 4 7 2 5 5 1 4 2 8 3 3
+ 8 9 6 5 3 8 7 8 7 0 5 9 3 0 7 3 7 3 8 3 3 7 7 8 7 2 6 6 9 5 6 3 3 3 1 4 9
+ 3 8 3 6 4 3 8 8 8 9 8 4 3 9 3 6 8 0 3 3 9 7 9 8 8 3 8 1 6 8 8 0 2 8 9 9 9
+ 8 7 4 5 5 5 3 5 8 4 3 8 2 5 7]
+[INFO 2019-05-06 16:08:32,944 cleverhans] Attack result at iteration 28 is [9 4 8 8 6 8 7 8 3 8 7 2 3 9 5 4 7 5 0 5 0 8 0 9 2 3 2 4 5 3 5 6 3 4 3 5 1
+ 8 5 9 3 5 2 8 7 8 8 7 7 5 9 4 7 8 3 8 7 2 2 7 3 7 7 4 5 8 3 3 4 9 8 3 2 8
+ 2 7 4 3 9 7 4 4 7 7 8 4 0 8 5 3 2 8 3 9 5 9 3 9 0 1 4 7 2 5 5 1 4 2 8 3 3
+ 8 9 6 5 3 8 7 8 7 2 5 9 3 0 7 3 7 3 8 3 3 7 7 8 7 2 6 6 9 5 6 3 3 3 1 4 9
+ 3 8 3 6 4 3 8 8 2 9 8 4 3 9 3 6 8 0 3 3 9 7 9 8 8 3 8 1 6 5 8 0 2 8 9 9 9
+ 8 7 4 5 5 5 3 5 8 4 3 8 2 5 7]
+[INFO 2019-05-06 16:08:32,947 cleverhans] 200 out of 200 become adversarial examples at iteration 28
+[INFO 2019-05-06 16:08:33,503 cleverhans] Attack result at iteration 5 is [7 2 3 4 0 2 1 0 3 5 5 7 2 4 6 7 2 8 3 0 8 7 8 4 0 8 4 4 5 8 5 6 6 3 0 9 3
+ 7 6 8 9 3 4 9 5 8 9 1 2 8 8 6 8 1 3 7 9 0 1 1 9 7 0 8 1 7 4 5 7 1 2 1 1 3
+ 0 6 2 1 2 8 0 7 6 6 9 3 7 0 5 2 8 0 5 4 3 8 4 6 6 2 7 9 5 1 3 2 4 3 6 1 9
+ 4 4 7 6 5 4 1 9 9 2 7 8 0 1 3 6 1 3 4 1 1 1 5 6 0 7 0 7 2 3 2 5 2 2 9 4 9
+ 8 1 2 1 6 1 2 7 8 0 0 0 8 2 2 9 2 2 7 9 9 2 7 5 1 3 4 9 4 1 8 5 6 2 8 3 1
+ 2 8 4 9 9 3 7 0 7 7 2 3 2 4 0]
+[INFO 2019-05-06 16:08:34,081 cleverhans] Attack result at iteration 10 is [7 2 3 4 0 2 1 3 3 5 5 7 2 4 6 7 2 8 3 0 8 7 8 4 0 8 4 4 5 8 5 6 6 3 0 9 3
+ 7 6 8 9 3 4 9 5 8 9 1 2 8 8 6 8 1 3 7 9 0 1 1 9 7 0 8 1 7 4 5 7 1 2 1 1 3
+ 0 6 2 1 2 8 0 7 6 6 9 3 7 0 5 2 8 0 5 4 3 8 4 6 6 2 7 9 5 1 3 2 4 3 6 1 9
+ 4 4 7 6 5 4 1 9 9 2 7 8 0 1 3 6 1 3 4 1 1 1 5 6 0 7 0 7 2 3 2 5 2 2 9 4 9
+ 8 1 2 1 6 1 2 7 8 0 0 0 8 2 2 9 2 2 7 9 9 2 7 5 1 3 4 9 4 1 8 5 6 2 8 3 1
+ 2 8 4 9 9 3 7 0 7 7 2 3 2 4 0]
+[INFO 2019-05-06 16:08:34,679 cleverhans] Attack result at iteration 15 is [7 2 3 4 0 2 1 3 3 8 8 7 2 9 0 8 2 8 8 0 8 7 8 6 0 8 4 4 5 8 9 6 6 3 0 9 3
+ 7 5 8 9 8 9 9 3 8 9 1 3 8 8 6 8 8 3 7 9 0 1 8 4 7 0 8 7 8 4 3 7 1 2 1 1 2
+ 0 6 2 1 8 8 8 7 6 6 9 8 7 0 6 2 8 0 5 4 3 8 4 6 6 8 7 9 5 1 8 2 4 3 6 1 9
+ 9 7 7 8 5 9 8 9 9 2 7 8 0 2 3 6 8 3 9 8 8 1 8 6 0 7 0 7 2 3 2 5 2 2 9 4 8
+ 8 1 3 1 6 1 2 7 8 0 0 0 8 8 2 9 2 8 3 9 9 2 7 5 7 8 4 9 9 8 8 5 0 3 8 3 1
+ 2 8 4 9 9 3 7 0 7 7 2 8 3 4 0]
+[INFO 2019-05-06 16:08:35,090 cleverhans] Attack result at iteration 20 is [3 2 9 7 6 2 8 3 5 8 8 3 8 9 0 8 3 3 8 0 3 9 3 6 0 8 1 7 3 3 9 5 6 2 9 7 5
+ 2 5 3 3 8 9 9 3 8 4 1 3 8 8 0 6 8 5 3 7 8 7 8 4 3 9 3 7 8 9 3 3 8 2 4 7 2
+ 5 0 4 4 8 6 8 2 5 5 4 8 1 8 6 1 6 6 9 9 5 8 9 6 8 8 7 9 3 3 8 3 1 7 6 4 9
+ 9 7 9 8 6 9 8 4 3 7 9 8 6 2 5 0 8 2 9 8 8 7 8 5 6 2 9 3 3 5 3 3 7 7 3 7 8
+ 3 4 3 7 5 8 3 3 8 6 0 0 5 8 1 7 3 8 3 3 0 7 3 3 7 8 2 3 9 8 3 3 0 3 3 9 4
+ 2 3 7 7 7 2 3 5 3 9 3 8 3 9 0]
+[INFO 2019-05-06 16:08:35,286 cleverhans] Attack result at iteration 25 is [3 1 9 7 6 3 8 3 5 8 8 3 8 9 0 8 3 3 8 2 3 9 3 6 2 4 1 7 3 3 9 5 8 2 9 7 5
+ 2 5 3 3 8 9 4 3 3 4 4 3 2 2 0 6 8 5 3 7 8 7 8 4 3 9 3 7 8 9 3 3 8 2 4 7 2
+ 5 0 4 4 8 6 8 2 5 5 4 8 1 8 6 1 6 6 9 9 5 2 9 5 8 8 1 4 3 3 8 3 1 7 5 4 4
+ 9 7 9 8 6 9 8 4 3 7 9 3 6 2 5 0 8 2 9 8 8 7 8 5 6 2 9 3 3 5 3 3 7 7 3 7 8
+ 3 4 3 7 5 8 3 3 8 6 2 2 5 8 1 7 3 8 3 3 0 7 3 3 7 8 2 3 9 8 3 3 0 3 3 9 4
+ 3 3 7 7 7 2 3 5 3 9 3 8 3 9 5]
+[INFO 2019-05-06 16:08:35,351 cleverhans] Attack result at iteration 27 is [3 1 9 7 6 3 8 3 5 8 8 3 8 9 0 8 3 3 8 2 3 9 3 6 2 4 1 7 3 3 9 5 8 2 9 7 5
+ 2 5 3 3 8 9 4 3 3 4 4 3 2 2 0 6 8 5 3 7 8 7 8 4 3 9 3 7 8 9 3 3 8 1 4 7 2
+ 5 0 4 4 8 6 8 2 5 5 4 8 1 8 6 1 6 6 9 9 5 2 9 5 8 8 1 4 3 3 8 3 1 7 5 4 4
+ 9 7 9 8 6 9 8 4 3 7 9 3 6 2 5 0 8 2 9 8 8 7 8 5 6 2 9 3 3 5 3 3 7 7 3 7 8
+ 3 4 3 7 5 8 3 3 8 6 2 2 5 8 1 7 3 8 3 3 0 7 3 3 7 8 2 3 9 8 3 3 0 3 3 9 4
+ 3 3 7 7 7 2 3 5 3 9 3 8 3 9 5]
+[INFO 2019-05-06 16:08:35,353 cleverhans] 200 out of 200 become adversarial examples at iteration 27
+[INFO 2019-05-06 16:08:35,948 cleverhans] Attack result at iteration 5 is [3 9 9 8 4 1 0 6 0 9 6 8 6 1 1 9 8 9 2 3 5 5 9 4 2 1 9 4 3 9 6 0 4 0 6 0 1
+ 2 3 4 7 8 9 0 1 2 3 4 7 8 9 0 1 2 3 4 5 6 7 8 9 8 3 4 7 8 6 3 4 0 9 7 1 9
+ 3 8 4 7 3 0 9 1 4 5 4 6 2 0 6 2 1 1 1 1 7 2 4 7 5 2 9 4 5 8 4 2 9 7 0 0 7
+ 5 1 1 7 6 6 6 8 2 2 7 7 4 0 2 4 2 1 8 9 6 1 0 5 9 6 9 8 0 3 0 8 3 9 6 3 0
+ 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 5 4 8 7 4 7 7 3 9 8 8
+ 3 1 5 8 2 7 4 2 1 5 4 5 5 8 6]
+[INFO 2019-05-06 16:08:36,557 cleverhans] Attack result at iteration 10 is [3 9 9 8 4 1 0 6 0 9 6 8 6 1 1 9 8 9 2 3 5 5 9 4 2 1 9 4 3 9 6 0 4 0 6 0 1
+ 2 3 4 7 8 9 0 1 2 3 4 7 8 9 0 1 2 3 4 5 6 7 8 9 8 3 4 7 8 6 3 4 0 9 7 1 9
+ 3 8 4 7 3 0 9 1 4 5 4 6 2 0 6 2 1 1 1 1 7 2 4 7 5 2 9 4 5 8 4 2 9 7 0 0 7
+ 5 1 1 7 6 6 6 8 2 2 7 7 4 0 2 4 2 1 8 9 6 1 0 5 9 6 9 8 0 3 0 8 3 9 6 3 0
+ 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 5 4 8 7 4 7 7 3 9 8 8
+ 3 1 5 8 2 7 4 2 1 5 4 5 5 8 6]
+[INFO 2019-05-06 16:08:37,141 cleverhans] Attack result at iteration 15 is [3 8 9 8 4 7 6 6 8 9 6 8 6 8 1 8 8 9 2 8 8 3 9 8 2 1 9 4 8 9 6 0 9 8 6 6 1
+ 2 8 9 7 8 9 6 1 2 5 9 7 8 9 6 1 2 8 4 8 0 7 8 9 8 3 4 7 8 0 8 7 0 9 7 1 9
+ 3 8 4 7 3 0 9 1 4 8 4 6 2 8 0 2 1 1 8 7 7 2 4 9 8 2 9 4 8 8 4 2 9 7 8 0 7
+ 8 8 1 3 6 6 0 8 2 2 7 7 7 0 2 4 7 1 8 8 6 8 0 5 9 0 9 8 0 3 8 8 3 9 6 3 0
+ 8 2 3 9 3 6 7 6 8 2 3 4 3 6 7 8 9 0 1 3 8 9 5 6 7 8 8 9 8 9 4 7 7 3 9 8 8
+ 8 8 3 8 2 7 9 2 1 3 4 5 3 8 6]
+[INFO 2019-05-06 16:08:37,499 cleverhans] Attack result at iteration 20 is [5 8 8 3 7 7 6 0 8 9 6 0 0 8 7 8 5 7 4 8 8 3 7 8 3 7 4 7 8 4 2 0 9 8 6 6 8
+ 2 8 9 9 8 9 6 8 2 5 9 9 8 7 6 7 7 8 7 8 0 3 8 9 3 5 9 3 8 0 8 7 2 3 7 8 3
+ 9 8 9 3 5 8 9 4 9 8 9 5 4 8 0 3 2 8 8 7 3 7 9 9 8 3 4 9 8 5 7 3 4 3 8 2 3
+ 8 8 7 3 0 0 0 5 3 3 7 3 7 2 1 4 7 8 5 8 5 8 2 0 3 0 7 8 2 5 8 3 5 7 0 3 5
+ 8 2 9 9 3 0 2 6 8 3 5 9 3 6 2 8 3 5 7 3 8 9 3 4 2 8 8 9 8 9 7 9 9 5 3 8 8
+ 8 8 3 8 1 2 9 2 7 3 9 3 3 8 4]
+[INFO 2019-05-06 16:08:37,690 cleverhans] Attack result at iteration 25 is [5 8 8 3 7 7 6 0 8 5 6 0 0 8 7 8 5 7 4 8 8 3 7 8 3 7 4 7 8 4 2 2 9 8 5 6 8
+ 1 8 9 9 5 7 6 8 1 5 9 9 5 7 6 7 7 8 7 8 0 3 5 5 3 5 9 3 8 0 8 7 2 3 3 8 3
+ 9 9 9 3 5 8 3 4 9 8 9 5 4 8 0 3 2 8 8 7 3 7 9 9 8 3 4 9 8 5 7 3 4 3 8 2 3
+ 8 8 7 3 0 0 0 5 3 3 1 3 7 2 1 1 7 8 5 8 5 8 2 0 3 0 7 5 2 5 8 3 5 7 0 5 5
+ 8 1 9 9 3 0 2 6 8 3 5 9 3 4 2 8 3 5 7 3 8 9 3 4 2 8 8 9 4 9 7 9 9 5 3 4 3
+ 8 8 3 8 1 2 9 3 7 3 9 3 3 4 4]
+[INFO 2019-05-06 16:08:37,799 cleverhans] Attack result at iteration 28 is [5 8 8 3 7 7 6 0 8 5 5 0 0 8 7 8 5 7 4 8 8 3 7 8 3 7 4 7 8 4 2 2 9 8 5 6 8
+ 1 8 9 9 5 7 6 8 1 5 9 9 5 7 6 7 7 8 7 8 0 3 5 5 3 5 9 3 5 0 8 7 2 3 3 8 3
+ 9 9 9 3 5 8 3 4 9 8 9 5 4 8 0 3 2 8 8 7 3 7 9 9 8 3 4 9 8 5 7 3 4 3 8 2 3
+ 8 8 7 3 0 0 0 5 3 3 1 3 7 2 1 1 7 8 5 8 5 8 2 0 3 0 7 5 2 5 8 3 5 7 0 5 5
+ 8 1 9 9 3 0 2 6 8 3 5 9 3 4 2 5 3 5 7 3 8 9 3 4 2 5 8 9 4 9 7 9 9 5 3 4 3
+ 8 8 3 5 1 2 9 3 7 3 9 3 3 4 4]
+[INFO 2019-05-06 16:08:37,802 cleverhans] 200 out of 200 become adversarial examples at iteration 28
+[INFO 2019-05-06 16:08:38,440 cleverhans] Attack result at iteration 5 is [4 4 4 1 8 7 5 5 1 8 9 1 3 6 3 3 2 2 6 9 9 6 5 5 3 3 8 1 6 5 6 8 1 9 7 6 8
+ 3 7 4 7 0 9 0 0 3 7 9 3 0 2 0 1 0 1 0 4 0 1 0 4 7 9 6 2 6 2 2 9 9 0 1 2 3
+ 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 8 0 5 6 6 0 8 0 2 3 7
+ 9 4 7 1 9 1 7 1 4 0 0 4 1 7 5 7 1 3 3 3 1 6 9 7 4 3 0 2 5 2 6 0 8 9 4 3 5
+ 4 8 1 5 9 0 6 4 3 6 3 3 8 1 4 7 5 7 2 2 0 0 1 7 7 9 5 9 8 9 6 8 8 2 3 6 1
+ 2 9 8 9 5 2 6 2 4 8 4 6 5 0 1]
+[INFO 2019-05-06 16:08:39,048 cleverhans] Attack result at iteration 10 is [4 4 4 1 8 7 5 5 1 8 9 1 3 6 3 3 2 2 6 9 9 6 5 5 3 3 8 1 6 5 6 8 1 9 7 6 8
+ 3 7 4 7 0 9 0 0 3 7 9 3 0 2 0 1 0 1 0 4 0 1 0 4 7 9 6 2 6 2 2 8 9 0 1 2 3
+ 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 8 0 5 6 6 0 8 0 2 3 7
+ 9 4 7 1 9 1 7 1 4 0 0 4 1 7 5 7 1 3 3 3 1 6 9 7 4 3 0 2 5 2 6 0 8 9 4 3 5
+ 4 8 1 5 9 0 6 4 3 6 3 3 8 1 4 7 5 7 2 2 0 0 1 7 7 9 5 9 8 9 6 8 8 2 3 6 1
+ 2 9 8 9 5 2 6 2 4 8 4 6 5 0 1]
+[INFO 2019-05-06 16:08:39,607 cleverhans] Attack result at iteration 15 is [9 9 9 1 8 7 3 5 8 8 9 1 8 6 3 3 2 2 6 9 9 6 3 3 8 3 8 8 6 5 6 8 1 9 7 6 8
+ 8 7 9 7 0 9 0 0 3 7 9 3 0 3 0 1 0 8 0 7 0 8 0 8 7 9 6 2 6 2 3 8 8 0 8 2 5
+ 9 5 6 7 8 9 0 8 2 8 9 3 6 7 8 9 0 1 2 3 9 8 6 7 8 9 8 0 5 6 6 0 8 0 2 9 7
+ 9 4 7 8 7 1 7 8 4 0 0 4 1 7 3 7 1 3 3 3 6 6 9 7 4 8 0 2 3 2 6 0 8 9 4 8 5
+ 4 8 1 3 9 0 6 4 8 6 3 8 8 1 4 9 8 7 2 2 0 0 1 9 7 7 5 9 8 7 6 8 8 2 3 6 1
+ 2 9 8 9 3 2 6 2 7 8 4 6 3 0 1]
+[INFO 2019-05-06 16:08:40,014 cleverhans] Attack result at iteration 20 is [9 9 9 7 8 2 3 3 8 8 3 7 8 6 5 5 2 3 6 8 3 0 3 3 8 2 8 8 6 3 6 8 2 4 2 0 8
+ 8 2 9 2 6 8 9 9 9 2 3 5 0 3 9 4 0 8 0 7 0 8 8 8 2 7 0 3 4 1 3 8 8 9 8 3 5
+ 9 9 4 3 7 7 6 8 3 8 9 3 5 9 8 7 0 7 3 5 9 8 6 3 0 7 3 6 3 6 6 0 8 0 3 9 3
+ 7 9 3 8 7 7 9 8 6 0 0 7 7 9 3 3 7 9 5 5 6 6 3 3 4 8 9 3 3 3 8 6 8 3 9 8 3
+ 7 8 2 3 7 6 6 9 8 6 9 8 7 8 7 9 8 3 3 7 0 5 8 9 9 7 3 4 8 7 6 7 8 3 5 6 8
+ 3 7 8 7 3 3 6 3 7 8 4 6 3 0 2]
+[INFO 2019-05-06 16:08:40,243 cleverhans] Attack result at iteration 25 is [9 9 9 7 3 2 3 3 8 8 3 7 8 4 5 5 1 3 4 8 3 0 3 3 8 2 8 8 4 3 4 8 2 4 2 0 8
+ 8 2 9 2 6 8 9 9 9 2 3 5 1 3 9 4 2 8 1 7 2 8 8 8 2 7 0 3 4 1 3 8 8 9 8 3 5
+ 9 9 4 3 7 7 6 8 3 8 9 3 5 9 0 7 2 7 3 5 9 8 5 3 0 7 3 6 3 5 5 2 7 2 3 9 3
+ 7 9 3 8 7 7 9 8 6 2 7 7 7 9 3 3 7 9 5 5 6 5 3 3 1 8 9 3 3 3 8 6 7 3 9 8 3
+ 7 2 2 3 7 6 5 9 8 5 9 8 7 8 7 9 8 3 3 7 7 5 8 9 9 7 3 4 9 7 6 7 9 3 5 5 8
+ 3 7 8 7 3 3 5 3 7 7 4 5 3 2 2]
+[INFO 2019-05-06 16:08:40,376 cleverhans] Attack result at iteration 29 is [9 9 9 7 3 2 3 3 8 5 3 7 8 4 5 5 1 3 4 8 3 0 3 3 8 2 5 8 4 3 4 5 2 4 2 0 5
+ 8 2 9 2 6 8 9 9 9 2 3 5 1 3 9 4 2 8 1 7 2 8 8 8 2 7 0 3 4 1 3 8 8 9 8 3 5
+ 9 9 4 3 7 7 6 8 3 8 9 3 5 9 0 7 2 7 3 5 9 8 5 3 0 7 3 6 3 5 5 2 7 2 3 9 3
+ 7 9 3 8 7 7 9 8 6 2 7 7 7 9 3 3 7 9 5 5 6 5 3 3 1 8 9 3 3 3 8 6 7 3 9 8 3
+ 7 2 2 3 7 6 5 9 8 5 9 8 7 8 7 9 8 3 3 7 7 5 8 9 9 7 3 4 9 7 5 7 9 3 5 5 8
+ 3 7 2 7 3 3 5 3 7 7 1 5 3 2 2]
+[INFO 2019-05-06 16:08:40,378 cleverhans] 200 out of 200 become adversarial examples at iteration 29
+[INFO 2019-05-06 16:08:40,949 cleverhans] Attack result at iteration 5 is [5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 7 4 2 0 9 0 1 5 8 8 0 2
+ 7 8 4 4 6 1 0 4 5 3 9 4 2 0 5 0 1 3 2 9 1 6 0 1 1 8 0 4 7 7 6 3 6 0 7 3 5
+ 4 2 4 1 8 3 5 6 7 0 6 7 1 2 5 8 1 9 3 8 2 8 7 6 7 1 4 6 2 9 3 0 1 2 3 4 5
+ 6 7 0 1 2 3 4 5 0 1 2 8 9 1 4 0 9 5 0 8 0 7 7 1 1 2 9 3 6 7 2 3 8 1 2 9 8
+ 8 7 1 7 1 1 0 3 4 2 6 4 7 4 2 7 4 9 1 0 6 8 5 5 5 3 5 9 7 4 8 5 9 6 9 3 0
+ 3 8 9 1 8 1 6 0 0 1 2 3 4 5 6]
+[INFO 2019-05-06 16:08:41,548 cleverhans] Attack result at iteration 10 is [5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 7 4 2 0 9 0 1 5 8 8 0 2
+ 7 8 4 4 6 1 0 4 5 3 9 4 2 0 5 0 1 3 2 9 1 6 0 1 1 8 0 4 7 7 6 3 6 0 7 3 5
+ 4 2 4 1 8 3 5 6 7 0 6 7 1 2 5 8 1 9 3 8 2 8 7 6 7 1 4 6 2 9 3 0 1 2 3 4 5
+ 6 7 0 1 2 3 4 5 0 1 2 8 9 1 4 0 9 5 0 8 0 7 7 1 1 2 9 3 6 7 2 3 8 1 2 9 8
+ 8 7 1 7 1 1 0 3 4 2 6 4 7 4 2 7 4 9 1 0 6 8 5 5 5 3 5 9 7 4 8 5 9 6 9 3 0
+ 3 8 9 1 8 1 6 0 0 1 2 3 4 5 6]
+[INFO 2019-05-06 16:08:42,128 cleverhans] Attack result at iteration 15 is [5 6 7 8 9 8 7 2 8 4 0 6 7 8 9 0 1 2 9 7 3 6 7 8 9 7 4 2 0 9 0 1 5 8 8 0 2
+ 7 8 4 9 6 8 0 4 5 3 9 7 2 0 5 0 8 3 2 9 8 6 0 7 8 8 0 7 7 7 6 3 6 0 7 8 5
+ 4 2 7 1 8 3 8 6 7 0 6 7 1 2 5 8 7 9 8 8 2 8 7 6 7 7 7 0 3 9 0 8 1 2 3 4 5
+ 6 7 0 1 2 3 9 3 0 1 2 8 9 1 4 0 9 5 0 8 0 7 7 8 1 2 9 3 0 7 2 3 8 1 3 9 0
+ 8 9 1 7 1 1 0 3 4 2 0 4 7 4 8 7 4 9 1 0 0 8 5 5 5 3 3 7 7 4 8 6 7 6 9 3 0
+ 3 0 9 8 8 1 6 0 0 1 2 3 4 8 6]
+[INFO 2019-05-06 16:08:42,541 cleverhans] Attack result at iteration 20 is [9 5 3 3 3 8 7 7 8 6 0 0 3 3 3 9 8 1 9 7 3 0 5 8 4 9 7 3 5 7 2 7 9 3 3 0 3
+ 9 3 4 9 0 8 5 7 3 5 4 7 3 5 9 2 8 3 2 7 8 0 6 7 8 5 2 7 9 3 0 5 0 5 9 8 3
+ 7 2 7 7 3 5 8 6 9 2 0 7 8 2 3 2 7 3 8 3 1 3 3 6 3 7 7 0 3 7 0 8 8 2 5 7 3
+ 6 9 5 1 2 9 9 3 5 8 2 9 7 1 7 0 7 3 6 5 0 9 9 8 7 3 7 8 0 3 3 7 8 8 3 4 0
+ 3 9 8 9 8 8 5 5 4 1 0 9 9 9 8 3 4 4 8 0 0 9 3 3 9 5 3 7 3 7 0 6 7 0 7 5 5
+ 5 0 4 8 2 8 0 0 6 8 3 9 4 8 6]
+[INFO 2019-05-06 16:08:42,755 cleverhans] Attack result at iteration 25 is [9 5 3 3 3 8 7 7 8 6 0 0 3 3 3 9 8 1 9 7 3 0 5 9 4 9 7 3 5 7 2 7 9 3 3 2 3
+ 9 3 7 9 0 8 5 7 3 5 4 7 3 5 9 2 8 5 1 7 8 0 6 7 8 5 2 7 9 3 0 5 0 5 9 8 3
+ 7 1 7 7 3 5 8 4 9 2 0 3 8 1 3 2 7 3 8 3 1 3 3 4 3 7 7 0 3 7 0 8 8 1 5 7 3
+ 4 9 5 4 1 9 9 3 5 8 1 9 7 4 7 2 7 3 6 5 2 9 9 8 7 3 7 8 0 3 3 7 6 8 3 4 0
+ 3 9 8 9 8 8 5 5 2 1 0 9 9 9 8 3 2 4 8 7 0 9 3 3 9 5 3 7 3 7 0 6 7 0 7 5 5
+ 5 0 4 8 2 8 0 2 6 8 3 9 7 8 5]
+[INFO 2019-05-06 16:08:42,759 cleverhans] 200 out of 200 become adversarial examples at iteration 25
+[INFO 2019-05-06 16:08:43,351 cleverhans] Attack result at iteration 5 is [7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 3 5 3 2 9 3 2 1 4 5 5 3 3 2
+ 1 3 9 7 2 1 2 8 9 1 8 8 7 8 1 0 0 7 7 8 7 5 0 6 1 5 7 4 6 1 2 5 0 7 9 9 0
+ 3 8 4 4 8 1 8 6 5 9 0 0 0 3 7 1 6 4 2 6 6 0 4 5 4 1 3 8 6 3 9 9 5 9 3 7 8
+ 5 6 4 7 6 2 2 0 9 4 0 1 2 3 4 5 6 7 8 9 0 1 2 3 5 6 0 1 2 3 4 5 6 8 7 1 3
+ 2 8 0 7 5 9 9 6 0 9 4 1 3 2 1 2 3 8 3 2 6 5 6 8 2 7 4 8 1 8 0 5 3 9 4 1 9
+ 2 1 9 6 7 9 0 4 6 1 7 3 8 7 2]
+[INFO 2019-05-06 16:08:43,945 cleverhans] Attack result at iteration 10 is [7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 3 5 3 2 9 3 2 1 4 5 5 2 3 2
+ 1 3 9 7 2 1 2 8 9 1 8 8 7 8 1 0 0 7 7 8 7 5 0 6 1 5 7 4 6 1 2 5 0 7 9 9 0
+ 3 8 4 4 8 1 8 6 5 9 0 0 0 3 7 1 6 4 2 6 6 0 4 5 4 1 3 8 6 3 9 9 5 9 3 7 8
+ 5 6 4 7 6 2 2 0 9 4 0 1 2 3 4 5 6 7 8 9 0 1 2 3 5 6 0 1 2 3 4 5 6 8 7 1 3
+ 2 8 0 7 5 9 9 6 0 9 4 1 3 2 1 2 3 8 3 2 6 5 6 8 2 7 4 8 1 8 0 5 3 9 4 1 9
+ 2 1 9 6 7 9 0 4 6 1 7 3 8 7 2]
+[INFO 2019-05-06 16:08:44,553 cleverhans] Attack result at iteration 15 is [7 8 9 0 1 2 9 4 5 6 7 8 9 0 1 2 8 4 5 6 7 8 9 0 8 3 3 9 3 8 1 4 3 8 2 3 2
+ 1 3 9 9 2 8 2 8 9 8 8 8 9 8 1 0 0 9 8 8 7 5 0 6 8 3 9 4 6 1 2 8 0 7 9 9 0
+ 3 8 4 4 8 1 8 6 8 9 0 0 0 8 9 1 6 4 2 6 6 0 4 5 4 1 3 8 6 8 9 9 8 9 3 7 8
+ 5 6 4 9 6 2 8 0 9 4 0 8 8 3 4 9 6 7 8 8 0 8 2 3 3 0 0 8 2 3 4 5 6 8 7 2 3
+ 2 8 0 7 5 9 9 6 0 7 4 1 9 2 1 2 8 8 8 2 6 6 6 8 2 7 9 8 1 8 0 3 3 9 4 1 9
+ 2 8 9 6 7 9 0 4 6 8 7 3 8 7 2]
+[INFO 2019-05-06 16:08:45,001 cleverhans] Attack result at iteration 20 is [9 4 4 0 8 3 9 7 3 6 9 6 4 6 8 8 8 4 3 4 9 4 4 0 8 9 3 4 5 8 1 7 3 8 2 5 3
+ 8 5 9 9 3 8 3 4 9 8 6 8 9 8 7 9 6 9 8 3 9 3 0 6 8 3 9 7 6 8 3 8 5 9 3 4 5
+ 5 3 7 6 8 4 3 6 8 5 0 5 5 8 9 8 6 4 3 6 0 5 5 9 4 8 9 8 6 8 3 9 8 3 5 9 3
+ 3 6 4 9 5 3 8 5 7 7 0 8 8 9 7 9 6 4 8 8 9 8 2 7 3 0 9 8 1 5 7 3 6 8 1 2 2
+ 1 2 2 3 3 9 3 6 9 7 7 4 9 3 2 3 8 8 8 2 4 6 6 2 2 9 9 8 7 8 2 3 2 9 7 8 7
+ 3 8 9 5 3 7 6 6 6 8 3 9 3 3 2]
+[INFO 2019-05-06 16:08:45,223 cleverhans] Attack result at iteration 25 is [9 4 4 5 8 3 9 7 3 5 9 6 4 6 8 8 8 7 3 4 9 4 4 0 8 9 3 4 5 8 7 7 3 8 2 5 3
+ 8 5 7 9 3 8 3 4 3 8 6 4 9 5 7 9 6 9 8 3 9 3 2 5 8 3 9 7 5 8 3 8 5 9 3 4 5
+ 5 3 7 6 3 4 3 3 8 5 5 5 5 8 9 8 4 7 3 5 0 5 5 9 7 8 9 4 4 8 3 4 8 3 5 9 3
+ 3 4 7 9 5 3 8 5 7 7 2 8 8 9 7 9 0 4 9 8 9 8 1 7 3 0 9 8 1 5 7 3 2 8 1 2 2
+ 1 2 2 3 3 5 3 4 9 7 7 4 9 3 2 3 8 2 8 1 4 6 4 2 1 9 9 5 7 8 2 3 2 7 7 8 7
+ 3 8 5 5 3 7 6 6 4 8 3 9 3 3 1]
+[INFO 2019-05-06 16:08:45,362 cleverhans] Attack result at iteration 29 is [9 4 4 5 8 3 9 7 3 5 9 6 4 6 8 8 8 7 3 4 9 4 4 0 8 9 3 4 5 8 7 7 3 8 2 5 3
+ 8 5 7 9 3 8 3 4 3 8 6 4 9 5 7 9 6 9 8 3 9 3 2 5 8 3 9 7 5 8 3 8 5 9 3 4 5
+ 5 3 7 6 3 4 3 3 8 5 5 5 5 8 9 8 4 7 3 5 0 5 5 9 7 8 9 4 4 8 3 4 8 3 5 9 3
+ 3 4 7 9 5 3 8 5 7 7 2 8 8 9 7 9 0 4 9 8 9 8 1 7 3 0 9 8 1 5 7 3 2 5 1 2 2
+ 1 2 2 3 3 5 3 4 9 7 7 4 9 3 2 3 8 2 8 1 4 6 4 2 1 9 9 5 7 5 2 3 2 7 7 8 7
+ 3 8 5 5 3 7 6 6 4 8 3 9 3 3 1]
+[INFO 2019-05-06 16:08:45,365 cleverhans] 200 out of 200 become adversarial examples at iteration 29
+[INFO 2019-05-06 16:08:45,963 cleverhans] Attack result at iteration 5 is [9 0 5 8 3 9 0 5 7 1 6 1 0 9 3 3 4 4 0 6 2 5 4 2 3 4 6 0 0 2 0 1 4 5 6 7 8
+ 9 0 1 2 3 4 5 6 7 8 0 1 2 3 4 5 6 7 8 9 8 7 1 3 7 5 2 8 0 7 5 9 9 0 9 1 1
+ 5 8 8 6 3 2 1 8 3 2 6 5 6 7 0 1 0 5 3 1 9 2 1 9 6 0 4 6 1 7 3 8 7 2 9 6 5
+ 8 3 5 7 1 6 1 0 9 6 2 5 4 2 3 4 4 6 0 0 2 0 1 2 3 4 3 6 7 8 9 0 1 2 3 4 5
+ 6 7 8 9 0 1 2 8 4 5 6 7 8 9 8 6 5 0 6 8 9 4 1 9 5 8 0 4 8 9 1 4 0 5 3 2 1
+ 5 4 0 7 6 0 1 7 0 6 8 9 5 1 7]
+[INFO 2019-05-06 16:08:46,556 cleverhans] Attack result at iteration 10 is [9 0 5 8 3 9 0 5 7 1 6 1 0 9 3 3 4 4 0 6 2 5 4 2 3 4 6 0 0 2 0 1 4 5 6 7 8
+ 9 0 1 2 3 4 5 6 7 8 0 1 2 3 4 5 6 7 8 9 8 7 1 3 7 5 2 8 0 7 5 9 9 0 9 1 1
+ 5 8 8 6 3 2 1 8 3 2 6 5 6 7 0 1 0 5 3 1 9 2 1 9 6 0 4 6 1 7 3 8 7 2 9 6 5
+ 8 3 5 7 1 6 1 0 9 6 2 5 4 2 3 4 4 6 0 0 2 0 1 2 3 4 3 6 7 8 9 0 1 2 3 4 5
+ 6 7 8 9 0 1 2 8 4 5 6 7 8 9 8 6 5 0 6 8 9 4 1 9 5 8 0 4 8 9 1 4 0 5 3 2 1
+ 5 4 0 7 6 0 1 7 0 6 8 9 8 1 7]
+[INFO 2019-05-06 16:08:47,153 cleverhans] Attack result at iteration 15 is [9 6 9 8 3 9 0 9 7 1 6 1 0 7 3 3 9 4 0 6 2 5 4 2 3 9 6 0 0 2 9 8 9 3 6 9 8
+ 9 0 8 2 3 7 9 6 7 8 0 1 2 3 4 5 6 7 8 9 8 4 8 3 7 3 8 8 0 7 3 9 9 0 9 8 8
+ 3 8 8 6 3 3 8 8 8 2 0 5 6 0 0 8 0 3 3 8 9 2 1 9 6 0 4 6 1 7 3 8 4 2 9 6 5
+ 8 3 5 4 8 6 1 0 9 6 2 3 4 2 3 4 4 6 0 0 2 0 1 0 8 4 3 6 7 8 9 0 1 8 8 4 5
+ 6 7 8 9 0 1 2 3 4 3 6 7 0 9 8 6 5 0 6 8 9 9 8 9 3 3 0 4 8 9 1 4 0 3 5 0 1
+ 3 9 0 7 6 0 8 7 0 6 8 9 8 1 7]
+[INFO 2019-05-06 16:08:47,519 cleverhans] Attack result at iteration 20 is [7 6 9 8 9 9 2 9 3 4 6 7 0 7 2 8 9 6 2 6 2 3 7 7 7 9 6 6 5 3 9 8 9 3 6 9 5
+ 4 7 8 3 5 7 9 0 4 8 0 8 3 5 7 3 6 4 8 7 2 4 8 5 3 3 8 2 0 4 3 7 9 0 9 8 8
+ 3 2 3 0 5 3 8 8 8 3 0 3 8 0 4 8 5 3 5 8 7 2 7 7 6 0 7 6 8 9 5 3 4 3 4 6 3
+ 8 5 3 4 8 6 4 8 4 6 2 3 4 1 5 9 2 6 0 0 1 0 8 0 8 9 5 4 9 8 8 0 8 8 8 9 3
+ 4 9 3 9 0 2 7 3 9 3 4 9 0 7 3 5 3 5 6 3 3 9 8 3 3 3 0 9 3 8 3 9 0 3 5 0 3
+ 3 9 0 9 5 6 8 7 5 4 3 3 8 1 9]
+[INFO 2019-05-06 16:08:47,740 cleverhans] Attack result at iteration 25 is [7 6 9 8 9 7 2 9 3 4 2 7 2 7 2 8 9 6 2 5 7 3 7 7 7 9 4 6 5 3 9 8 9 3 5 9 5
+ 4 7 8 3 5 7 9 0 4 2 7 8 3 5 7 3 6 4 9 7 2 4 8 5 3 3 8 2 2 4 3 7 4 7 5 8 8
+ 3 2 3 0 5 3 8 2 8 3 0 3 8 0 4 8 5 3 5 8 7 1 7 7 5 2 7 2 8 9 5 3 4 3 4 5 3
+ 8 5 3 4 8 6 4 8 4 5 1 3 7 1 5 9 2 6 5 2 1 5 8 0 8 9 5 4 9 2 8 5 8 8 8 9 3
+ 4 9 3 9 5 2 7 3 9 3 4 9 0 7 3 5 3 5 5 3 3 9 8 3 3 3 7 9 3 8 3 9 5 3 5 0 3
+ 3 9 5 9 5 6 8 9 5 4 3 3 8 4 9]
+[INFO 2019-05-06 16:08:47,874 cleverhans] Attack result at iteration 29 is [7 6 9 5 9 7 2 9 3 4 2 7 2 7 2 8 9 6 2 5 7 3 7 7 7 9 4 6 5 3 9 8 9 3 5 9 5
+ 4 7 8 3 5 7 9 0 4 2 7 8 3 5 7 3 5 4 9 7 2 4 8 5 3 3 8 2 2 4 3 7 4 7 5 8 8
+ 3 2 3 0 5 3 8 2 8 3 0 3 8 0 4 8 5 3 5 8 7 1 7 7 5 2 7 2 8 9 5 3 4 3 4 5 3
+ 2 5 3 4 8 2 4 8 4 5 1 3 7 1 5 9 2 2 5 2 1 5 8 0 8 9 5 4 9 2 8 5 8 8 8 9 3
+ 4 9 3 4 5 2 7 3 9 3 4 9 0 7 3 5 3 5 5 3 3 9 8 3 3 3 7 9 3 8 3 9 5 3 5 0 3
+ 3 9 5 9 5 6 8 9 5 4 3 3 8 4 9]
+[INFO 2019-05-06 16:08:47,876 cleverhans] 200 out of 200 become adversarial examples at iteration 29
+[INFO 2019-05-06 16:08:48,435 cleverhans] Attack result at iteration 5 is [9 8 6 0 8 1 7 7 1 3 2 3 1 4 2 0 0 7 8 4 6 4 9 3 8 4 7 2 5 6 3 6 9 6 3 2 2
+ 4 6 9 0 2 5 5 1 3 3 9 7 8 7 2 2 5 7 9 8 2 1 3 1 3 0 1 2 3 4 5 6 7 8 9 0 1
+ 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 1 2 6 5 3 0 7 0 4 1 4 3 6 7 2 3 1 2 1
+ 2 9 6 0 1 3 0 2 7 5 7 6 2 9 1 9 0 6 0 6 0 2 0 6 1 5 8 4 3 0 1 5 4 4 8 5 7
+ 5 7 8 3 4 8 8 5 2 9 7 1 3 8 1 0 7 5 9 6 9 4 7 7 9 9 3 4 4 3 8 6 2 0 1 2 3
+ 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8]
+[INFO 2019-05-06 16:08:49,039 cleverhans] Attack result at iteration 10 is [9 8 6 0 8 1 7 7 1 3 2 3 1 4 2 0 0 7 8 4 6 4 9 3 8 4 7 2 5 6 3 6 9 6 3 2 2
+ 4 6 9 0 2 5 5 1 3 3 9 7 8 7 2 2 5 7 9 8 2 1 3 1 3 0 1 2 3 4 5 6 7 8 9 0 1
+ 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 5 1 2 6 5 3 0 7 0 4 1 4 3 6 7 2 3 1 2 1
+ 2 9 6 0 1 3 0 2 7 5 7 6 2 9 1 9 0 6 0 6 0 2 0 6 1 5 8 4 3 0 1 5 4 4 8 5 7
+ 5 7 8 3 4 8 8 5 2 9 7 1 3 8 1 0 7 5 9 6 9 4 7 7 9 9 3 4 4 3 8 6 2 0 1 2 3
+ 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8]
+[INFO 2019-05-06 16:08:49,607 cleverhans] Attack result at iteration 15 is [9 8 6 0 8 8 7 7 1 3 2 0 8 9 2 0 0 7 8 4 6 4 9 8 8 4 7 8 3 6 0 6 9 6 3 0 8
+ 9 6 9 0 8 3 3 8 8 8 9 7 8 7 8 2 5 7 9 8 6 8 8 1 3 0 8 2 8 9 8 6 7 8 9 6 8
+ 2 3 4 8 6 7 8 3 0 1 2 8 4 5 6 7 8 5 1 8 6 5 3 0 7 0 4 8 4 3 6 7 2 3 8 2 1
+ 2 5 8 0 1 3 0 2 7 5 7 6 2 9 1 9 0 6 0 6 0 2 0 6 1 8 8 4 8 0 1 5 4 4 8 8 7
+ 5 7 8 3 4 8 8 5 2 5 7 8 8 8 3 0 7 5 9 6 9 6 7 7 5 3 3 4 4 3 8 6 2 0 8 8 8
+ 8 8 6 7 8 9 0 8 2 8 4 8 6 7 8]
+[INFO 2019-05-06 16:08:49,994 cleverhans] Attack result at iteration 20 is [7 3 3 0 3 8 9 9 3 9 3 0 8 9 3 0 5 2 8 9 6 9 3 8 3 9 1 8 3 3 0 5 9 3 9 0 8
+ 9 6 4 0 8 3 3 8 8 8 9 2 3 9 8 8 3 9 3 3 6 8 8 1 9 0 8 1 8 9 8 4 3 6 3 6 8
+ 3 5 9 8 6 9 6 3 0 8 8 8 9 8 6 3 0 5 8 8 0 9 3 0 3 0 7 8 6 5 0 3 2 5 8 7 8
+ 1 5 8 2 8 5 0 2 3 9 3 6 2 5 8 5 0 6 5 0 6 2 0 6 8 8 9 7 8 6 8 8 7 9 5 8 9
+ 8 3 8 5 7 2 5 3 3 5 3 8 8 0 3 6 3 3 3 6 3 6 8 3 5 3 5 8 7 5 8 5 1 9 8 8 8
+ 8 8 6 9 3 8 0 8 3 8 9 8 6 9 2]
+[INFO 2019-05-06 16:08:50,214 cleverhans] Attack result at iteration 25 is [7 3 3 5 3 8 9 9 3 9 3 0 8 9 3 5 5 2 2 9 5 9 3 8 3 9 1 8 3 3 0 5 4 3 9 0 8
+ 9 5 4 5 8 3 3 8 8 8 3 2 3 9 8 8 3 9 3 3 6 8 8 4 9 2 8 1 8 9 8 4 3 6 3 6 8
+ 3 5 9 8 4 9 6 3 9 8 8 8 9 8 5 3 0 5 8 8 0 9 5 5 3 2 7 8 6 5 0 3 1 5 8 7 8
+ 1 5 8 2 8 5 9 1 3 9 3 5 1 5 8 5 5 5 5 0 6 1 5 5 8 8 9 7 8 6 8 8 7 9 5 8 9
+ 8 3 2 5 7 2 5 3 3 5 3 8 8 0 3 6 3 3 3 4 3 6 8 3 5 3 5 8 7 5 2 5 1 9 8 8 8
+ 8 8 4 9 3 8 2 8 3 8 9 8 4 9 2]
+[INFO 2019-05-06 16:08:50,217 cleverhans] 200 out of 200 become adversarial examples at iteration 25
+[INFO 2019-05-06 16:08:50,793 cleverhans] Attack result at iteration 5 is [9 0 1 2 3 4 5 6 7 8 9 0 8 3 9 5 5 2 6 8 4 9 1 7 1 2 3 5 9 6 9 1 1 1 2 9 5
+ 6 8 1 2 0 7 7 5 8 2 9 8 9 0 4 6 7 1 3 4 5 6 0 3 6 8 7 0 4 2 7 4 7 5 4 3 4
+ 2 8 1 5 1 2 0 2 5 6 4 3 0 0 0 3 3 5 7 0 6 4 8 8 6 3 4 6 9 9 8 2 7 7 1 0 1
+ 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 0 1 2 3 4 5 6 7 8 2 1 7 2 5 0 8 0 2 7 8
+ 8 3 6 0 2 7 6 6 1 2 8 8 7 7 4 7 7 3 7 4 5 4 3 3 8 4 1 1 9 7 4 3 7 3 3 0 2
+ 5 5 6 6 3 5 2 5 9 9 8 4 1 0 6]
+[INFO 2019-05-06 16:08:51,407 cleverhans] Attack result at iteration 10 is [9 0 1 2 3 4 5 6 7 8 9 0 8 3 9 5 5 2 6 8 4 9 1 7 1 2 3 5 9 6 9 1 1 1 2 9 5
+ 6 8 1 2 0 7 7 5 8 2 9 8 9 0 4 6 7 1 3 4 5 6 0 3 6 8 7 0 4 2 7 4 7 5 4 3 4
+ 2 8 1 5 1 2 0 2 5 6 4 3 0 0 0 3 3 5 7 0 6 4 8 8 6 3 4 6 9 9 8 2 7 7 1 0 1
+ 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 0 1 2 3 4 5 6 7 8 2 1 7 2 5 0 8 0 2 7 8
+ 8 3 6 0 2 7 6 6 1 2 8 8 7 7 4 7 7 3 7 4 5 4 3 3 8 4 1 1 9 7 4 3 7 3 3 0 2
+ 5 5 6 6 3 5 2 5 9 9 8 4 1 0 6]
+[INFO 2019-05-06 16:08:52,024 cleverhans] Attack result at iteration 15 is [9 0 8 8 8 8 5 6 7 8 9 0 8 3 9 5 5 2 6 8 4 9 1 9 1 2 3 3 9 6 9 1 8 8 8 7 3
+ 6 8 1 8 0 7 7 5 8 2 9 8 8 0 4 6 7 7 8 4 3 6 0 8 6 8 7 0 9 2 9 4 7 8 9 8 4
+ 2 8 8 3 1 2 0 2 8 6 4 3 0 0 0 5 3 0 7 0 6 9 8 8 6 3 9 6 9 9 8 3 7 7 7 0 8
+ 2 3 4 5 6 7 8 9 0 1 2 3 9 6 6 7 8 0 8 2 3 9 3 0 7 8 2 1 7 2 5 0 8 6 2 7 8
+ 8 3 6 0 2 7 6 6 8 2 8 8 7 7 4 7 7 3 7 4 3 4 3 8 8 4 8 1 9 7 4 3 9 3 3 0 6
+ 5 5 6 6 3 8 2 5 9 9 8 8 8 0 0]
+[INFO 2019-05-06 16:08:52,352 cleverhans] Attack result at iteration 20 is [7 2 8 8 8 8 3 6 9 2 4 2 3 5 8 3 3 8 0 8 7 7 1 9 7 3 5 3 7 0 4 7 8 8 8 7 3
+ 4 3 7 8 0 9 4 3 8 3 8 8 8 0 7 6 9 7 8 9 3 6 0 8 0 3 9 0 9 3 9 7 9 8 9 8 0
+ 3 8 8 3 7 7 0 3 8 0 4 5 9 0 9 5 2 0 9 2 6 9 3 3 6 5 9 0 8 7 8 3 3 3 7 0 8
+ 9 9 7 3 0 3 2 3 0 2 7 8 9 6 0 3 8 0 8 7 5 9 3 0 3 8 3 4 3 3 3 0 2 6 2 9 3
+ 8 5 0 6 0 9 0 6 8 5 3 2 5 3 7 9 9 5 9 3 3 7 2 8 3 7 8 8 9 9 7 2 9 2 9 0 6
+ 3 8 0 0 5 8 3 8 4 3 8 8 8 7 0]
+[INFO 2019-05-06 16:08:52,502 cleverhans] Attack result at iteration 24 is [7 2 8 8 8 8 3 5 9 2 4 2 3 5 8 3 3 8 0 2 7 7 4 9 7 3 5 3 7 0 4 7 8 8 8 7 3
+ 4 3 7 8 2 9 4 3 2 3 8 3 8 5 7 4 9 7 8 9 3 5 5 8 0 3 9 4 9 3 9 7 9 8 9 8 0
+ 3 2 8 3 7 7 2 3 8 0 1 5 9 9 9 5 2 0 9 2 4 9 3 3 5 5 9 0 8 7 3 3 3 3 7 7 8
+ 9 9 7 3 0 3 2 3 2 2 7 8 9 6 0 3 2 2 8 7 5 9 3 0 3 2 3 4 3 3 3 2 2 6 1 9 3
+ 2 5 0 6 0 9 0 5 8 5 3 2 5 3 7 9 9 5 9 3 3 7 2 8 3 7 8 8 4 9 7 2 9 2 9 2 6
+ 3 8 0 0 5 8 3 8 4 3 2 8 8 7 0]
+[INFO 2019-05-06 16:08:52,504 cleverhans] 200 out of 200 become adversarial examples at iteration 24
+[INFO 2019-05-06 16:08:53,131 cleverhans] Attack result at iteration 5 is [0 9 6 8 8 5 6 1 1 9 8 9 2 3 5 5 9 4 2 1 9 3 9 2 0 6 0 4 0 0 1 2 3 4 7 8 9
+ 0 1 2 3 7 8 9 0 1 2 3 4 7 8 9 7 3 0 3 1 8 7 6 4 0 2 6 8 3 2 8 1 2 0 7 1 0
+ 4 4 5 8 0 6 2 3 1 5 1 8 5 9 4 0 7 5 8 8 3 8 9 2 6 2 5 3 1 7 3 9 1 9 9 6 0
+ 3 9 2 8 1 4 3 5 2 9 2 5 8 9 5 0 1 2 4 5 6 0 1 2 3 4 5 6 7 1 2 3 4 5 1 0 4
+ 5 6 6 3 4 4 2 8 1 0 6 4 9 7 2 3 3 9 2 0 9 3 3 7 1 5 2 3 1 7 8 4 0 2 4 0 2
+ 4 7 8 0 7 0 6 9 3 2 8 6 7 5 7]
+[INFO 2019-05-06 16:08:53,786 cleverhans] Attack result at iteration 10 is [0 9 6 8 8 5 6 1 1 9 8 9 2 3 5 5 9 4 2 1 9 3 9 2 0 6 0 4 0 0 1 2 3 4 7 8 9
+ 0 1 2 3 7 8 9 0 1 2 3 4 7 8 9 7 3 0 3 1 8 7 6 4 0 2 6 8 3 2 8 1 2 0 7 1 0
+ 4 4 5 8 0 6 2 3 1 5 1 8 5 9 4 0 7 5 8 8 3 8 9 2 6 2 5 3 1 7 3 9 1 9 9 6 0
+ 3 9 2 8 1 4 3 5 2 9 2 5 8 9 5 0 1 2 4 5 6 0 1 2 3 4 5 6 7 1 2 3 4 5 1 0 4
+ 5 6 6 3 4 4 2 8 1 0 6 4 9 7 2 3 3 9 2 0 9 3 3 7 1 5 2 3 1 7 8 4 0 2 4 0 2
+ 4 7 8 0 7 0 6 9 3 2 8 6 7 5 7]
+[INFO 2019-05-06 16:08:54,423 cleverhans] Attack result at iteration 15 is [0 9 6 8 8 5 6 1 1 9 8 9 2 3 8 5 3 7 2 1 9 3 9 2 0 0 6 4 0 8 1 8 8 8 4 8 9
+ 0 1 2 5 7 8 9 0 8 8 3 4 8 8 9 9 3 0 3 1 8 7 8 8 6 2 6 8 5 8 8 1 2 8 7 8 0
+ 4 4 5 8 0 6 2 8 1 5 1 8 8 9 4 0 7 5 8 8 3 8 9 8 6 2 5 3 8 7 3 0 8 9 9 6 0
+ 5 9 2 8 8 4 3 8 2 9 2 8 8 9 5 0 1 2 4 5 6 0 8 2 3 8 5 6 7 1 2 3 4 3 1 0 0
+ 3 6 6 3 0 9 2 9 7 0 6 2 9 3 2 3 3 8 2 0 9 3 3 3 1 5 6 3 7 7 8 4 0 2 4 0 2
+ 4 7 8 0 7 0 6 9 3 2 8 6 3 3 7]
+[INFO 2019-05-06 16:08:54,845 cleverhans] Attack result at iteration 20 is [0 7 0 6 8 3 0 7 8 3 2 4 0 3 8 3 3 7 7 4 9 2 7 4 6 0 6 7 2 8 8 8 8 8 4 8 3
+ 0 7 3 5 4 9 7 6 8 8 9 7 8 2 7 9 5 0 5 2 8 7 8 8 6 3 6 9 5 8 3 7 3 8 7 8 8
+ 3 7 9 9 0 6 1 8 8 3 2 8 8 7 7 0 4 9 8 3 5 8 7 8 6 3 9 5 8 1 9 0 8 7 7 6 0
+ 5 3 2 8 8 8 5 8 3 3 3 8 8 7 3 5 7 3 2 3 6 5 8 7 3 8 9 2 3 4 3 7 3 3 2 5 0
+ 3 6 6 3 0 9 3 9 7 0 5 2 5 3 3 3 7 8 3 2 9 2 3 3 7 3 6 7 7 1 8 2 2 2 6 0 7
+ 4 9 3 0 2 5 5 4 7 7 3 3 3 3 3]
+[INFO 2019-05-06 16:08:55,071 cleverhans] Attack result at iteration 25 is [2 7 0 6 2 3 0 7 8 3 2 4 0 9 8 3 3 7 7 4 4 2 7 4 6 0 6 7 2 8 8 8 8 8 4 9 3
+ 2 7 3 5 4 9 7 6 8 8 9 7 8 2 7 9 5 2 5 2 9 1 8 8 6 3 5 9 5 8 3 7 3 8 1 8 8
+ 3 7 9 9 2 5 1 8 8 3 2 2 8 7 7 2 4 9 9 3 5 9 7 8 5 3 9 5 8 1 9 0 8 7 7 5 2
+ 5 3 1 2 8 8 5 8 3 3 3 8 9 7 3 5 7 3 2 3 6 5 8 7 7 8 9 2 3 4 3 7 3 3 2 5 0
+ 3 4 5 5 0 9 3 9 7 2 5 2 5 3 3 7 7 8 3 2 3 2 5 3 7 3 6 7 7 1 5 2 2 1 6 5 7
+ 1 9 3 2 2 5 5 4 7 7 3 3 3 3 3]
+[INFO 2019-05-06 16:08:55,108 cleverhans] Attack result at iteration 26 is [2 7 0 6 2 3 0 7 8 3 2 4 0 9 8 3 3 7 7 4 4 2 7 4 6 0 6 7 2 8 8 8 8 8 4 9 3
+ 2 7 3 5 4 9 7 6 8 8 9 7 8 2 7 9 5 2 5 2 9 1 8 8 6 3 5 9 5 8 3 7 3 8 1 8 8
+ 3 7 9 9 2 5 1 8 8 3 2 2 8 7 7 2 4 9 9 3 5 9 7 8 5 3 9 5 8 1 9 0 8 7 7 5 2
+ 5 3 1 2 8 8 5 8 3 3 3 8 9 7 3 5 7 3 2 3 1 5 8 7 7 8 9 2 3 4 3 7 3 3 2 5 0
+ 3 4 5 5 0 9 3 9 7 2 5 2 5 3 3 7 7 8 3 2 3 2 5 3 7 3 6 7 7 1 5 2 2 1 6 5 7
+ 1 9 3 2 2 5 5 4 7 7 3 3 3 3 3]
+[INFO 2019-05-06 16:08:55,111 cleverhans] 200 out of 200 become adversarial examples at iteration 26
+[INFO 2019-05-06 16:08:55,755 cleverhans] Attack result at iteration 5 is [5 1 0 8 1 6 7 2 9 7 9 5 8 6 2 6 2 8 1 7 5 0 1 1 3 2 4 9 1 8 6 8 9 0 1 2 3
+ 4 5 6 7 8 9 0 1 2 3 4 7 8 9 8 1 7 8 9 9 8 9 8 4 1 7 7 3 3 7 6 6 6 1 9 0 1
+ 7 6 3 2 1 7 1 3 9 1 7 6 8 4 1 4 3 6 9 6 1 4 4 7 2 4 4 0 1 2 3 4 5 6 7 8 9
+ 0 1 2 3 4 5 6 9 0 1 2 3 4 7 8 1 3 5 1 7 7 2 1 4 8 3 4 4 3 9 7 4 1 2 3 5 9
+ 1 6 0 1 0 0 2 8 7 1 1 4 0 4 7 3 6 8 0 3 7 4 0 6 9 2 6 5 8 6 9 0 4 0 6 6 9
+ 2 0 9 5 1 3 7 6 9 3 0 2 2 0 1]
+[INFO 2019-05-06 16:08:56,375 cleverhans] Attack result at iteration 10 is [5 1 0 8 1 6 7 2 9 7 9 5 8 6 2 6 2 8 1 7 5 0 1 1 3 8 4 9 1 8 6 8 9 0 1 2 3
+ 4 5 6 7 8 9 0 1 2 3 4 7 8 9 8 1 7 8 9 9 8 9 8 4 1 7 7 3 3 7 6 6 6 1 9 0 1
+ 7 6 3 2 1 7 1 3 9 1 7 6 8 4 1 4 3 6 9 6 1 4 4 7 2 4 4 0 1 2 3 4 5 6 7 8 9
+ 0 1 2 3 4 5 6 9 0 1 2 3 4 7 8 1 3 5 1 7 7 2 1 4 8 3 4 4 3 9 7 4 1 2 3 5 9
+ 1 6 0 1 0 0 2 8 7 1 1 4 0 4 7 3 6 8 0 3 7 4 0 6 9 2 6 5 8 6 9 0 4 0 6 6 9
+ 2 0 9 5 1 3 7 6 9 3 0 2 2 0 1]
+[INFO 2019-05-06 16:08:56,951 cleverhans] Attack result at iteration 15 is [5 1 0 8 8 6 7 2 9 7 9 5 8 6 7 6 2 8 1 7 8 0 7 8 3 8 4 9 1 8 6 8 9 0 1 3 3
+ 4 3 6 7 8 9 8 1 2 5 4 7 8 9 0 1 3 8 9 8 8 9 8 8 1 7 7 3 3 7 6 8 6 7 8 0 1
+ 7 6 3 2 1 7 1 0 8 1 7 6 8 4 2 4 5 8 9 6 2 4 4 7 2 4 4 0 8 2 8 4 3 6 7 8 8
+ 0 8 2 3 9 3 6 8 0 8 2 3 4 7 8 8 5 3 8 7 7 7 8 4 8 3 8 6 3 0 7 4 8 2 3 5 8
+ 8 6 0 4 0 0 2 7 7 8 8 8 0 8 7 3 6 8 0 3 7 9 0 6 9 2 6 5 8 6 9 0 9 0 6 6 8
+ 2 0 8 8 8 3 7 6 9 3 0 2 7 0 8]
+[INFO 2019-05-06 16:08:57,338 cleverhans] Attack result at iteration 20 is [3 2 7 7 8 6 3 0 5 7 9 3 3 0 7 6 2 2 2 9 8 7 7 8 5 8 9 3 7 3 6 2 9 0 7 3 2
+ 4 3 6 9 5 5 8 7 3 5 7 3 3 4 0 2 3 8 9 8 8 7 8 8 7 3 3 5 7 3 8 8 6 7 8 9 7
+ 3 5 2 7 7 3 7 0 8 7 9 6 3 7 2 7 5 8 7 6 2 7 7 3 3 7 1 9 8 7 8 9 3 6 3 8 8
+ 0 8 7 9 9 3 6 8 2 8 7 9 0 3 0 8 5 3 8 9 3 7 8 8 8 5 8 6 7 0 9 9 8 7 5 3 8
+ 8 5 0 4 0 6 7 7 3 8 8 8 6 8 3 5 6 8 0 5 3 9 2 0 8 7 6 3 6 8 8 0 9 2 0 1 8
+ 2 0 8 8 8 7 9 6 4 7 0 7 7 0 8]
+[INFO 2019-05-06 16:08:57,528 cleverhans] Attack result at iteration 25 is [3 2 7 7 8 1 3 0 5 1 5 3 3 0 7 4 7 2 2 9 8 7 7 8 5 8 9 3 7 3 2 2 5 2 7 3 2
+ 1 3 5 9 5 5 8 7 3 5 7 3 3 4 0 2 3 5 7 8 5 7 9 8 7 3 3 5 7 3 8 8 5 7 8 9 7
+ 3 5 2 7 7 3 7 0 8 7 9 5 3 7 2 7 5 8 7 2 2 7 7 3 3 7 1 9 8 7 8 9 3 2 3 5 8
+ 2 8 7 9 9 3 5 8 2 8 7 9 0 3 0 8 5 3 8 9 3 7 8 8 5 5 8 6 7 0 9 9 8 7 5 3 8
+ 8 5 9 4 2 6 7 7 3 8 8 8 6 8 3 5 5 6 2 5 3 9 2 0 8 7 4 3 6 8 8 2 9 2 0 1 8
+ 7 2 8 8 8 7 9 2 4 7 9 7 7 5 8]
+[INFO 2019-05-06 16:08:57,531 cleverhans] 200 out of 200 become adversarial examples at iteration 25
+[INFO 2019-05-06 16:08:58,074 cleverhans] Attack result at iteration 5 is [2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 2 1 7 2 5 0 8 0 2
+ 7 8 8 3 0 6 0 2 7 6 6 1 2 8 8 7 7 4 7 7 3 7 4 5 4 3 3 8 4 5 4 1 1 9 7 4 3
+ 7 3 3 0 2 5 5 6 3 1 5 2 5 9 9 8 4 1 0 6 0 9 6 8 8 5 6 1 1 9 8 9 2 3 5 5 9
+ 4 2 1 9 4 9 1 3 9 2 0 6 0 4 0 6 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0
+ 1 2 3 4 5 6 7 8 9 3 8 0 7 1 0 7 5 5 6 9 0 1 0 0 8 3 4 3 1 5 0 0 9 5 3 4 9
+ 3 7 6 9 2 4 5 7 2 6 4 9 4 9 4]
+[INFO 2019-05-06 16:08:58,605 cleverhans] Attack result at iteration 10 is [2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 2 1 7 2 5 0 8 0 2
+ 7 8 8 3 0 6 0 2 7 6 6 1 2 8 8 7 7 4 7 7 3 7 4 5 4 3 3 8 4 5 4 1 1 9 7 4 3
+ 7 3 3 0 2 5 5 6 3 1 5 2 5 9 9 8 4 1 0 6 0 9 6 8 8 5 6 1 1 9 8 9 2 3 5 5 9
+ 4 2 1 9 4 9 1 3 9 2 0 6 0 4 0 6 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0
+ 1 2 3 4 5 6 7 8 9 3 8 0 7 1 0 7 5 5 6 9 0 1 0 0 8 3 4 3 1 5 0 0 9 5 3 4 9
+ 3 7 6 9 2 4 5 7 2 6 4 9 4 9 4]
+[INFO 2019-05-06 16:08:59,177 cleverhans] Attack result at iteration 15 is [2 3 4 5 6 7 8 9 0 1 2 3 4 3 6 7 8 8 0 1 2 3 4 3 6 7 8 9 2 8 7 2 3 0 8 0 2
+ 7 8 8 3 0 6 0 2 7 6 4 8 2 8 8 7 7 4 9 7 8 7 4 5 9 3 3 8 9 5 4 8 8 9 7 4 3
+ 7 3 3 0 2 3 3 6 3 1 5 2 5 8 9 8 4 1 0 6 0 9 6 8 8 3 6 1 1 9 8 8 2 3 5 5 9
+ 4 2 1 9 4 9 8 3 9 2 0 6 0 8 0 6 0 1 2 3 7 5 6 9 8 9 0 1 2 3 9 5 6 9 8 9 0
+ 8 2 3 4 5 6 7 8 8 9 8 0 7 1 0 7 3 5 6 7 0 1 0 0 8 3 9 3 8 5 0 0 9 3 3 4 9
+ 8 7 6 9 8 4 5 7 2 6 4 9 9 9 4]
+[INFO 2019-05-06 16:08:59,602 cleverhans] Attack result at iteration 20 is [1 5 7 3 6 3 8 9 5 7 2 3 7 3 6 3 3 8 3 8 2 5 7 3 6 3 3 4 2 8 9 2 3 9 8 9 1
+ 7 3 3 2 2 6 0 3 9 5 4 8 1 8 8 9 3 7 9 9 8 9 7 3 9 9 5 3 9 3 9 8 8 4 9 7 2
+ 9 3 3 0 2 3 3 5 9 2 9 1 3 8 9 8 9 1 0 6 3 7 6 2 8 3 3 4 4 7 8 8 6 3 3 3 4
+ 7 3 8 9 7 7 8 5 7 2 2 3 7 8 0 4 7 8 3 2 7 3 0 9 3 4 2 8 8 3 9 3 0 9 7 9 9
+ 8 8 9 7 3 0 2 8 8 9 3 0 3 7 6 3 3 3 0 7 0 8 0 0 3 3 9 5 8 3 0 0 4 3 5 9 7
+ 8 2 6 4 8 9 3 9 3 5 7 7 9 7 9]
+[INFO 2019-05-06 16:08:59,835 cleverhans] Attack result at iteration 25 is [1 5 7 3 5 3 2 4 5 7 1 5 7 3 5 3 3 8 3 8 1 5 7 3 5 3 3 4 1 8 9 1 3 9 3 9 1
+ 3 3 3 2 2 5 5 3 9 5 4 8 1 2 2 9 3 7 9 9 8 9 7 3 9 9 5 3 9 3 9 8 8 4 9 7 2
+ 9 2 2 5 1 3 3 5 9 2 9 1 3 8 4 2 9 4 2 5 3 7 5 2 3 3 3 4 4 7 2 8 6 9 3 3 4
+ 7 3 8 4 7 7 8 5 7 1 2 3 7 8 7 4 7 8 3 2 7 3 0 9 3 4 2 8 8 5 9 3 0 9 7 3 9
+ 8 8 9 7 3 0 2 0 8 9 3 2 3 7 6 3 3 3 0 7 2 8 0 2 3 5 9 5 8 3 6 7 4 3 5 9 7
+ 8 2 5 4 8 9 3 9 3 5 7 7 9 7 9]
+[INFO 2019-05-06 16:08:59,941 cleverhans] Attack result at iteration 28 is [1 5 7 3 5 3 2 4 5 7 1 5 7 3 5 3 3 8 3 8 1 5 7 3 5 3 3 4 1 8 9 1 3 9 3 9 1
+ 3 3 3 2 2 5 5 3 9 5 4 8 1 2 2 9 3 7 9 9 8 9 7 3 9 9 5 3 9 3 9 8 8 4 9 7 2
+ 9 2 2 5 1 3 3 5 9 2 9 1 3 8 4 2 9 4 2 5 3 7 5 2 3 3 3 4 4 7 2 8 6 9 3 3 4
+ 7 3 8 4 7 7 8 5 7 1 2 3 7 8 7 4 7 8 3 2 7 3 0 9 3 4 2 8 8 5 9 3 0 9 7 3 9
+ 8 8 9 7 3 0 2 0 8 9 3 2 3 7 6 3 3 3 0 7 2 8 2 2 3 5 9 5 8 3 6 7 4 3 5 9 7
+ 8 2 5 4 8 9 3 9 3 5 7 7 9 7 9]
+[INFO 2019-05-06 16:08:59,943 cleverhans] 200 out of 200 become adversarial examples at iteration 28
+[INFO 2019-05-06 16:09:00,557 cleverhans] Attack result at iteration 5 is [1 2 2 5 8 1 3 2 9 4 3 8 2 2 1 2 8 6 5 1 6 7 2 1 3 9 3 8 7 5 7 0 7 4 8 8 5
+ 0 6 6 3 7 6 9 9 4 8 4 1 0 6 6 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
+ 2 3 4 5 6 7 8 9 7 4 0 4 0 1 7 9 5 1 4 2 8 9 4 3 7 8 2 4 4 3 3 6 9 9 5 8 6
+ 7 0 6 8 2 6 3 9 3 2 8 6 1 7 4 8 8 9 0 3 3 9 0 5 2 9 4 1 0 3 7 5 8 7 7 8 2
+ 9 7 1 2 6 4 2 5 2 3 6 6 5 0 0 2 8 1 6 1 0 4 3 1 6 1 9 0 1 4 5 6 7 8 9 1 2
+ 3 4 5 6 7 0 1 2 3 4 5 6 7 8 9]
+[INFO 2019-05-06 16:09:01,146 cleverhans] Attack result at iteration 10 is [1 2 2 5 8 1 3 2 9 4 3 8 2 2 1 2 8 6 5 1 6 7 2 1 3 9 3 8 7 5 7 0 7 4 8 8 5
+ 0 6 6 3 7 6 9 9 4 8 4 1 0 6 6 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
+ 2 3 4 5 6 7 8 9 7 4 0 4 0 1 7 9 5 1 4 2 8 9 4 3 7 8 2 4 4 3 3 6 9 9 5 8 6
+ 7 0 6 8 2 6 3 9 3 2 8 6 1 7 4 8 8 9 0 3 3 9 0 5 2 9 4 1 0 3 7 5 8 7 7 8 2
+ 9 7 1 2 6 4 2 5 2 3 6 6 5 0 0 2 8 1 6 1 0 4 3 1 6 1 9 0 1 4 5 6 7 8 9 1 2
+ 3 4 5 6 7 0 1 2 3 4 5 6 7 8 9]
+[INFO 2019-05-06 16:09:01,682 cleverhans] Attack result at iteration 15 is [8 8 8 5 8 1 3 8 9 4 3 8 8 8 1 2 8 6 5 1 6 7 2 7 3 8 3 8 9 3 7 0 9 4 8 8 8
+ 0 6 6 3 7 6 9 9 4 8 4 1 0 6 6 0 1 2 8 9 5 6 7 8 9 0 1 2 8 8 5 6 7 8 9 0 8
+ 2 3 4 3 6 7 8 9 7 9 0 8 0 1 7 9 8 8 4 7 8 9 4 8 7 8 7 9 4 3 3 6 9 9 5 8 6
+ 7 0 6 8 2 6 3 9 5 2 8 6 8 7 4 8 8 9 0 8 8 9 0 3 2 9 4 1 0 3 7 5 8 7 7 8 2
+ 7 7 1 2 6 7 7 5 2 3 6 6 5 0 0 2 8 1 6 8 6 8 3 1 6 8 9 0 8 4 9 6 7 8 9 8 2
+ 3 9 5 6 7 0 1 2 3 4 5 6 9 8 9]
+[INFO 2019-05-06 16:09:02,079 cleverhans] Attack result at iteration 20 is [8 8 8 3 3 7 3 8 4 9 7 8 8 8 8 4 3 3 3 8 3 9 3 7 9 8 9 3 9 3 9 2 9 7 3 3 8
+ 6 2 3 8 2 6 3 7 9 8 9 7 6 8 4 0 8 7 8 9 9 0 3 9 7 6 8 7 8 8 9 6 2 8 7 0 8
+ 7 5 7 3 0 3 8 7 3 9 6 8 0 7 3 4 8 8 7 7 8 7 7 8 3 5 7 9 8 5 3 4 9 7 9 7 5
+ 3 0 0 8 7 0 7 7 5 7 7 0 8 3 7 8 7 4 0 8 8 7 0 3 7 7 7 4 0 5 3 9 8 3 3 3 7
+ 7 3 8 7 0 7 7 3 7 3 0 0 9 6 0 7 8 7 0 8 6 8 7 8 6 8 3 5 8 4 9 5 9 8 7 8 3
+ 2 9 3 6 9 0 7 3 9 7 3 6 9 8 7]
+[INFO 2019-05-06 16:09:02,299 cleverhans] Attack result at iteration 25 is [8 8 8 3 3 7 5 8 4 9 7 2 8 8 8 4 3 3 3 8 3 9 3 7 9 8 9 3 9 3 9 2 9 7 3 3 8
+ 6 2 3 8 2 5 3 7 9 9 9 7 6 8 4 2 8 7 8 9 9 0 3 9 7 6 8 7 8 8 9 6 2 8 7 2 8
+ 7 5 7 3 0 3 2 7 3 9 6 8 2 7 3 4 8 8 7 7 9 7 7 8 3 5 7 9 8 5 7 4 4 7 9 7 5
+ 3 2 0 3 7 0 7 7 5 7 7 0 8 3 7 9 7 4 2 8 8 7 2 3 7 7 7 4 2 5 3 9 7 3 3 3 7
+ 7 3 8 7 0 7 7 3 7 7 0 0 9 6 2 7 7 7 0 8 6 8 7 8 4 8 3 5 8 1 9 5 9 3 7 8 3
+ 2 9 3 5 9 7 7 3 9 7 3 5 9 2 7]
+[INFO 2019-05-06 16:09:02,410 cleverhans] Attack result at iteration 28 is [8 8 8 3 3 7 5 8 4 9 7 2 8 8 8 4 3 3 3 8 3 9 3 7 9 8 9 3 9 3 9 2 9 7 3 3 8
+ 6 2 3 8 2 5 3 7 9 9 9 7 6 8 4 2 8 7 8 9 9 0 3 9 7 6 8 7 8 8 9 5 2 2 7 2 8
+ 7 5 7 3 0 3 2 7 3 9 6 8 2 7 3 4 8 8 7 7 9 7 7 8 3 5 7 9 8 5 7 4 4 7 9 7 5
+ 3 2 0 3 7 0 7 7 5 7 7 0 8 3 7 9 7 4 2 8 8 7 2 3 7 7 7 4 2 5 3 9 7 3 3 3 7
+ 7 3 8 7 0 7 7 3 7 7 0 0 9 6 2 7 7 7 0 8 6 8 7 8 4 8 3 5 8 1 9 5 9 3 7 8 3
+ 2 9 3 5 9 7 7 3 9 7 3 5 9 2 7]
+[INFO 2019-05-06 16:09:02,413 cleverhans] 200 out of 200 become adversarial examples at iteration 28
+[INFO 2019-05-06 16:09:03,138 cleverhans] Attack result at iteration 5 is [8 4 0 0 7 2 4 3 8 6 6 3 2 6 3 3 0 1 4 7 8 0 3 1 9 0 1 9 1 2 7 0 1 3 8 2 9
+ 2 7 6 5 5 9 9 8 2 9 1 3 2 3 4 3 1 9 0 9 3 6 8 7 0 1 0 5 8 2 7 7 0 1 2 3 4
+ 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 1 7 4 8 1 5 6 5 7 2 8 6
+ 3 3 8 6 5 4 0 9 1 7 2 9 1 5 1 3 2 2 3 0 6 4 3 7 6 9 0 4 8 1 4 0 6 1 2 6 9
+ 2 2 3 5 5 1 0 7 7 9 6 2 9 4 7 0 2 3 4 0 0 8 8 8 5 1 3 7 4 9 8 8 9 0 9 8 9
+ 0 2 6 5 6 7 4 7 5 4 1 3 5 3 1]
+[INFO 2019-05-06 16:09:03,725 cleverhans] Attack result at iteration 10 is [8 4 0 0 7 2 4 3 8 6 6 3 2 6 3 3 0 1 4 7 8 0 3 1 9 0 1 9 1 2 7 0 1 3 8 2 9
+ 2 7 6 5 5 9 9 8 2 9 1 3 2 3 4 3 1 9 0 9 3 6 8 7 0 1 0 5 8 2 7 7 0 1 2 3 4
+ 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 1 7 4 8 1 5 6 5 7 2 8 6
+ 3 3 8 6 5 4 0 9 1 7 2 9 1 5 1 3 2 2 3 0 6 4 3 7 6 9 0 4 8 1 4 0 6 1 2 6 9
+ 2 2 3 5 5 1 0 7 7 9 6 2 9 4 7 0 2 3 4 0 0 8 8 8 5 1 3 7 4 9 8 8 9 0 9 8 9
+ 0 2 6 5 6 7 4 7 5 4 1 3 5 3 1]
+[INFO 2019-05-06 16:09:04,296 cleverhans] Attack result at iteration 15 is [8 7 0 0 7 2 4 3 8 6 6 3 2 6 3 3 3 1 7 7 8 0 3 1 9 0 1 9 1 2 7 0 1 3 8 2 9
+ 2 7 6 5 5 9 7 8 2 9 1 3 5 3 7 0 1 9 0 9 5 6 8 8 0 1 0 5 8 7 9 4 0 8 2 9 4
+ 8 6 9 8 9 0 1 2 3 4 8 6 7 8 9 0 8 2 3 4 5 6 7 8 9 1 7 4 8 8 5 6 3 9 2 8 6
+ 3 8 8 6 3 4 0 9 1 7 8 9 8 5 8 3 2 2 8 0 6 4 3 7 6 9 0 4 8 1 7 0 6 1 2 6 9
+ 2 2 9 5 5 8 6 7 7 8 6 2 9 4 7 0 2 8 7 0 0 8 8 8 5 1 3 7 8 9 8 8 9 0 9 8 9
+ 0 2 6 3 6 7 9 7 3 4 8 3 5 8 7]
+[INFO 2019-05-06 16:09:04,720 cleverhans] Attack result at iteration 20 is [8 7 0 0 2 7 7 9 2 5 5 5 7 2 9 5 3 7 7 9 3 2 9 4 7 6 7 3 7 7 9 0 2 5 8 3 7
+ 3 9 6 3 3 7 7 8 7 3 2 5 5 5 7 0 2 3 0 3 5 5 3 8 2 2 2 3 3 7 9 4 0 8 2 9 7
+ 8 6 9 2 4 2 4 3 8 7 8 6 9 8 4 2 8 3 9 7 3 6 9 8 4 8 9 7 8 8 3 0 3 9 3 0 6
+ 2 8 3 6 3 7 0 7 8 9 8 7 8 3 8 9 3 3 8 0 6 7 9 2 6 3 6 7 2 8 7 0 6 7 2 6 3
+ 2 1 9 3 3 8 6 3 2 8 6 2 7 7 3 6 3 8 7 0 0 8 2 2 3 8 9 2 8 8 2 8 4 6 4 3 8
+ 6 8 0 3 6 2 9 7 3 8 8 9 3 8 7]
+[INFO 2019-05-06 16:09:04,935 cleverhans] Attack result at iteration 25 is [2 7 7 0 2 7 7 9 2 5 5 5 7 2 9 5 3 7 7 9 3 2 9 4 7 6 7 3 7 7 9 2 2 5 8 3 7
+ 3 9 2 3 3 7 7 3 7 3 2 5 5 5 7 0 2 3 2 3 5 5 3 8 2 2 2 3 3 7 9 4 2 8 7 9 7
+ 8 5 9 2 4 2 4 3 8 7 8 4 9 2 4 2 8 3 9 7 3 4 9 2 4 8 9 7 2 8 3 0 3 9 3 0 4
+ 2 8 3 4 3 7 6 7 8 9 8 7 8 3 8 9 3 3 8 2 3 7 9 2 4 3 6 7 2 8 7 7 5 7 1 5 3
+ 7 1 9 3 3 8 6 3 2 8 6 1 7 7 3 6 3 8 7 2 2 2 2 2 3 8 9 2 8 8 2 3 4 6 4 3 8
+ 6 8 0 3 4 2 9 2 3 8 8 9 3 8 7]
+[INFO 2019-05-06 16:09:05,002 cleverhans] Attack result at iteration 27 is [2 7 7 2 2 7 7 9 2 5 5 5 7 2 9 5 3 7 7 9 3 2 9 4 7 6 7 3 7 7 9 2 2 5 2 3 7
+ 3 9 2 3 3 7 7 3 7 3 2 5 5 5 7 0 2 3 2 3 5 5 3 8 2 2 2 3 3 7 9 4 2 8 7 9 7
+ 8 5 9 2 4 2 4 3 8 7 8 4 9 2 4 2 8 3 9 7 3 4 9 2 4 8 9 7 2 8 3 0 3 9 3 0 4
+ 2 8 3 4 3 7 6 7 8 9 8 7 8 3 8 9 3 3 8 2 3 7 9 2 4 3 6 7 2 8 7 7 5 7 1 5 3
+ 7 1 9 3 3 8 6 3 2 8 5 1 7 7 3 6 3 8 7 2 2 2 2 2 3 8 9 2 8 8 2 3 4 6 4 3 8
+ 6 8 0 3 4 2 9 2 3 8 8 9 3 8 7]
+[INFO 2019-05-06 16:09:05,006 cleverhans] 200 out of 200 become adversarial examples at iteration 27
+[INFO 2019-05-06 16:09:05,623 cleverhans] Attack result at iteration 5 is [2 3 4 5 6 1 2 3 4 6 0 1 2 4 5 6 7 8 1 7 2 4 1 4 1 4 9 6 8 4 5 3 7 8 4 3 3
+ 5 6 7 0 6 1 6 8 7 0 1 5 0 8 5 0 1 5 8 4 2 3 9 7 6 9 1 9 0 6 7 1 2 3 9 2 4
+ 5 5 3 7 5 3 1 8 2 2 3 0 2 9 4 9 7 0 2 7 4 9 9 2 5 9 8 3 8 6 7 0 0 1 2 3 4
+ 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 0 7 2 6 5 5 3 7 8 6 6
+ 6 6 4 3 8 8 3 0 1 9 0 5 4 1 9 1 2 7 0 1 3 8 2 9 2 7 4 2 6 5 5 9 9 1 1 5 7
+ 6 8 2 9 4 3 1 9 0 9 3 6 8 7 0]
+[INFO 2019-05-06 16:09:06,233 cleverhans] Attack result at iteration 10 is [2 3 4 5 6 1 2 3 4 6 0 1 2 4 5 6 7 8 1 7 2 4 1 4 1 4 9 6 8 4 5 3 7 8 8 3 3
+ 5 6 7 0 6 1 6 8 7 0 1 5 0 8 5 0 1 5 8 4 2 3 9 7 6 9 1 9 0 6 7 1 2 3 9 2 4
+ 5 5 3 7 5 3 1 8 2 2 3 0 2 9 4 9 7 0 2 7 4 9 9 2 5 9 8 3 8 6 7 0 0 1 2 3 4
+ 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 0 7 2 6 5 5 3 7 8 6 6
+ 6 6 4 3 8 8 3 0 1 9 0 5 4 1 9 1 2 7 0 1 3 8 2 9 2 7 4 2 6 5 5 9 9 1 1 5 7
+ 6 8 2 9 4 3 1 9 0 9 3 6 8 7 0]
+[INFO 2019-05-06 16:09:06,821 cleverhans] Attack result at iteration 15 is [2 3 8 8 6 8 2 3 4 6 6 1 2 0 5 6 3 8 8 7 8 4 1 9 1 9 9 6 8 4 3 3 3 8 8 9 3
+ 8 6 7 0 6 1 6 8 3 2 7 3 0 8 5 8 1 5 8 9 2 3 9 7 6 9 4 9 8 6 7 1 2 3 9 2 7
+ 3 3 2 7 3 3 8 8 2 2 8 0 2 8 4 9 7 0 2 7 0 8 9 2 5 9 8 3 8 6 7 0 0 1 2 8 4
+ 3 6 7 8 9 0 8 2 5 4 3 6 7 8 9 0 8 8 3 4 3 6 7 8 9 0 0 9 2 6 3 3 8 7 8 6 6
+ 6 6 4 3 8 8 3 0 1 9 0 3 8 1 9 8 2 4 6 1 8 8 2 9 3 7 4 8 6 3 5 9 4 8 7 5 9
+ 6 8 8 9 4 3 1 9 0 9 8 6 8 7 0]
+[INFO 2019-05-06 16:09:07,182 cleverhans] Attack result at iteration 20 is [2 0 8 8 0 8 7 7 7 0 6 7 3 0 3 0 3 5 8 9 8 7 7 9 7 9 9 0 5 4 3 3 3 8 8 9 7
+ 8 0 2 0 6 7 6 8 3 2 7 3 0 8 2 8 7 9 3 9 7 7 5 2 0 9 4 9 8 6 3 7 3 7 9 7 7
+ 3 3 2 2 3 9 8 5 2 7 8 0 7 8 7 7 3 6 7 3 0 8 9 7 3 8 8 3 5 0 3 2 0 2 2 8 4
+ 3 6 3 9 3 0 8 8 5 4 3 6 7 8 7 0 8 8 9 7 3 0 3 9 7 0 0 9 2 0 3 3 8 3 9 0 0
+ 0 5 4 5 9 0 5 6 2 3 0 3 8 8 4 8 7 4 6 7 8 9 1 4 3 9 1 8 6 3 3 3 4 8 7 3 9
+ 6 9 8 4 2 9 2 7 2 9 8 0 8 3 0]
+[INFO 2019-05-06 16:09:07,380 cleverhans] Attack result at iteration 25 is [7 0 8 8 0 8 7 7 7 0 6 7 3 0 3 0 3 5 8 9 8 7 7 9 7 9 5 0 5 7 3 7 3 5 8 9 7
+ 8 0 2 2 4 7 4 4 3 2 7 3 2 5 2 8 7 9 3 9 7 7 5 2 0 7 4 5 8 0 3 7 3 7 7 7 7
+ 3 3 2 2 3 9 8 5 7 7 8 2 7 8 7 7 3 6 7 3 0 8 4 7 3 8 5 5 5 0 3 2 2 2 1 8 1
+ 3 6 3 9 3 2 8 8 5 2 3 2 1 2 7 2 8 8 9 7 3 0 3 9 7 0 2 9 1 0 3 3 8 3 9 0 0
+ 0 5 7 5 9 0 5 6 2 3 2 3 8 8 4 8 7 4 6 7 8 9 1 4 3 9 1 8 5 3 3 3 4 8 7 3 9
+ 5 9 8 4 2 9 2 7 2 3 8 0 3 3 2]
+[INFO 2019-05-06 16:09:07,511 cleverhans] Attack result at iteration 29 is [7 0 8 8 0 8 7 7 7 0 6 7 3 0 3 0 3 5 8 9 8 7 7 9 7 9 5 0 5 7 3 7 3 5 8 9 7
+ 8 0 2 2 4 7 4 4 3 2 7 3 2 5 2 8 7 9 3 9 7 7 5 2 0 7 4 5 8 0 3 7 3 7 7 7 7
+ 3 3 2 2 3 9 8 5 7 7 8 2 7 8 7 7 3 6 7 3 0 8 4 7 3 8 5 5 5 0 3 2 2 2 1 8 1
+ 3 2 3 9 3 2 8 8 5 2 3 2 1 2 7 2 8 8 9 7 3 0 3 9 7 2 2 9 1 0 3 3 8 3 9 0 0
+ 0 5 7 5 9 0 5 6 2 3 2 3 8 8 4 8 7 4 6 7 8 9 1 4 3 9 1 8 5 3 3 3 4 8 7 3 9
+ 5 9 8 4 2 9 2 7 2 3 8 0 3 3 2]
+[INFO 2019-05-06 16:09:07,513 cleverhans] 200 out of 200 become adversarial examples at iteration 29
+[INFO 2019-05-06 16:09:08,181 cleverhans] Attack result at iteration 5 is [1 0 5 8 2 7 7 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 8 9 0 1 2 3 4 5 6 7 8 9 2 1
+ 2 1 3 9 9 8 5 3 7 0 7 7 5 7 9 9 4 7 0 3 4 1 5 8 1 4 8 4 1 8 6 6 4 6 0 5 5
+ 3 3 5 7 2 5 9 6 9 2 6 2 1 2 0 8 3 8 3 0 8 7 4 9 5 0 9 7 0 0 4 6 0 9 1 6 2
+ 7 6 8 3 5 2 1 8 3 8 6 1 0 2 1 4 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0
+ 1 2 3 4 5 6 7 8 9 7 6 4 7 6 2 3 4 8 7 8 6 9 8 3 2 2 8 4 8 5 6 5 0 2 0 1 1
+ 2 9 6 8 2 1 0 6 5 2 9 7 5 3 9]
+[INFO 2019-05-06 16:09:08,819 cleverhans] Attack result at iteration 10 is [1 0 5 8 2 7 7 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 8 9 0 1 2 3 4 5 6 7 8 9 2 1
+ 2 1 3 9 9 8 5 3 7 0 7 7 5 7 9 9 4 7 0 3 4 1 5 8 1 4 8 4 1 8 6 6 4 6 0 5 5
+ 3 3 5 7 2 5 9 6 9 2 6 2 1 2 0 8 3 8 3 0 8 7 4 9 5 0 9 7 0 0 4 6 0 9 1 6 2
+ 7 6 8 3 5 2 1 8 3 8 6 1 0 2 1 4 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0
+ 1 2 3 4 5 6 7 8 9 7 6 4 7 6 2 3 4 8 7 8 6 9 8 3 2 2 8 4 8 5 6 5 0 2 0 1 1
+ 2 9 6 8 2 1 0 6 5 2 9 7 5 3 9]
+[INFO 2019-05-06 16:09:09,420 cleverhans] Attack result at iteration 15 is [1 0 5 8 2 7 7 0 1 2 3 9 5 6 7 8 9 0 1 2 3 9 5 8 9 6 8 0 3 9 8 6 7 8 9 2 1
+ 0 1 3 9 8 8 5 3 7 0 7 7 6 7 8 9 9 7 0 8 9 8 3 8 8 4 8 9 8 8 0 6 9 6 0 8 8
+ 3 3 3 7 2 9 9 6 8 0 6 2 1 3 0 8 8 8 3 0 8 7 9 9 5 0 9 7 0 0 9 6 0 9 7 6 0
+ 7 6 8 5 9 2 8 8 3 8 6 8 0 0 1 4 0 8 2 3 8 5 6 7 8 8 0 1 3 3 9 5 6 7 8 8 0
+ 7 2 3 8 8 6 7 8 8 7 6 4 7 6 2 9 7 8 9 8 6 8 8 2 3 8 8 4 8 5 6 5 0 2 0 8 1
+ 2 7 6 8 2 8 0 6 5 2 9 7 5 3 7]
+[INFO 2019-05-06 16:09:09,800 cleverhans] Attack result at iteration 20 is [4 2 3 9 3 9 7 0 2 7 7 9 3 0 3 3 4 5 8 7 5 9 3 8 3 6 8 0 5 9 8 6 9 3 8 3 1
+ 0 8 5 4 8 8 3 5 3 0 2 2 6 3 8 8 9 3 0 8 9 8 3 3 8 9 8 9 8 3 0 6 9 5 5 8 8
+ 5 5 3 3 8 9 4 5 8 0 6 0 4 3 0 8 8 3 8 6 8 3 9 4 9 0 7 2 5 0 9 0 8 4 7 0 0
+ 3 0 8 5 9 3 8 8 5 8 0 8 5 0 8 7 6 8 3 5 8 8 4 9 3 8 0 8 3 7 9 8 5 3 8 8 6
+ 7 3 9 8 8 6 3 2 8 3 6 7 9 6 3 9 7 2 9 8 6 8 8 2 3 8 8 9 2 3 6 3 0 3 9 8 7
+ 3 7 4 8 3 8 6 5 8 3 9 9 8 5 7]
+[INFO 2019-05-06 16:09:10,012 cleverhans] Attack result at iteration 25 is [4 2 3 9 3 9 1 7 2 7 7 9 3 0 3 3 4 5 8 7 5 9 3 2 3 6 8 0 5 9 8 5 9 3 8 3 4
+ 0 8 5 4 8 2 3 5 3 2 2 2 6 3 8 8 9 3 0 8 9 8 3 3 8 9 3 9 8 3 0 2 9 5 5 8 8
+ 5 5 3 3 8 9 4 5 8 0 4 0 4 3 7 3 8 3 8 6 5 3 9 4 9 2 7 2 5 2 9 0 8 4 7 0 0
+ 3 0 5 5 9 3 8 5 5 5 0 8 5 0 8 7 6 8 3 5 8 8 4 9 3 8 2 8 3 7 9 8 5 3 2 8 6
+ 7 3 9 8 8 5 3 2 8 3 5 7 9 4 3 9 7 2 9 2 5 8 2 2 3 8 4 9 2 3 5 3 2 3 9 8 7
+ 3 7 4 2 3 8 6 5 8 3 4 9 8 5 7]
+[INFO 2019-05-06 16:09:10,046 cleverhans] Attack result at iteration 26 is [4 2 3 9 3 9 1 7 2 7 7 9 3 0 3 3 4 5 8 7 5 9 3 2 3 6 8 0 5 9 8 5 9 3 8 3 4
+ 0 8 5 4 8 2 3 5 3 2 2 2 6 3 8 8 9 3 2 8 9 8 3 3 8 9 3 9 8 3 0 2 9 5 5 8 8
+ 5 5 3 3 8 9 4 5 8 0 4 0 4 3 7 3 8 3 8 6 5 3 9 4 9 2 7 2 5 2 9 0 8 4 7 0 0
+ 3 0 5 5 9 3 8 5 5 5 0 8 5 0 8 7 6 8 3 5 8 8 4 9 3 8 2 8 3 7 9 8 5 3 2 8 6
+ 7 3 9 8 8 5 3 2 8 3 5 7 9 4 3 9 7 2 9 2 5 8 2 2 3 8 4 9 2 3 5 3 2 3 9 8 7
+ 3 7 4 2 3 8 6 5 8 3 4 9 8 5 7]
+[INFO 2019-05-06 16:09:10,049 cleverhans] 200 out of 200 become adversarial examples at iteration 26
+[INFO 2019-05-06 16:09:10,643 cleverhans] Attack result at iteration 5 is [3 7 1 8 3 8 1 9 5 5 0 1 1 9 8 2 6 0 4 5 0 3 1 8 6 7 5 9 9 3 0 3 1 4 4 0 4
+ 9 0 1 2 3 5 6 7 8 0 1 2 3 5 6 7 8 9 0 1 2 3 5 6 7 8 9 9 7 0 9 0 1 5 8 8 0
+ 9 3 2 7 8 4 6 1 0 4 9 4 2 0 5 0 1 6 9 3 2 9 1 6 0 1 1 8 7 7 6 3 6 0 7 2 4
+ 1 7 0 6 7 1 2 5 8 1 8 2 8 7 6 8 7 1 6 2 9 3 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4
+ 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 8 9 5 7 0 3 1 6 8 4 1 5 6 4 2 7 8 1 3 4 3 4
+ 7 2 0 5 0 1 9 2 3 2 3 5 5 7 8]
+[INFO 2019-05-06 16:09:11,209 cleverhans] Attack result at iteration 10 is [3 7 1 8 3 8 1 9 5 5 0 1 8 9 8 2 6 0 4 5 0 3 1 8 6 7 5 9 9 3 0 3 1 4 4 0 4
+ 9 0 1 2 3 5 6 7 8 0 1 2 3 5 6 7 8 9 0 1 2 3 5 6 7 8 9 9 7 0 9 0 1 5 8 8 0
+ 9 3 2 7 8 4 6 1 0 4 9 4 2 0 5 0 1 6 9 3 2 9 1 6 0 1 1 8 7 7 6 3 6 0 7 2 4
+ 1 7 0 6 7 1 2 5 8 1 8 2 8 7 6 8 7 1 6 2 9 3 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4
+ 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 8 9 5 7 0 3 1 6 8 4 1 5 6 4 2 7 8 1 3 4 3 4
+ 7 2 0 5 0 1 9 2 3 2 3 5 5 7 8]
+[INFO 2019-05-06 16:09:11,782 cleverhans] Attack result at iteration 15 is [3 7 1 8 3 8 8 9 5 3 0 1 8 9 8 3 6 0 8 8 0 3 8 8 6 7 5 9 9 3 0 3 1 9 4 0 4
+ 8 0 1 2 3 5 6 7 8 0 0 2 3 8 6 7 8 9 0 8 2 2 5 6 8 8 9 9 7 0 9 0 8 5 8 8 0
+ 8 3 2 7 8 4 6 8 0 4 8 4 2 0 5 0 8 6 9 3 2 9 1 6 0 8 8 8 7 7 6 5 6 0 7 2 4
+ 8 7 0 6 8 8 2 5 8 8 8 2 8 7 6 8 7 0 6 2 9 3 0 8 2 8 4 8 6 7 8 9 0 1 2 8 4
+ 8 6 7 8 9 0 1 2 3 8 5 6 7 8 9 8 8 3 7 0 3 1 6 8 4 1 8 6 4 2 7 8 8 3 4 5 4
+ 7 2 0 9 0 8 8 2 3 2 3 5 5 7 8]
+[INFO 2019-05-06 16:09:12,170 cleverhans] Attack result at iteration 20 is [2 9 8 3 2 5 8 8 3 3 6 8 8 8 3 3 5 6 8 8 6 2 8 3 6 3 3 7 4 2 5 2 8 9 9 0 6
+ 8 6 8 8 5 8 0 9 0 8 0 2 3 8 0 3 2 4 8 8 4 2 3 0 8 2 8 7 9 0 8 8 8 3 8 0 0
+ 8 3 4 9 8 8 6 8 0 7 8 0 4 9 3 6 8 0 4 5 3 4 8 6 6 8 8 8 8 8 6 5 6 6 8 4 6
+ 8 8 0 5 8 8 4 3 2 8 8 2 2 8 6 8 9 0 6 3 3 5 2 8 7 8 9 8 6 3 6 8 9 8 3 8 7
+ 8 6 2 9 7 2 8 3 2 8 3 5 2 8 7 9 8 3 2 0 2 8 6 7 4 7 8 5 0 3 2 8 8 5 8 5 7
+ 2 2 2 9 6 8 8 3 5 3 9 5 3 2 0]
+[INFO 2019-05-06 16:09:12,374 cleverhans] Attack result at iteration 25 is [2 9 8 3 2 5 8 8 3 3 6 8 8 8 3 3 5 6 8 8 6 2 8 3 5 3 3 7 4 2 5 2 8 9 9 2 6
+ 8 6 8 8 5 8 0 9 0 8 0 4 5 8 0 3 2 4 8 8 4 2 3 0 8 2 8 7 9 9 8 8 8 3 2 0 9
+ 8 5 4 9 3 8 2 8 2 7 8 0 4 9 3 6 8 0 4 5 3 4 8 5 6 8 8 0 8 8 5 5 4 6 8 4 6
+ 8 8 6 5 8 8 4 3 2 8 8 4 2 8 4 2 9 0 4 3 3 5 2 8 7 8 9 8 5 3 6 8 9 8 3 8 7
+ 8 4 2 9 7 2 8 3 2 8 3 5 2 9 7 9 8 3 2 2 2 8 5 7 1 7 8 5 0 3 2 2 8 5 8 5 7
+ 2 7 2 9 6 8 8 3 5 3 9 3 3 2 0]
+[INFO 2019-05-06 16:09:12,439 cleverhans] Attack result at iteration 27 is [2 9 8 3 2 5 8 8 3 3 6 8 8 8 3 3 5 6 8 8 6 2 8 3 5 3 3 7 4 2 5 2 8 9 9 2 6
+ 8 6 8 8 5 8 0 9 0 8 0 4 5 8 0 3 2 4 8 8 4 2 3 0 8 2 8 7 9 9 8 8 8 3 2 0 9
+ 8 5 4 9 3 8 2 8 2 7 8 0 4 9 3 6 8 0 4 5 3 4 8 5 6 8 8 0 8 8 5 5 4 6 8 4 6
+ 8 8 6 5 8 8 4 3 2 8 2 4 2 8 4 2 9 0 4 3 3 5 2 8 7 8 9 8 5 3 6 8 9 8 3 8 7
+ 8 4 2 9 7 2 8 3 2 8 3 5 2 9 7 9 8 3 2 2 2 8 5 7 1 7 8 5 0 3 2 2 8 5 8 5 7
+ 2 7 2 9 6 8 8 3 5 3 9 3 3 2 0]
+[INFO 2019-05-06 16:09:12,441 cleverhans] 200 out of 200 become adversarial examples at iteration 27
+[INFO 2019-05-06 16:09:13,072 cleverhans] Attack result at iteration 5 is [4 9 9 7 1 1 9 0 7 8 3 4 8 6 3 8 0 9 6 2 1 0 1 0 6 2 3 8 9 0 7 2 3 4 5 5 2
+ 8 5 4 6 6 6 7 9 1 8 2 1 5 3 4 7 9 4 0 0 0 1 1 3 4 5 6 7 8 9 0 1 2 3 4 5 6
+ 7 8 9 0 1 2 3 4 5 6 9 0 1 3 1 5 1 2 4 9 8 4 6 8 0 1 1 9 2 6 6 8 7 4 2 9 7
+ 0 2 1 0 3 6 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 8
+ 6 5 9 7 0 2 3 4 3 8 5 1 5 2 3 0 1 2 1 3 2 6 5 3 0 7 2 7 4 6 4 0 5 9 9 8 9
+ 5 3 1 7 4 7 6 5 4 0 0 6 6 2 0]
+[INFO 2019-05-06 16:09:13,663 cleverhans] Attack result at iteration 10 is [4 9 9 7 1 1 9 0 7 8 3 4 8 6 3 8 0 9 6 2 1 0 1 0 6 2 3 8 9 0 7 2 3 4 5 5 2
+ 8 5 4 6 6 6 7 9 1 8 2 1 5 3 4 7 9 4 0 0 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6
+ 7 8 9 0 1 2 3 4 5 6 9 0 1 3 1 5 1 2 4 9 8 4 6 8 0 1 1 9 2 6 6 8 7 4 2 9 7
+ 0 2 1 0 3 6 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 8
+ 6 5 9 7 0 2 3 4 3 8 5 1 5 2 3 0 1 2 1 3 2 6 5 3 0 7 2 7 4 6 4 0 5 9 9 8 9
+ 5 3 1 7 4 7 6 5 4 0 0 6 6 2 0]
+[INFO 2019-05-06 16:09:14,225 cleverhans] Attack result at iteration 15 is [4 9 9 8 1 1 9 0 7 8 3 4 8 6 8 8 0 9 6 2 8 0 1 0 6 2 3 8 9 0 7 2 3 9 5 3 2
+ 8 8 4 6 6 6 7 8 8 8 2 1 8 3 4 7 9 4 0 0 0 1 2 8 4 8 6 8 8 9 0 1 2 3 4 5 6
+ 7 8 9 0 1 2 3 4 3 6 9 0 8 3 1 8 1 8 4 9 2 6 6 9 0 8 1 9 8 6 6 8 8 9 2 9 7
+ 0 2 8 0 3 6 0 8 2 8 4 8 6 7 8 9 0 1 2 3 7 8 6 7 8 9 0 1 2 8 4 5 6 7 8 8 8
+ 6 8 9 7 0 2 3 4 9 8 5 7 3 2 8 0 1 2 8 8 2 6 0 3 0 7 2 7 8 6 4 0 9 8 0 8 8
+ 3 8 1 7 4 7 6 9 4 0 0 0 8 2 0]
+[INFO 2019-05-06 16:09:14,576 cleverhans] Attack result at iteration 20 is [0 3 3 8 2 7 7 6 2 2 2 7 3 0 8 2 9 3 6 3 8 6 8 0 6 4 5 8 9 6 2 7 5 9 3 3 3
+ 8 8 9 6 5 6 2 8 8 8 8 8 8 5 7 7 7 9 6 2 0 8 2 8 9 8 8 8 3 3 0 8 1 3 9 3 5
+ 9 0 4 6 8 1 9 6 3 6 4 6 8 8 8 8 8 8 9 4 2 6 6 9 6 8 8 4 8 6 6 3 8 9 1 4 8
+ 0 8 8 6 5 2 2 8 7 8 7 8 5 9 2 9 6 6 7 5 7 8 5 3 3 7 0 2 7 8 7 3 6 3 8 8 9
+ 6 8 3 2 6 3 5 7 9 8 3 7 3 4 8 9 2 5 8 8 7 6 0 5 6 3 3 9 8 5 7 6 9 8 0 5 8
+ 3 8 7 9 7 2 6 9 0 0 2 0 8 4 8]
+[INFO 2019-05-06 16:09:14,770 cleverhans] Attack result at iteration 25 is [0 3 3 8 2 7 7 6 2 2 2 7 3 0 8 2 9 3 4 3 8 6 8 2 5 4 5 2 4 6 2 7 5 9 3 3 3
+ 3 8 9 5 5 6 2 8 8 9 8 8 8 5 7 2 7 9 6 2 9 8 2 8 9 8 8 8 3 3 2 8 1 9 9 3 5
+ 9 0 4 6 8 1 9 6 3 5 4 6 8 8 8 8 8 8 9 4 2 6 4 9 6 8 8 4 8 3 5 3 8 9 1 4 8
+ 2 8 8 6 5 2 2 8 7 8 7 8 5 9 2 5 6 6 7 5 7 8 5 3 3 7 2 2 7 8 7 3 4 3 3 8 9
+ 5 8 3 2 6 3 5 7 9 9 3 7 3 4 8 9 2 5 8 8 7 5 0 5 6 3 3 9 8 5 7 6 9 8 0 5 8
+ 3 8 7 9 7 2 5 9 0 2 2 0 8 4 8]
+[INFO 2019-05-06 16:09:14,835 cleverhans] Attack result at iteration 27 is [0 3 3 8 2 7 7 6 2 2 2 7 3 0 8 2 9 3 4 3 8 6 8 2 5 4 5 2 4 6 2 7 5 9 3 3 3
+ 3 8 9 5 5 5 2 8 8 9 8 8 8 5 7 2 7 9 6 2 9 8 2 8 9 8 8 8 3 3 2 8 1 9 9 3 5
+ 9 0 4 6 8 1 9 6 3 5 4 6 8 8 8 8 8 8 9 4 2 6 4 9 6 8 8 4 8 3 5 3 8 9 1 4 8
+ 2 8 8 6 5 2 2 8 7 8 7 8 5 9 2 5 6 6 7 5 7 8 5 3 3 7 2 2 7 8 7 3 4 3 3 8 9
+ 5 8 3 2 6 3 5 7 9 9 3 7 3 4 8 9 2 5 8 8 7 5 0 5 6 3 3 9 8 5 7 6 9 8 0 5 8
+ 3 8 7 9 7 2 5 9 0 2 2 0 8 4 8]
+[INFO 2019-05-06 16:09:14,838 cleverhans] 200 out of 200 become adversarial examples at iteration 27
+[INFO 2019-05-06 16:09:15,475 cleverhans] Attack result at iteration 5 is [6 3 7 7 4 4 3 9 2 8 9 6 0 9 5 3 8 8 7 1 4 0 4 8 5 2 3 9 0 1 9 1 5 1 7 4 8
+ 6 2 1 6 8 8 0 1 2 3 4 7 8 9 0 1 2 3 4 6 7 8 9 0 1 2 3 4 7 8 9 1 4 5 3 3 0
+ 9 5 4 3 0 8 4 6 7 0 7 7 1 6 9 1 3 6 2 3 8 2 3 8 9 5 8 8 7 1 7 1 1 0 3 4 2
+ 6 4 7 4 2 7 4 2 9 2 7 9 2 1 0 6 5 3 4 8 5 9 6 9 0 6 3 0 8 1 6 0 0 1 2 3 4
+ 5 6 7 0 1 2 3 4 7 8 9 0 1 2 3 4 7 2 5 1 6 4 3 9 9 0 9 7 1 6 4 3 6 2 0 9 8
+ 6 5 7 0 0 1 7 4 3 2 4 1 3 7 6]
+[INFO 2019-05-06 16:09:16,040 cleverhans] Attack result at iteration 10 is [6 3 7 7 4 4 3 9 2 8 9 6 0 9 5 3 8 8 7 1 4 0 4 8 5 2 3 9 0 1 9 1 5 1 7 4 8
+ 6 2 1 6 8 8 0 1 2 3 4 7 8 9 0 1 2 3 4 6 7 8 9 0 1 2 3 4 7 8 9 1 4 5 3 3 0
+ 9 5 4 3 0 8 4 6 7 0 7 7 1 6 9 1 3 6 2 3 8 2 3 8 9 5 8 8 7 1 7 1 1 0 3 4 2
+ 6 4 7 4 2 7 4 2 9 2 7 9 2 1 0 6 5 3 4 8 5 9 6 9 0 6 3 0 8 1 6 0 0 1 2 3 4
+ 5 6 7 0 1 2 3 4 7 8 9 0 1 2 3 4 7 2 5 1 6 4 3 9 9 0 9 7 1 6 4 3 6 2 0 9 8
+ 6 5 7 0 0 1 7 4 3 2 4 1 3 7 6]
+[INFO 2019-05-06 16:09:16,622 cleverhans] Attack result at iteration 15 is [6 3 7 9 4 7 3 9 2 8 9 6 0 9 5 3 8 8 7 8 4 0 7 8 9 2 3 7 0 7 9 1 3 8 7 4 8
+ 6 2 8 6 8 8 0 8 2 3 4 7 8 9 0 7 2 3 4 6 3 8 9 0 8 2 3 4 7 8 9 1 4 8 3 3 0
+ 8 0 0 3 0 8 8 6 7 0 7 7 7 6 9 1 8 6 2 3 8 2 8 8 9 8 8 8 7 8 7 8 8 0 3 8 2
+ 6 4 7 7 2 7 8 2 9 2 3 9 8 1 0 6 5 3 0 8 8 9 6 9 0 6 8 0 8 1 0 0 0 1 2 3 4
+ 8 6 7 0 1 2 3 8 7 8 9 0 1 2 3 9 7 8 5 8 6 8 3 9 9 0 8 7 4 6 9 8 6 2 0 9 8
+ 6 8 8 0 0 7 8 4 2 2 4 8 3 7 6]
+[INFO 2019-05-06 16:09:17,007 cleverhans] Attack result at iteration 20 is [5 5 9 9 2 7 9 9 3 8 5 6 4 3 9 9 2 9 9 8 7 2 7 2 9 3 2 7 2 7 7 2 3 8 3 7 8
+ 6 7 8 5 2 5 2 8 3 3 3 3 8 3 2 7 7 3 2 6 3 5 9 3 8 7 9 3 2 8 9 7 7 8 5 5 9
+ 8 0 0 5 9 8 8 6 3 2 3 3 7 2 4 7 8 6 7 5 8 7 8 8 5 8 8 3 3 8 3 8 8 0 5 8 2
+ 4 9 7 7 7 2 8 8 9 7 3 7 8 7 6 2 3 5 0 2 8 7 0 9 5 6 8 9 8 8 0 6 0 2 7 9 9
+ 8 4 9 3 8 4 5 8 9 8 7 2 8 4 5 9 3 8 3 8 6 8 5 9 7 6 8 9 4 6 9 8 4 3 0 8 5
+ 6 8 8 0 8 7 8 6 2 7 7 8 5 3 6]
+[INFO 2019-05-06 16:09:17,216 cleverhans] Attack result at iteration 25 is [5 5 9 9 2 7 9 5 3 2 5 5 4 3 9 9 2 9 9 8 7 2 7 2 9 3 2 7 2 7 7 2 3 8 3 7 8
+ 5 7 8 5 2 5 2 8 3 5 3 3 8 3 2 7 7 5 2 2 3 5 5 3 8 7 9 3 2 3 4 7 7 8 5 5 9
+ 8 0 0 5 9 8 8 1 3 2 3 3 7 2 4 7 8 1 7 5 5 7 8 5 5 8 5 3 3 8 3 8 8 1 5 8 1
+ 4 9 2 7 7 2 8 8 5 7 3 7 8 7 6 2 3 5 0 2 8 7 0 4 5 1 8 9 2 8 0 6 2 2 7 9 9
+ 8 4 9 3 8 4 5 8 9 2 7 2 8 4 5 9 3 8 3 8 2 8 5 3 7 6 8 9 4 2 9 8 4 3 2 8 5
+ 2 8 8 2 8 7 8 6 2 7 7 8 5 3 2]
+[INFO 2019-05-06 16:09:17,320 cleverhans] Attack result at iteration 28 is [5 5 9 9 2 7 9 5 3 2 5 5 4 3 9 9 2 9 9 8 7 2 7 2 9 3 2 7 2 7 7 2 3 8 3 7 2
+ 5 7 8 5 2 5 2 8 3 5 3 3 9 3 2 7 7 5 2 2 3 5 5 3 8 7 9 3 2 3 4 7 7 8 5 5 9
+ 8 0 0 5 9 5 8 1 3 2 3 3 7 2 4 7 8 1 7 5 5 7 8 5 5 8 5 3 3 8 3 8 8 1 5 8 1
+ 4 9 2 7 7 2 8 8 5 7 3 7 8 7 6 2 3 5 0 2 8 7 0 4 5 1 8 9 2 8 0 6 2 2 7 9 9
+ 8 4 9 3 8 4 5 8 9 2 7 2 8 4 5 9 3 8 3 8 2 8 5 3 7 6 8 9 4 2 9 8 4 3 2 8 5
+ 2 8 8 2 8 7 8 6 2 7 7 8 5 3 2]
+[INFO 2019-05-06 16:09:17,322 cleverhans] 200 out of 200 become adversarial examples at iteration 28
+[INFO 2019-05-06 16:09:17,959 cleverhans] Attack result at iteration 5 is [4 7 7 7 9 8 4 3 5 2 8 3 5 8 0 5 4 7 1 3 1 7 9 6 2 0 9 1 7 3 3 9 1 6 4 3 9
+ 8 2 1 8 6 4 1 5 5 6 5 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5
+ 6 7 8 9 6 9 7 0 2 3 4 3 8 5 1 3 0 1 2 1 3 2 0 7 2 6 4 0 5 9 9 8 9 5 3 1 7
+ 4 7 0 0 6 6 6 3 7 4 2 8 9 8 7 1 4 0 4 8 5 2 3 9 0 1 9 1 5 1 7 6 1 2 1 6 8
+ 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 0 1 2 3 5 6 7 8 1 0 4 5 6 6 3 4 4 2
+ 8 1 0 6 4 9 7 2 9 2 0 9 3 3 9]
+[INFO 2019-05-06 16:09:18,598 cleverhans] Attack result at iteration 10 is [4 7 7 7 9 8 4 3 5 2 8 3 5 8 0 5 4 7 1 3 1 7 9 6 2 0 9 1 7 3 3 9 1 6 4 3 9
+ 8 2 1 8 6 4 1 5 5 6 5 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5
+ 6 7 8 9 6 9 7 0 2 3 4 3 8 5 1 3 0 1 2 1 3 2 0 7 2 6 4 0 5 9 9 8 9 5 3 1 7
+ 4 7 0 0 6 6 6 3 7 4 2 8 9 8 7 1 9 0 4 8 5 2 3 9 0 1 9 1 5 1 7 6 1 2 1 6 8
+ 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 0 1 2 3 5 6 7 8 1 0 4 5 6 6 3 4 4 2
+ 8 1 0 6 4 9 7 2 9 2 0 9 3 3 9]
+[INFO 2019-05-06 16:09:19,190 cleverhans] Attack result at iteration 15 is [9 7 8 7 9 8 9 3 5 2 8 8 5 8 6 5 8 9 1 3 8 7 9 6 8 6 9 8 8 3 8 9 8 6 4 3 9
+ 8 2 1 8 6 4 1 5 8 6 5 0 1 2 3 7 5 6 7 0 9 0 1 2 3 4 3 6 7 8 9 0 1 2 3 4 5
+ 6 7 8 9 6 9 7 0 2 3 9 8 8 8 8 3 0 1 2 1 3 2 0 7 2 6 9 0 5 7 9 8 9 8 3 1 7
+ 4 7 0 0 6 6 6 3 7 4 2 8 9 8 7 1 9 0 4 8 5 2 8 9 0 1 9 1 0 1 7 6 1 2 1 6 8
+ 0 1 2 8 4 3 6 7 8 9 0 8 2 3 4 8 6 7 8 0 8 2 3 3 6 7 8 1 0 4 5 0 6 8 4 4 2
+ 8 1 0 6 4 9 7 2 9 2 0 9 8 8 9]
+[INFO 2019-05-06 16:09:19,600 cleverhans] Attack result at iteration 20 is [9 3 8 9 7 8 9 5 2 3 8 8 3 8 6 3 8 9 8 5 8 2 3 0 8 6 7 8 8 9 8 9 8 6 7 5 7
+ 8 3 7 8 6 2 2 2 8 5 3 5 8 1 9 7 3 4 3 0 3 5 8 3 9 7 3 0 3 8 3 9 8 2 9 9 3
+ 6 3 5 3 6 7 3 0 3 2 9 8 2 8 8 9 7 8 7 8 9 3 9 8 1 5 9 5 3 7 5 2 4 8 5 8 3
+ 9 3 5 9 8 6 6 2 3 9 3 2 5 2 3 8 9 5 5 3 3 3 8 7 9 3 3 8 0 8 9 3 8 0 3 3 8
+ 5 8 2 8 7 3 0 9 3 3 6 8 3 5 7 8 0 7 3 0 8 3 9 3 0 3 3 7 0 7 3 0 0 8 9 9 0
+ 3 8 6 0 7 7 3 1 4 3 0 3 8 8 3]
+[INFO 2019-05-06 16:09:19,791 cleverhans] Attack result at iteration 25 is [9 3 8 9 7 5 9 5 2 3 5 8 3 5 6 3 8 9 8 5 8 2 3 0 8 6 7 8 8 9 8 5 8 6 7 5 7
+ 5 3 7 5 4 2 2 2 8 5 3 5 8 1 9 7 3 4 3 0 3 5 8 3 9 7 3 0 3 9 3 9 8 1 9 9 3
+ 4 3 5 3 0 7 3 9 3 2 9 8 2 8 8 9 7 8 7 8 9 3 9 8 1 5 9 5 3 7 5 2 4 8 5 8 3
+ 9 3 5 9 8 5 4 2 3 9 3 2 5 2 3 8 9 5 5 3 3 3 8 7 9 3 3 8 0 8 9 3 8 0 3 3 5
+ 5 8 1 8 7 3 0 9 3 3 6 8 3 5 7 8 0 1 3 2 8 3 9 3 0 3 3 7 0 7 3 0 0 8 9 9 0
+ 3 8 6 0 7 7 3 1 4 3 2 3 8 8 3]
+[INFO 2019-05-06 16:09:19,862 cleverhans] Attack result at iteration 27 is [9 3 8 9 7 5 9 5 2 3 5 8 3 5 6 3 8 9 8 5 8 2 3 0 8 6 7 8 8 9 8 5 8 2 7 5 7
+ 5 3 7 5 4 2 2 2 8 5 3 5 8 1 9 7 3 4 3 0 3 5 8 3 9 7 3 0 3 9 3 9 8 1 9 9 3
+ 4 3 5 3 0 7 3 9 3 2 9 8 2 8 8 9 7 8 7 8 9 3 9 8 1 5 9 5 3 7 5 2 4 8 5 8 3
+ 9 3 5 9 8 5 4 2 3 9 3 2 5 2 3 8 9 5 5 3 3 3 8 7 9 3 3 8 0 8 9 3 8 0 3 3 5
+ 5 8 1 8 7 3 0 9 3 3 6 8 3 5 7 8 0 1 3 2 8 3 9 3 0 3 3 7 7 7 3 0 0 8 9 9 0
+ 3 8 6 0 7 7 3 1 4 3 2 3 8 8 3]
+[INFO 2019-05-06 16:09:19,864 cleverhans] 200 out of 200 become adversarial examples at iteration 27
+[INFO 2019-05-06 16:09:20,412 cleverhans] Attack result at iteration 5 is [1 5 2 3 1 6 7 3 7 8 4 0 2 4 0 2 4 7 8 0 7 0 6 9 3 2 4 8 6 0 5 7 5 1 0 8 1
+ 6 7 2 9 7 9 5 6 5 2 6 2 8 1 7 5 5 7 3 5 0 1 1 3 8 4 9 4 5 1 8 6 8 9 0 1 2
+ 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 3 5 3 2 9 3 2 1 4 5
+ 5 2 3 2 1 3 9 7 2 1 2 8 9 1 8 8 7 8 1 0 0 6 7 7 8 7 5 0 6 1 5 7 4 6 1 2 5
+ 0 7 9 9 0 3 4 4 8 4 1 8 6 5 9 0 0 0 3 7 1 6 4 6 0 4 5 4 1 3 8 6 3 9 9 5 9
+ 3 7 8 5 6 4 7 6 2 2 0 9 4 0 1]
+[INFO 2019-05-06 16:09:20,944 cleverhans] Attack result at iteration 10 is [1 5 2 3 1 6 7 3 7 8 4 0 2 4 0 2 4 7 8 0 7 0 6 9 3 2 4 8 6 0 5 7 5 1 0 8 1
+ 6 7 2 9 7 9 5 6 5 2 6 2 8 1 7 5 5 7 3 5 0 1 1 3 8 4 9 4 5 1 8 6 8 9 0 1 2
+ 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 3 5 3 2 9 3 2 1 4 5
+ 5 2 3 2 1 3 9 7 2 1 2 8 9 1 8 8 7 8 1 0 0 6 7 7 8 7 5 0 6 1 5 7 4 6 1 2 5
+ 0 7 9 9 0 3 4 4 8 4 1 8 6 5 9 0 0 0 3 7 1 6 4 6 0 4 5 4 1 3 8 6 3 9 9 5 9
+ 3 7 8 5 6 4 7 6 2 2 0 9 4 0 1]
+[INFO 2019-05-06 16:09:21,463 cleverhans] Attack result at iteration 15 is [8 8 2 8 8 6 7 3 7 8 4 0 2 4 0 3 4 9 8 0 9 8 6 9 3 2 4 8 6 0 3 7 3 1 0 8 1
+ 6 7 3 9 3 9 3 6 3 2 6 3 8 1 9 5 3 9 3 5 0 8 8 9 8 4 9 4 5 1 8 6 8 9 0 8 2
+ 3 9 3 6 7 8 9 0 1 8 8 4 3 6 7 8 9 0 1 8 8 4 8 6 7 8 9 8 8 3 2 9 2 8 8 9 8
+ 8 2 3 2 1 3 9 7 2 8 2 8 9 8 8 8 7 8 8 0 0 6 7 7 8 7 8 0 6 8 5 7 8 6 1 8 5
+ 0 7 9 9 0 3 4 7 8 7 1 8 0 8 9 0 0 0 3 7 1 6 4 6 0 8 3 9 8 3 8 6 3 9 8 8 9
+ 3 7 8 5 0 4 7 6 2 2 0 9 4 0 8]
+[INFO 2019-05-06 16:09:21,815 cleverhans] Attack result at iteration 20 is [8 8 3 8 8 0 2 9 9 9 7 8 2 7 0 3 7 9 3 6 9 8 0 4 9 3 7 8 0 0 3 9 3 7 0 3 8
+ 0 9 3 9 3 7 3 0 3 2 0 3 3 7 9 3 3 9 9 3 0 8 8 9 8 9 4 2 3 7 3 0 3 7 2 8 7
+ 8 9 3 6 3 5 7 2 4 8 8 7 3 6 7 5 9 9 7 8 8 7 8 0 9 8 4 8 8 8 2 4 2 8 8 9 8
+ 8 1 5 2 8 9 4 3 2 8 3 3 8 8 3 3 3 5 8 0 0 0 3 3 3 9 8 6 0 8 3 2 8 5 8 8 9
+ 0 3 4 3 0 8 7 7 3 7 8 8 0 8 8 2 0 2 5 9 8 0 7 0 2 8 3 9 8 9 3 6 9 8 8 8 9
+ 5 3 8 3 0 9 3 4 2 1 0 4 7 9 8]
+[INFO 2019-05-06 16:09:22,028 cleverhans] Attack result at iteration 25 is [8 8 3 8 8 0 2 9 9 9 7 8 1 7 2 3 7 9 3 6 9 8 0 4 9 3 7 3 0 2 3 9 3 7 2 3 8
+ 0 9 3 4 3 7 3 0 3 1 0 3 3 7 9 3 3 9 9 3 5 8 8 9 3 9 4 2 3 7 3 0 3 7 2 8 7
+ 8 9 3 4 3 5 7 2 4 8 8 7 3 6 2 5 4 9 7 8 8 7 8 0 9 5 4 8 8 8 7 4 2 8 8 9 8
+ 8 1 5 1 8 9 4 3 1 8 3 3 8 8 3 3 3 5 8 2 2 0 3 3 3 9 8 6 0 8 3 2 8 5 8 8 9
+ 2 3 4 3 2 8 7 7 3 7 8 2 0 8 8 2 2 2 5 9 8 0 7 0 2 8 3 9 8 9 3 5 9 8 8 8 4
+ 5 3 9 3 0 9 3 4 7 1 2 4 7 9 8]
+[INFO 2019-05-06 16:09:22,162 cleverhans] Attack result at iteration 29 is [8 8 3 8 8 0 2 9 9 9 7 8 1 7 2 3 7 9 3 6 9 8 0 4 9 3 7 3 0 2 3 9 3 7 2 3 8
+ 0 9 3 4 3 7 3 0 3 1 0 3 3 7 9 3 3 9 9 3 5 8 8 9 3 9 4 2 3 7 3 0 3 7 2 8 7
+ 8 9 3 4 3 5 7 2 4 8 8 7 3 2 2 5 4 9 7 8 8 7 8 0 9 5 4 8 8 8 7 4 2 8 8 9 8
+ 8 1 5 1 8 9 4 3 1 8 3 3 8 8 3 3 3 5 8 2 2 0 3 3 3 9 8 6 0 8 3 2 8 5 8 8 9
+ 2 3 4 3 2 8 7 7 3 7 8 2 0 8 8 2 2 2 5 9 8 0 7 0 2 8 3 9 8 9 3 5 9 8 8 8 4
+ 5 3 9 3 0 9 3 4 7 1 2 4 7 9 8]
+[INFO 2019-05-06 16:09:22,164 cleverhans] 200 out of 200 become adversarial examples at iteration 29
+[INFO 2019-05-06 16:09:22,800 cleverhans] Attack result at iteration 5 is [2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 6 4 2 6 4 7 5 5 4
+ 7 2 9 3 9 3 8 2 0 9 5 6 0 1 0 6 5 3 5 3 8 0 0 3 4 1 5 3 0 8 3 0 6 2 7 8 1
+ 7 1 3 8 5 4 2 0 9 7 6 7 4 1 6 2 6 7 1 9 8 0 6 9 4 9 9 6 2 3 7 1 9 2 2 5 3
+ 7 8 0 1 2 3 4 7 8 9 0 1 2 3 4 7 8 9 0 1 7 8 9 8 9 2 6 1 3 5 4 8 2 6 4 3 4
+ 5 9 2 0 3 9 4 9 7 3 8 7 4 4 9 8 5 8 2 6 6 2 3 1 3 2 7 3 1 9 0 1 1 3 5 0 7
+ 8 1 5 1 4 6 0 0 4 9 1 6 6 9 0]
+[INFO 2019-05-06 16:09:23,393 cleverhans] Attack result at iteration 10 is [2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 6 4 2 6 4 7 5 5 4
+ 7 2 9 3 9 3 8 2 0 9 5 6 0 1 0 6 5 3 5 3 8 0 0 3 4 1 5 3 0 8 3 0 6 2 7 8 1
+ 7 1 3 8 5 4 2 0 9 7 6 7 4 1 6 2 6 7 1 9 8 0 6 9 4 9 9 6 2 3 7 1 9 2 2 5 3
+ 7 8 0 1 2 3 4 7 8 9 0 1 2 3 4 7 8 9 0 1 7 8 9 8 9 2 6 1 3 5 4 8 2 6 4 3 4
+ 5 9 2 0 3 9 4 9 7 3 8 7 4 4 9 8 5 8 2 6 6 2 3 1 3 2 7 3 1 9 0 1 1 3 5 0 7
+ 8 1 5 1 4 6 0 0 4 9 1 6 6 9 0]
+[INFO 2019-05-06 16:09:24,027 cleverhans] Attack result at iteration 15 is [8 3 4 8 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 8 8 6 7 8 9 6 9 2 6 4 9 8 8 4
+ 9 2 9 8 9 3 8 2 0 9 5 6 0 8 0 6 8 3 5 9 8 0 0 8 9 1 8 8 0 8 3 9 6 2 7 8 8
+ 7 8 8 8 0 4 2 0 9 7 6 7 7 1 6 2 6 7 1 9 8 0 6 8 4 9 9 6 8 3 9 1 9 2 2 3 3
+ 7 8 0 8 2 3 7 7 8 9 0 8 8 3 4 7 8 9 0 8 0 8 9 8 9 8 6 7 3 5 4 8 2 6 4 3 4
+ 5 7 2 0 3 9 4 9 7 3 8 7 4 8 8 8 5 8 2 6 6 2 3 1 3 2 5 3 1 9 0 1 7 5 5 0 7
+ 8 1 3 8 8 6 0 0 4 9 1 6 6 9 0]
+[INFO 2019-05-06 16:09:24,478 cleverhans] Attack result at iteration 20 is [8 9 7 8 6 9 8 9 0 7 3 5 4 9 0 9 8 9 0 7 3 5 8 8 0 3 2 4 5 9 3 0 7 9 8 8 7
+ 9 1 4 8 3 5 8 0 0 4 0 4 7 8 0 6 8 5 9 9 8 0 2 8 9 7 8 8 0 3 5 9 0 3 9 8 8
+ 3 8 8 3 0 7 3 0 4 3 0 3 7 7 0 3 0 3 7 3 8 0 4 8 9 7 8 0 8 5 9 7 8 3 3 3 5
+ 3 8 6 8 3 3 7 3 3 9 0 8 8 9 7 3 8 7 0 8 0 8 3 8 3 8 6 7 9 3 7 3 2 6 7 5 7
+ 3 7 2 0 9 8 7 3 7 5 8 3 9 8 8 8 9 8 1 5 6 4 8 7 8 3 5 9 4 3 9 7 7 5 3 6 4
+ 9 7 3 8 8 6 5 2 7 9 7 0 6 7 6]
+[INFO 2019-05-06 16:09:24,714 cleverhans] Attack result at iteration 25 is [8 9 7 8 6 9 8 4 2 7 3 5 1 9 0 9 8 5 2 7 3 5 8 8 0 3 2 4 5 9 3 0 7 9 8 8 7
+ 9 1 4 8 3 5 9 0 2 4 0 4 7 8 2 4 8 5 9 9 6 2 2 8 9 7 8 8 2 3 5 9 0 3 9 2 8
+ 3 8 8 3 0 7 3 2 4 3 0 3 7 7 0 3 0 3 7 3 7 2 4 8 9 7 8 0 8 5 9 7 8 3 3 3 5
+ 3 1 6 8 3 2 7 3 3 3 2 8 8 9 7 3 9 7 2 8 0 2 3 9 3 8 5 7 9 3 7 3 1 5 7 5 7
+ 3 7 1 2 9 8 7 3 1 5 3 3 9 8 8 9 9 9 1 5 5 4 8 7 8 3 5 9 4 3 9 7 7 5 3 6 4
+ 9 7 3 8 8 5 5 2 7 4 7 0 5 7 6]
+[INFO 2019-05-06 16:09:24,752 cleverhans] Attack result at iteration 26 is [8 9 7 8 4 9 5 4 2 7 3 5 1 9 0 9 1 5 2 7 3 5 8 8 0 3 2 4 5 9 3 0 7 9 8 8 7
+ 9 1 4 8 3 5 9 0 2 4 0 4 7 8 2 4 8 5 9 9 6 2 2 8 9 7 8 8 2 3 5 9 0 3 9 2 8
+ 3 8 8 3 0 7 3 2 4 3 0 3 7 7 0 3 0 3 7 3 7 2 4 8 9 7 8 0 8 5 9 7 8 3 3 3 5
+ 3 1 6 8 3 2 7 3 3 3 2 8 8 9 7 3 9 7 2 8 0 2 3 9 3 8 5 7 9 3 7 3 1 5 7 5 7
+ 3 7 1 2 9 8 7 3 1 5 3 3 9 8 8 9 9 9 1 5 5 4 8 7 8 3 5 9 4 3 9 7 7 5 3 6 4
+ 9 7 3 8 8 5 5 2 7 4 7 0 5 7 6]
+[INFO 2019-05-06 16:09:24,756 cleverhans] 200 out of 200 become adversarial examples at iteration 26
+[INFO 2019-05-06 16:09:25,350 cleverhans] Attack result at iteration 5 is [7 6 1 1 0 1 2 3 4 2 2 3 4 5 6 2 0 1 2 7 8 6 3 9 7 1 9 3 9 6 1 7 2 4 4 5 7
+ 0 0 1 6 6 8 2 7 7 2 4 2 1 6 8 0 6 9 8 3 9 6 3 0 1 2 3 4 5 6 7 8 9 0 1 2 3
+ 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 1 6 8 9 9 0 1 2 4 4 3 7 4 4 4 0 3 8 7 5 8
+ 2 1 7 5 3 8 5 2 5 1 1 6 2 1 3 8 6 4 2 6 2 5 5 0 2 8 0 6 8 1 7 9 1 9 2 6 7
+ 6 6 8 7 4 9 2 1 3 3 0 5 5 8 0 3 7 9 7 0 2 7 9 1 7 8 0 3 5 3 6 0 1 2 3 4 5
+ 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0]
+[INFO 2019-05-06 16:09:25,906 cleverhans] Attack result at iteration 10 is [7 6 1 1 0 1 2 3 4 7 2 3 4 5 6 2 0 1 2 7 8 6 3 9 7 1 9 3 9 6 1 7 2 4 4 5 7
+ 0 0 1 6 6 8 2 7 7 2 4 2 1 6 8 0 6 9 8 3 9 6 3 0 1 2 3 4 5 6 7 8 9 0 1 2 3
+ 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 1 6 8 9 9 0 1 2 4 4 3 7 4 4 4 0 3 8 7 5 8
+ 2 1 7 5 3 8 5 2 5 1 1 6 2 1 3 8 6 4 2 6 2 5 5 0 2 8 0 6 8 1 7 9 1 9 2 6 7
+ 6 6 8 7 4 9 2 1 3 3 0 5 5 8 0 3 7 9 7 0 2 7 9 1 7 8 0 3 5 3 6 0 1 2 3 4 5
+ 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0]
+[INFO 2019-05-06 16:09:26,491 cleverhans] Attack result at iteration 15 is [7 6 1 1 8 1 3 8 4 7 3 8 0 5 6 7 8 1 2 2 8 6 8 9 2 8 9 3 9 6 1 7 3 9 8 8 7
+ 0 6 1 6 6 8 3 7 7 3 4 2 1 6 8 0 6 9 8 3 9 6 3 0 1 2 3 4 5 6 7 8 9 0 1 2 3
+ 7 8 6 7 8 9 0 1 2 3 4 9 6 7 8 9 1 6 8 9 9 0 1 2 4 4 8 7 4 4 4 0 9 8 7 5 8
+ 2 1 9 8 8 8 5 2 8 1 8 6 3 8 3 8 6 4 8 0 2 8 5 0 2 8 0 6 8 8 9 9 8 9 3 6 9
+ 6 6 8 7 7 9 2 8 3 8 0 8 8 8 0 3 7 9 7 0 8 7 9 8 7 8 0 3 8 3 6 0 8 2 8 4 8
+ 6 9 8 7 0 1 3 9 4 3 6 7 8 9 0]
+[INFO 2019-05-06 16:09:26,902 cleverhans] Attack result at iteration 20 is [3 4 7 2 8 7 3 8 0 7 3 8 0 6 5 7 8 7 7 2 9 6 8 9 2 8 9 5 3 0 7 3 3 9 8 8 2
+ 6 6 7 5 0 3 3 2 2 3 6 1 7 5 1 0 5 7 3 5 3 6 3 2 8 1 2 7 3 5 9 9 4 9 8 3 8
+ 7 8 5 3 5 3 0 8 2 8 7 9 5 3 8 4 1 5 3 4 4 0 8 8 7 7 8 3 7 7 7 6 9 3 9 8 5
+ 1 8 9 8 8 8 3 1 8 8 8 6 3 8 8 8 6 6 8 0 2 8 8 2 3 8 7 6 3 8 9 4 8 4 3 5 9
+ 5 5 6 9 7 5 3 8 5 8 9 8 8 8 6 2 9 7 5 5 8 9 4 8 9 3 0 2 8 8 6 0 8 3 8 7 8
+ 6 9 9 7 2 7 3 9 2 3 8 9 8 7 8]
+[INFO 2019-05-06 16:09:27,096 cleverhans] Attack result at iteration 25 is [3 4 7 2 8 7 3 8 0 7 3 8 0 6 5 7 8 7 7 2 9 2 8 4 2 8 4 5 3 0 7 3 3 9 8 8 2
+ 6 6 7 5 0 3 3 2 2 3 6 1 7 5 1 2 5 7 3 5 3 2 5 2 8 1 2 7 3 5 9 9 4 9 8 3 8
+ 7 8 5 3 5 3 2 8 1 8 7 9 5 3 5 4 4 5 3 4 4 5 8 8 7 7 8 3 7 7 7 6 9 3 9 8 5
+ 1 8 9 8 8 2 3 1 8 8 8 5 3 8 8 3 5 6 8 0 1 8 8 2 3 3 7 5 3 8 9 4 8 4 3 5 9
+ 5 5 6 9 7 5 3 8 5 8 9 8 8 5 6 2 9 7 5 5 8 9 4 8 9 3 5 2 8 8 5 2 8 3 8 7 8
+ 0 9 9 7 2 7 3 9 2 3 8 9 3 7 8]
+[INFO 2019-05-06 16:09:27,099 cleverhans] 200 out of 200 become adversarial examples at iteration 25
+[INFO 2019-05-06 16:09:27,655 cleverhans] Attack result at iteration 5 is [1 2 3 4 7 8 9 6 4 2 6 4 7 8 9 2 9 3 9 3 0 0 1 0 4 2 6 3 5 3 0 3 4 1 5 3 0
+ 8 3 0 6 1 7 8 0 9 2 6 7 1 9 6 9 4 9 9 6 7 1 2 5 3 7 8 0 1 2 4 5 6 7 8 9 0
+ 1 3 4 5 6 7 8 0 1 3 4 7 8 9 7 5 5 1 9 9 7 1 0 0 5 9 7 1 7 2 2 3 6 8 3 2 0
+ 0 6 1 7 5 8 6 2 9 4 8 8 7 1 0 8 7 7 5 8 5 3 4 6 1 1 5 5 0 7 2 3 6 4 1 2 4
+ 1 5 4 2 0 4 8 6 1 9 0 2 5 6 9 3 6 3 6 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7
+ 8 9 0 1 2 3 5 6 7 8 1 0 9 5 7]
+[INFO 2019-05-06 16:09:28,291 cleverhans] Attack result at iteration 10 is [1 2 3 4 7 8 9 6 4 2 6 4 7 8 9 2 9 3 9 3 0 0 1 0 4 2 6 3 5 3 0 3 4 1 5 3 0
+ 8 3 0 6 1 7 8 0 9 2 6 7 1 9 6 9 4 9 9 6 7 1 2 5 3 7 8 0 1 2 4 5 6 7 8 9 0
+ 1 3 4 5 6 7 8 0 1 3 4 7 8 9 7 5 5 1 9 9 7 1 0 0 5 9 7 1 7 2 2 3 6 8 3 2 0
+ 0 6 1 7 5 8 6 2 9 4 8 8 7 1 0 8 7 7 5 8 5 3 4 6 1 1 5 5 0 7 2 3 6 4 1 2 4
+ 1 5 4 2 0 4 8 6 1 9 0 2 5 6 9 3 6 3 6 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7
+ 8 9 0 1 2 3 5 6 7 8 1 0 9 5 7]
+[INFO 2019-05-06 16:09:28,880 cleverhans] Attack result at iteration 15 is [1 3 9 4 3 8 8 8 4 2 0 9 7 8 9 2 9 2 9 8 0 0 1 0 7 3 0 8 3 3 0 3 4 1 8 3 0
+ 8 9 0 0 1 7 8 0 7 2 6 7 1 9 6 9 7 8 9 6 8 8 3 5 8 3 8 0 1 2 9 3 6 7 8 9 0
+ 1 3 4 5 6 7 5 0 1 3 9 7 8 9 7 5 5 8 9 9 7 1 0 0 5 9 7 8 7 2 2 3 6 8 3 2 9
+ 0 6 8 7 3 8 6 2 9 9 8 8 7 8 0 8 7 7 8 8 5 8 4 6 1 1 5 8 0 7 8 3 6 4 8 2 4
+ 8 8 4 2 0 4 8 6 8 9 0 2 5 6 9 8 6 8 6 0 1 2 8 9 3 6 7 8 9 0 1 8 3 4 5 6 9
+ 8 9 0 8 8 3 3 6 7 8 1 0 9 3 7]
+[INFO 2019-05-06 16:09:29,236 cleverhans] Attack result at iteration 20 is [7 3 9 7 3 8 8 8 7 7 0 9 9 2 7 1 7 2 3 8 9 8 7 9 7 3 0 8 3 8 9 5 7 7 8 9 0
+ 8 9 9 0 4 3 8 7 7 2 6 9 7 3 0 7 7 8 7 0 8 8 3 3 8 3 8 0 7 3 9 3 6 3 3 3 2
+ 8 2 9 8 6 9 5 3 8 9 9 3 8 9 3 3 9 8 9 7 9 7 2 2 9 9 3 8 3 3 7 2 6 3 2 3 9
+ 0 6 8 3 3 5 3 3 9 9 3 3 3 8 9 8 9 9 8 3 9 8 9 6 1 1 9 8 9 3 8 2 6 9 8 0 9
+ 8 8 9 3 9 9 3 6 8 9 6 3 9 0 7 8 6 8 6 0 4 3 8 9 3 0 9 6 3 9 8 8 2 9 3 6 9
+ 8 9 6 8 8 2 3 6 9 8 4 6 9 3 9]
+[INFO 2019-05-06 16:09:29,444 cleverhans] Attack result at iteration 25 is [7 3 9 7 3 9 8 8 7 7 0 9 9 2 7 1 7 2 3 8 9 8 7 9 7 3 0 8 3 8 9 5 7 7 8 9 9
+ 2 9 9 0 4 3 2 7 7 1 5 9 7 3 0 7 7 8 7 0 8 8 3 3 8 3 2 2 7 3 9 3 2 3 3 3 2
+ 8 2 9 8 2 9 5 3 8 9 9 3 5 7 3 3 9 8 4 7 9 7 2 2 9 7 3 8 3 3 7 2 5 3 2 3 9
+ 2 5 8 3 3 5 3 3 4 9 3 3 3 8 9 3 9 9 8 3 9 8 9 5 4 4 9 8 9 3 8 2 5 9 8 0 9
+ 8 8 9 3 9 9 3 3 8 4 6 3 9 0 7 8 4 8 4 2 4 3 8 9 3 0 9 6 3 9 8 8 2 9 3 4 9
+ 5 3 6 8 8 2 3 4 9 5 4 6 7 3 9]
+[INFO 2019-05-06 16:09:29,447 cleverhans] 200 out of 200 become adversarial examples at iteration 25
+[INFO 2019-05-06 16:09:30,019 cleverhans] Attack result at iteration 5 is [5 1 8 6 9 0 4 1 9 3 8 4 4 7 0 1 9 2 8 7 8 2 5 9 6 0 6 5 5 3 3 3 9 8 1 1 0
+ 6 1 0 0 6 2 1 1 3 2 7 7 8 8 7 8 4 6 0 2 0 7 0 3 6 8 7 1 5 9 9 3 7 2 4 9 4
+ 3 6 2 2 5 3 2 5 5 9 4 1 7 2 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2
+ 3 4 5 6 7 8 9 1 0 1 2 7 5 3 4 4 0 0 6 8 6 6 5 7 2 3 4 4 9 1 4 0 7 9 5 7 2
+ 3 1 4 4 0 9 9 6 1 8 3 3 7 3 9 8 8 4 7 7 6 2 1 9 8 7 8 8 7 2 2 3 9 3 3 5 5
+ 0 7 4 5 6 5 1 4 1 1 2 8 2 6 1]
+[INFO 2019-05-06 16:09:30,599 cleverhans] Attack result at iteration 10 is [5 1 8 6 9 0 4 1 9 3 8 4 4 7 0 1 9 2 8 7 8 2 5 9 6 0 6 5 5 3 3 3 9 8 1 1 0
+ 6 1 0 0 6 2 1 1 3 2 7 7 8 8 7 8 4 6 0 2 0 7 0 3 6 8 7 1 5 9 9 3 7 2 4 9 4
+ 3 6 2 2 5 3 2 5 5 9 4 1 7 2 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2
+ 3 4 5 6 7 8 9 1 0 1 2 7 5 3 4 4 0 0 6 8 6 6 5 7 2 3 4 4 9 1 4 0 7 9 5 7 2
+ 3 1 4 4 0 9 9 6 1 8 3 3 7 3 9 8 8 4 7 7 6 2 1 9 8 7 8 8 7 2 2 3 9 3 3 5 5
+ 0 7 4 5 6 5 1 4 1 1 2 8 2 6 1]
+[INFO 2019-05-06 16:09:31,149 cleverhans] Attack result at iteration 15 is [3 1 8 6 9 0 9 8 9 8 8 4 8 7 0 1 9 0 8 7 8 2 3 9 6 0 6 5 3 5 3 3 9 8 1 8 0
+ 6 8 0 0 6 2 8 1 8 2 7 7 8 8 7 8 9 6 0 2 0 7 0 3 6 8 7 8 3 9 9 8 7 2 4 9 9
+ 8 6 2 2 3 8 2 3 3 9 4 8 7 2 0 8 2 3 4 8 6 7 8 8 0 8 7 3 4 8 6 2 8 9 0 1 2
+ 3 9 8 6 7 8 9 8 0 1 2 9 5 3 4 4 0 0 6 8 6 0 5 9 8 3 9 8 8 8 8 8 7 9 3 9 7
+ 3 8 4 9 0 8 8 6 1 8 3 2 7 3 9 8 8 9 7 7 6 2 8 9 8 7 8 8 7 2 2 3 8 3 3 3 8
+ 0 7 9 5 6 5 8 4 1 8 2 8 2 6 8]
+[INFO 2019-05-06 16:09:31,533 cleverhans] Attack result at iteration 20 is [3 1 8 0 7 0 9 8 7 8 8 9 8 7 0 7 9 0 3 3 2 0 3 4 6 6 4 3 3 5 8 5 3 8 4 8 9
+ 6 8 9 6 0 3 8 1 8 7 9 9 5 8 9 8 9 4 9 3 6 9 9 9 6 2 9 8 3 9 4 8 3 3 9 4 9
+ 8 0 2 7 3 8 1 3 3 8 9 8 9 0 9 8 1 3 2 8 0 9 3 8 9 8 7 7 7 8 0 2 8 8 8 2 7
+ 9 9 8 4 8 8 4 8 0 7 8 9 9 3 7 7 6 0 6 9 4 0 8 9 8 9 9 8 8 8 8 8 9 7 3 9 7
+ 2 8 7 9 6 8 8 6 2 8 5 2 1 7 8 8 8 9 8 3 5 3 8 4 8 8 8 8 9 1 3 5 8 7 8 3 8
+ 2 7 9 9 4 9 8 7 7 8 7 3 3 0 8]
+[INFO 2019-05-06 16:09:31,741 cleverhans] Attack result at iteration 25 is [3 4 5 0 7 5 9 8 7 8 5 9 8 1 2 7 3 0 3 3 2 0 3 4 5 6 4 3 3 5 8 5 3 7 4 8 9
+ 4 8 9 6 0 3 8 4 8 7 9 9 5 5 9 8 9 4 9 3 6 9 9 9 5 2 9 8 3 4 4 8 3 3 9 4 9
+ 8 0 3 7 3 8 1 3 3 8 9 8 9 0 9 8 1 7 2 8 0 9 3 8 9 8 7 7 7 8 0 2 7 8 8 2 7
+ 9 9 8 4 8 2 4 8 2 7 8 9 9 2 7 7 6 2 4 9 4 0 8 9 8 9 9 8 8 8 8 8 9 7 3 9 7
+ 2 8 7 9 6 8 8 5 2 8 5 2 1 7 8 3 2 9 8 3 5 3 8 4 8 8 9 5 9 1 3 5 8 7 8 3 8
+ 2 3 9 9 4 9 8 7 7 8 7 3 3 0 8]
+[INFO 2019-05-06 16:09:31,841 cleverhans] Attack result at iteration 28 is [3 4 5 0 7 5 9 8 7 8 5 9 8 1 2 7 3 0 3 3 2 0 3 4 5 6 4 3 3 5 8 5 3 7 4 8 9
+ 4 8 9 6 0 3 8 4 8 7 9 9 5 5 9 5 9 4 9 3 6 9 9 9 5 2 9 8 3 4 4 8 3 3 9 4 9
+ 8 0 3 7 3 8 1 3 3 8 9 8 9 0 9 8 1 7 2 8 0 9 3 8 9 8 7 7 7 8 0 2 7 8 8 2 7
+ 9 9 8 4 8 2 4 8 2 7 8 9 9 2 7 7 6 2 4 9 4 0 8 9 8 9 9 8 8 8 8 8 9 7 3 9 7
+ 2 8 7 9 6 8 8 5 2 2 5 2 1 7 8 3 2 9 8 3 5 3 8 4 2 8 9 5 9 1 3 5 8 7 8 3 8
+ 2 3 9 9 4 9 8 7 7 8 7 3 3 0 8]
+[INFO 2019-05-06 16:09:31,843 cleverhans] 200 out of 200 become adversarial examples at iteration 28
+[INFO 2019-05-06 16:09:32,439 cleverhans] Attack result at iteration 5 is [5 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 8 0 6 0 8 2 3
+ 7 9 4 7 1 7 1 7 1 4 0 0 1 7 5 7 1 3 3 3 1 6 9 7 1 3 0 7 6 0 8 9 4 3 5 4 8
+ 1 5 9 0 6 3 3 8 1 4 7 5 2 0 0 1 7 8 7 6 8 8 2 3 6 1 2 9 5 2 0 1 2 3 4 5 6
+ 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 6 6 7 8 9 7 4 6 1 4 0 9 9 3 7 8 4 7 5
+ 8 5 3 2 2 0 5 8 6 0 3 8 1 0 3 0 4 7 4 9 2 9 0 7 1 7 1 6 6 5 6 2 8 7 6 4 9
+ 9 5 3 7 4 3 0 9 6 6 1 1 3 2 1]
+[INFO 2019-05-06 16:09:33,048 cleverhans] Attack result at iteration 10 is [5 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 8 0 6 0 8 2 3
+ 7 9 4 7 1 7 1 7 1 4 0 0 1 7 5 7 1 3 3 3 1 6 9 7 1 3 0 7 6 0 8 9 4 3 5 4 8
+ 1 5 9 0 6 3 3 8 1 4 7 5 2 0 0 1 7 8 7 6 8 8 2 3 6 1 2 9 5 2 0 1 2 3 4 5 6
+ 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 6 6 7 8 9 7 4 6 1 4 0 9 9 3 7 8 4 7 5
+ 8 5 3 2 2 0 5 8 6 0 3 8 1 0 3 0 4 7 4 9 2 9 0 7 1 7 1 6 6 5 6 2 8 7 6 4 9
+ 9 5 3 7 4 3 0 9 6 6 1 1 3 2 1]
+[INFO 2019-05-06 16:09:33,663 cleverhans] Attack result at iteration 15 is [8 0 1 2 8 4 5 6 7 8 9 0 1 2 3 4 8 6 7 8 9 0 1 2 8 9 5 6 7 8 8 0 6 0 0 2 5
+ 7 7 4 7 1 9 7 3 7 4 0 0 1 7 5 9 7 8 3 3 1 6 9 7 7 3 0 7 6 0 8 9 7 8 3 2 8
+ 1 5 9 0 6 2 8 8 1 9 7 5 2 0 0 1 7 8 4 6 8 8 2 8 6 1 8 7 8 2 0 8 2 8 4 6 8
+ 9 8 9 0 1 2 8 4 0 8 7 8 9 0 1 2 3 8 6 6 9 8 7 7 4 8 1 8 8 9 7 8 7 8 0 7 0
+ 8 6 5 9 2 8 5 8 8 8 3 8 7 8 8 8 7 7 4 9 9 9 0 7 1 7 1 6 6 5 6 0 8 9 6 4 9
+ 9 3 3 9 4 3 0 7 6 6 1 1 8 8 1]
+[INFO 2019-05-06 16:09:34,045 cleverhans] Attack result at iteration 20 is [8 2 2 2 8 2 9 0 3 3 3 2 2 3 5 7 8 2 2 2 7 7 7 7 8 9 3 4 2 8 2 2 0 0 0 1 5
+ 3 7 7 3 7 9 7 3 7 7 8 0 7 3 3 9 7 8 5 5 2 0 3 3 7 2 0 2 0 2 2 7 7 8 3 2 3
+ 2 9 3 2 0 2 8 3 2 9 9 3 1 0 8 7 9 3 4 6 3 8 1 8 5 7 8 7 8 2 0 8 0 8 7 6 8
+ 9 5 7 6 7 3 8 7 0 8 9 0 7 2 4 3 9 8 5 5 9 3 7 5 7 8 7 8 8 7 7 8 5 8 0 4 0
+ 8 6 5 9 3 8 0 5 8 8 5 3 7 8 8 8 7 5 7 7 9 7 5 4 2 4 7 2 6 0 5 0 8 9 5 7 7
+ 3 3 5 9 4 9 0 7 5 2 7 2 8 8 7]
+[INFO 2019-05-06 16:09:34,244 cleverhans] Attack result at iteration 25 is [8 2 2 1 8 2 9 0 3 3 3 2 2 3 5 7 8 2 2 2 7 7 7 7 8 9 3 4 2 3 2 2 0 7 0 1 5
+ 3 7 7 3 7 9 7 3 7 7 8 2 7 3 3 9 7 8 5 5 2 0 3 3 7 2 2 2 0 2 2 7 7 8 3 2 3
+ 2 9 3 2 0 2 8 3 2 9 9 3 1 7 8 7 9 3 4 2 3 3 1 8 5 7 8 7 8 1 9 8 0 8 7 6 8
+ 9 5 7 6 7 3 8 7 0 8 9 0 7 2 4 3 9 8 5 5 9 3 7 5 7 8 7 8 8 7 7 8 5 2 0 4 0
+ 6 6 5 9 3 8 0 5 8 8 5 3 7 8 8 8 7 5 7 7 9 7 5 4 2 4 7 2 2 0 5 0 5 9 5 7 7
+ 3 3 5 9 7 9 2 7 5 2 7 2 8 8 7]
+[INFO 2019-05-06 16:09:34,248 cleverhans] 200 out of 200 become adversarial examples at iteration 25
+[INFO 2019-05-06 16:09:34,857 cleverhans] Attack result at iteration 5 is [0 0 1 2 3 4 7 8 9 0 1 8 3 4 5 6 7 8 0 1 2 3 4 7 8 9 0 8 3 9 5 5 2 6 8 4 1
+ 7 1 2 3 5 6 9 1 1 1 2 1 2 0 7 7 5 8 2 9 8 6 7 3 4 6 8 7 0 4 2 7 7 5 4 3 4
+ 2 8 1 5 1 0 2 3 3 5 7 0 6 8 6 3 9 9 8 2 7 7 1 0 1 7 8 9 0 1 2 3 4 5 6 7 8
+ 0 1 2 3 4 7 8 9 7 8 6 4 1 9 3 8 4 4 7 0 1 9 2 8 7 8 2 6 0 6 5 3 3 3 9 1 4
+ 0 6 1 0 0 6 2 1 1 7 7 8 4 6 0 7 0 3 6 8 7 1 5 2 4 9 4 3 6 4 1 7 2 6 5 0 1
+ 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6]
+[INFO 2019-05-06 16:09:35,484 cleverhans] Attack result at iteration 10 is [0 0 1 2 3 4 7 8 9 0 1 8 3 4 5 6 7 8 0 1 2 3 4 7 8 9 0 8 3 9 5 5 2 6 8 4 1
+ 7 1 2 3 5 6 9 1 1 1 2 1 2 0 7 7 5 8 2 9 8 6 7 3 4 6 8 7 0 4 2 7 7 5 4 3 4
+ 2 8 1 5 1 0 2 3 3 5 7 0 6 8 6 3 9 9 8 2 7 7 1 0 1 7 8 9 0 1 2 3 4 5 6 7 8
+ 0 1 2 3 4 7 8 9 7 8 6 4 1 9 3 8 4 4 7 0 1 9 2 8 7 8 2 6 0 6 5 3 3 3 9 1 4
+ 0 6 1 0 0 6 2 1 1 7 7 8 4 6 0 7 0 3 6 8 7 1 5 2 4 9 4 3 6 4 1 7 2 6 5 0 1
+ 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6]
+[INFO 2019-05-06 16:09:36,095 cleverhans] Attack result at iteration 15 is [0 0 1 2 3 4 7 8 9 8 1 8 3 4 8 6 7 8 0 1 2 3 4 7 8 9 0 8 3 9 8 8 8 6 8 0 1
+ 7 1 3 3 8 6 9 7 1 7 2 1 2 8 7 7 8 8 2 9 8 8 7 3 4 8 8 7 0 4 8 7 7 8 4 3 4
+ 2 8 1 5 1 0 8 3 3 5 7 0 6 8 0 3 9 9 8 8 3 7 7 0 8 7 8 8 0 1 0 3 4 5 6 7 8
+ 8 1 8 8 4 9 8 9 9 8 6 9 1 9 8 8 4 9 7 0 7 9 8 8 7 8 3 6 0 6 8 8 8 8 9 1 0
+ 8 6 1 0 0 0 3 7 2 7 7 8 9 6 8 7 0 3 6 8 7 1 5 8 4 9 4 2 6 4 1 9 3 6 3 0 8
+ 2 8 4 5 6 7 8 9 0 8 2 3 8 8 6]
+[INFO 2019-05-06 16:09:36,475 cleverhans] Attack result at iteration 20 is [9 8 7 3 5 7 3 8 9 8 7 2 5 7 8 5 3 6 8 7 3 5 9 3 8 9 6 3 5 4 8 8 8 0 8 0 7
+ 9 7 3 5 8 6 3 7 7 7 7 7 3 8 3 3 8 8 3 5 8 8 3 5 7 8 8 3 0 0 8 3 3 8 9 5 0
+ 3 8 7 5 7 2 8 5 5 1 3 0 6 6 0 5 3 3 8 8 3 3 7 0 8 3 3 8 2 7 0 7 4 0 6 3 8
+ 8 7 8 8 7 9 8 7 9 3 6 9 7 3 8 8 7 9 3 0 7 7 8 3 3 5 3 6 6 4 8 8 8 8 4 7 0
+ 8 0 7 7 2 0 3 7 2 3 9 8 9 0 8 3 0 5 4 3 3 7 3 8 9 4 0 2 4 7 7 9 3 6 3 5 8
+ 3 8 9 3 6 8 3 4 9 8 2 9 8 8 6]
+[INFO 2019-05-06 16:09:36,684 cleverhans] Attack result at iteration 25 is [9 8 7 3 5 7 3 5 9 8 7 2 5 7 8 5 3 6 8 7 3 5 9 3 5 3 6 3 5 4 8 8 8 0 5 0 7
+ 9 7 3 5 8 5 3 7 7 7 7 7 3 8 3 3 8 5 3 5 8 8 3 5 7 8 6 3 7 0 8 3 3 8 9 5 0
+ 3 5 7 1 7 2 8 5 5 1 3 2 5 6 0 5 3 3 5 8 3 3 7 2 8 3 3 8 2 7 0 7 1 0 5 3 8
+ 8 7 8 8 7 9 5 7 9 3 2 9 7 3 8 2 7 9 3 2 7 7 8 3 3 5 3 5 6 4 8 8 8 8 4 7 0
+ 8 0 7 7 2 0 3 7 2 3 9 3 9 0 8 3 2 5 4 3 3 7 3 8 9 4 0 2 4 7 7 9 3 0 3 5 8
+ 3 8 9 3 5 8 3 4 9 8 1 9 8 8 5]
+[INFO 2019-05-06 16:09:36,820 cleverhans] Attack result at iteration 29 is [9 8 7 3 5 7 3 5 5 8 7 2 5 7 8 5 3 6 8 7 3 5 9 3 5 3 6 3 5 4 8 8 8 0 5 0 7
+ 9 7 3 5 8 5 3 7 7 7 7 7 3 8 3 3 8 5 3 5 5 8 3 5 7 8 6 3 7 0 8 3 3 8 9 5 0
+ 3 5 7 1 7 2 8 5 5 1 3 2 5 6 0 5 3 3 5 8 3 3 7 2 8 3 3 8 2 7 0 7 1 0 5 3 1
+ 8 7 8 8 7 9 5 7 9 3 2 9 7 3 8 2 7 9 3 2 7 7 8 3 3 5 3 5 6 4 8 8 8 8 4 7 0
+ 8 0 7 7 2 0 3 7 2 3 9 3 9 0 8 3 2 5 4 3 3 7 3 8 9 4 0 2 4 7 7 9 3 0 3 5 8
+ 3 8 9 3 5 8 3 4 9 8 1 9 8 8 5]
+[INFO 2019-05-06 16:09:36,824 cleverhans] 200 out of 200 become adversarial examples at iteration 29
+2019-05-06 16:09:37.635026: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Adding visible gpu devices: 0
+2019-05-06 16:09:37.635109: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-06 16:09:37.635131: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0 
+2019-05-06 16:09:37.635145: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:   N 
+2019-05-06 16:09:37.635921: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10454 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:02:00.0, compute capability: 6.1)
+2019-05-06 16:10:31.150914: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Adding visible gpu devices: 0
+2019-05-06 16:10:31.151001: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-06 16:10:31.151024: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0 
+2019-05-06 16:10:31.151039: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:   N 
+2019-05-06 16:10:31.151814: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10454 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:02:00.0, compute capability: 6.1)
+2019-05-06 16:11:24.410912: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Adding visible gpu devices: 0
+2019-05-06 16:11:24.410997: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-06 16:11:24.411030: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0 
+2019-05-06 16:11:24.411046: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:   N 
+2019-05-06 16:11:24.411807: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10454 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:02:00.0, compute capability: 6.1)
+2019-05-06 16:12:16.238654: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Adding visible gpu devices: 0
+2019-05-06 16:12:16.238770: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-06 16:12:16.238801: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0 
+2019-05-06 16:12:16.238822: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:   N 
+2019-05-06 16:12:16.239903: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10454 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:02:00.0, compute capability: 6.1)
+
+WARNING: The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+If you depend on functionality not listed there, please file an issue.
+
+Extracting MNIST_data/train-images-idx3-ubyte.gz
+Extracting MNIST_data/train-labels-idx1-ubyte.gz
+Extracting MNIST_data/t10k-images-idx3-ubyte.gz
+Extracting MNIST_data/t10k-labels-idx1-ubyte.gz
+=============================================================
+JSMA: Crafting 10000 adversarial examples
+Attacking input batch 1/50
+Attacking input batch 2/50
+Attacking input batch 3/50
+Attacking input batch 4/50
+Attacking input batch 5/50
+Attacking input batch 6/50
+Attacking input batch 7/50
+Attacking input batch 8/50
+Attacking input batch 9/50
+Attacking input batch 10/50
+Attacking input batch 11/50
+Attacking input batch 12/50
+Attacking input batch 13/50
+Attacking input batch 14/50
+Attacking input batch 15/50
+Attacking input batch 16/50
+Attacking input batch 17/50
+Attacking input batch 18/50
+Attacking input batch 19/50
+Attacking input batch 20/50
+Attacking input batch 21/50
+Attacking input batch 22/50
+Attacking input batch 23/50
+Attacking input batch 24/50
+Attacking input batch 25/50
+Attacking input batch 26/50
+Attacking input batch 27/50
+Attacking input batch 28/50
+Attacking input batch 29/50
+Attacking input batch 30/50
+Attacking input batch 31/50
+Attacking input batch 32/50
+Attacking input batch 33/50
+Attacking input batch 34/50
+Attacking input batch 35/50
+Attacking input batch 36/50
+Attacking input batch 37/50
+Attacking input batch 38/50
+Attacking input batch 39/50
+Attacking input batch 40/50
+Attacking input batch 41/50
+Attacking input batch 42/50
+Attacking input batch 43/50
+Attacking input batch 44/50
+Attacking input batch 45/50
+Attacking input batch 46/50
+Attacking input batch 47/50
+Attacking input batch 48/50
+Attacking input batch 49/50
+Attacking input batch 50/50
+saved to: ./adv_test/jsma/adv.npy
+Iterating over 50 batches
+=============================================================
+CW: Crafting 10000 adversarial examples
+This could take some time ...
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+saved to: ./adv_test/cw/adv.npy
+=============================================================
+FGSM: Crafting 10000 adversarial examples
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+saved to: ./adv_test/fgsm/adv.npy
+DEEPFOOL: =============================================================
+Crafting 10000 adversarial examples
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+batch size: 200
+saved to: ./adv_test/deepfool/adv.npy
+=============================================================
+model_dir:./models/nat
+adv_path:./adv_test//fgsm/adv.npy
+Storing examples
+Examples stored in ./features/test//fgsm/adv_attr.npy
+=============================================================
+model_dir:./models/nat
+adv_path:./adv_test//cw/adv.npy
+Storing examples
+Examples stored in ./features/test//cw/adv_attr.npy
+=============================================================
+model_dir:./models/nat
+adv_path:./adv_test//jsma/adv.npy
+Storing examples
+Examples stored in ./features/test//jsma/adv_attr.npy
+=============================================================
+model_dir:./models/nat
+adv_path:./adv_test//deepfool/adv.npy
+Storing examples
+Examples stored in ./features/test//deepfool/adv_attr.npy
