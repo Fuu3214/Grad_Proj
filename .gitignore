@@ -2,4 +2,4 @@
 /targeted
 /MNIST_data
 *.npy
-
+*.bmp
