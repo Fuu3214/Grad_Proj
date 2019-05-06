@@ -47,8 +47,8 @@ import matplotlib.pyplot as plt
 
 model_dir = "./models/nat"
 
-num_examples = 10
-batch_size = 2
+num_examples = 10000
+batch_size = 200
 num_batches = int(math.ceil(num_examples / batch_size))
 
 mnist = input_data.read_data_sets('MNIST_data', one_hot=True)
