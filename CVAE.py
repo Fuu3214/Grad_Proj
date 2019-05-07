@@ -14,8 +14,8 @@ import vae
 # In[94]:
 
 
-model_dir = 'models/cvaenat'
-train_path = "./features/nat/feature_attributions.npy"
+model_dir = 'models/cvae03'
+train_path = "./features/train/03/feature_attributions.npy"
 # Setting up the data and the model
 feature_attributions = np.load(train_path)
 mnist = input_data.read_data_sets('MNIST_data', one_hot=False)

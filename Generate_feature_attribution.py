@@ -28,18 +28,23 @@ from model import Model
 
 from tensorflow.python import pywrap_tensorflow
 
+import tarfile
+
 
 # In[85]:
 
 
-model_dir = "./models/nat"
+model_dir = "./models/03"
 
 
 # In[86]:
 
 
 tf.reset_default_graph()
+x = tf.placeholder(tf.float32, shape = [None, 784])
+y = tf.placeholder(tf.int64, shape = [None])
 model = Model()
+model.build_and_eval(x, y)
 saver = tf.train.Saver()
 
 config = tf.ConfigProto()
@@ -96,11 +101,14 @@ for i in range(num_examples):
 
 
 print('Storing examples')
-path = "./features/nat/feature_attributions.npy"
+path = "./features/train/03/feature_attributions.npy"
+path_compressed = "./features/train/03/feature_attributions.npy.tar.gz"
 feature_attributions = np.asarray(feature_attributions)
 np.save(path, feature_attributions)
 print('Examples stored in {}'.format(path))
-
+tar = tarfile.open(path_compressed,"w:gz")
+tar.add(path)
+tar.close()
 
 # In[118]:
 
